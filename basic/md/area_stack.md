@@ -3,6 +3,11 @@ Area Stack Component:
 ```js
 
 import {
+  default as React,
+  Component,
+} from 'react';
+
+import {
   AreaStackChart as AreaStackChart
 } from 'react-d3-basic';
 
@@ -32,7 +37,13 @@ const chartSeries = [
 
 // Your other setting props
 
-<AreaStackChart {pass all your props and chartSeries here!} />
+(() => {
+
+  React.render(
+    <AreaStackChart {pass all your props and chartSeries here!} />,
+    document.getElementById('data_container')
+  )
+})()
 
 // And you have a beautiful chart in react!
 ```

@@ -3,6 +3,12 @@ Multiple Line and Area Chart Component:
 ```js
 
 import {
+  default as React,
+  Component,
+} from 'react';
+
+
+import {
   LineChart as LineChart
 } from 'react-d3-basic';
 
@@ -30,7 +36,13 @@ const chartSeries = [
 
 // Your other setting props
 
-<LineChart {pass all your props and chartSeries here!} />
+(() => {
+
+  React.render(
+    <LineChart {pass all your props and chartSeries here!} />,
+    document.getElementById('data_container')
+  )
+})()
 
 // And you have a beautiful chart in react!
 ```

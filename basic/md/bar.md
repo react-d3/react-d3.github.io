@@ -3,6 +3,12 @@ Bar Component:
 ```js
 
 import {
+  default as React,
+  Component,
+} from 'react';
+
+
+import {
   BarChart as BarChart
 } from 'react-d3-basic';
 
@@ -17,7 +23,13 @@ const chartSeries = [
 
 // Your other setting props
 
-<BarChart {pass all your props and chartSeries here!} />
+(() => {
+
+  React.render(
+    <BarChart {pass all your props and chartSeries here!} />,
+    document.getElementById('data_container')
+  )
+})()
 
 // And you have a beautiful chart in react!
 ```

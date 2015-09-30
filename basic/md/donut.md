@@ -3,6 +3,11 @@ Donut Chart Component:
 ```js
 
 import {
+  default as React,
+  Component,
+} from 'react';
+
+import {
   PieChart as PieChart
 } from 'react-d3-basic';
 
@@ -41,7 +46,13 @@ const chartSeries = [
 
 // Your other setting props
 
-<PieChart {pass all your props and chartSeries here!} />
+(() => {
+
+  React.render(
+    <PieChart {pass all your props and chartSeries here!} />,
+    document.getElementById('data_container')
+  )
+})()
 
 // And you have a beautiful chart in react!
 ```

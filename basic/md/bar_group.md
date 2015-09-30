@@ -3,6 +3,11 @@ Bar Group Chart Component:
 ```js
 
 import {
+  default as React,
+  Component,
+} from 'react';
+
+import {
   BarGroupChart as BarGroupChart
 } from 'react-d3-basic';
 
@@ -42,7 +47,13 @@ const chartSeries = [
 
 // Your other setting props
 
-<BarGroupChart {pass all your props and chartSeries here!} />
+(() => {
+
+  React.render(
+    <BarGroupChart {pass all your props and chartSeries here!} />,
+    document.getElementById('data_container')
+  )
+})()
 
 // And you have a beautiful chart in react!
 ```
