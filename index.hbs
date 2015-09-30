@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>{{company}}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google fonts - which you want to use - (rest you can just remove) -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/prettyPhoto.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/github-markdown.css">
+    <style>
+        .markdown-body {
+            min-width: 200px;
+            max-width: 790px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+    </style>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body id="top">
+    <header>
+        <!-- NAVIGATION -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- LOGO -->
+                    <a class="navbar-brand page-scroll" href="#page-top">
+                        <img src="{{logo}}" alt="" style="width:50px">
+                    </a>
+                    <!-- END LOGO -->
+
+                </div>
+
+                <!-- TOGGLE NAV -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        {{#if product}}
+                          {{#each product.data}}
+                            <li><a class="page-scroll" href="#{{@index}}">{{name}}</a>
+                            </li>
+                          {{/each}}
+                        {{/if}}
+                    </ul>
+                </div>
+                <!-- TOGGLE NAV -->
+
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- END NAVIGATION -->
+    </header>
+
+    <!-- HOME -->
+    <div id="home-area">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <!-- HOME CONTENT -->
+                    {{#ifCond description '||' slogan }}
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="home-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
+                            {{#if slogan}}
+                            <h1>{{slogan}}</h1>
+                            {{/if}}
+                            {{#if description}}
+                            <p>{{description}}</p>
+                            {{/if}}
+                        </div>
+                    </div>
+                    {{/ifCond}}
+                    <!-- END HOME CONTENT -->
+
+                    <!-- HOME FEATURE IMAGE -->
+                    {{#if banner-img}}
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="home-feature pull-right center-block wow bounceIn" data-wow-duration="1s" data-wow-delay="1s">
+                            <img class="img-responsive" src="{{banner-img}}" alt="">
+                        </div>
+                    </div>
+                    {{/if}}
+                    <!-- END HOME FEATURE IMAGE -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END HOME -->
+
+    <!-- SERVICES -->
+    {{#if product}}
+      {{#each product.data}}
+        <a name="{{@index}}"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">{{name}}</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                  {{#if md}}
+                    <div class="markdown-body">
+                      <section data-markdown="{{md}}" >
+                      </section>
+                    </div>
+                  {{/if}}
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+      {{/each}}
+    {{/if}}
+    <!-- END SERVICES -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <!-- FOOTER MENU -->
+                <div class="col-md-6">
+                </div>
+                <!-- END FOOTER MENU -->
+
+                <!-- FOOTER CONTENT -->
+                <div class="col-md-6">
+                    <div class="footer-content text-right">
+                        <p>&copy; 2015 License Apache2.0, <a href="/">{{company}}</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- END FOOTER CONTENT -->
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- ./container -->
+    </footer>
+    <!-- js files -->
+    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/prettyPhoto.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>

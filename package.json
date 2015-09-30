@@ -1,0 +1,28 @@
+{
+  "name": "react-d3",
+  "version": "0.0.1",
+  "description": "Official site",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-d3/react-d3.github.io.git"
+  },
+  "keywords": [
+    "react-d3"
+  ],
+  "author": "chilijung",
+  "bugs": {
+    "url": "https://github.com/react-d3/react-d3.github.io/issues"
+  },
+  "homepage": "https://github.com/react-d3/react-d3.github.io",
+  "dependencies": {},
+  "devDependencies": {
+    "react-d3-basic": "0.0.10",
+    "react-d3-brush": "0.0.5",
+    "react-d3-core": "0.0.16",
+    "react-d3-tooltip": "0.0.7",
+    "react-d3-zoom": "0.0.1"
+  }
+}

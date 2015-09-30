@@ -1,0 +1,33 @@
+{
+    "layout": "./index.hbs",
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "data": {
+        "company": "react-d3",
+        "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+        "slogan": "Painless building d3 charts",
+        "description": "A whole new solution for building reusable components for d3 charts",
+        "banner-img": "img/basic/cover.png",
+        "product": {
+          "title": "react-d3",
+          "data": [{
+            "name": "Introduction",
+            "md": "./intro/intro.md"
+          }, {
+            "name": "react-d3-core",
+            "md": "./node_modules/react-d3-core/README.md"
+          }, {
+            "name": "react-d3-basic",
+            "md": "./node_modules/react-d3-basic/README.md"
+          }, {
+            "name": "react-d3-tooltip",
+            "md": "./node_modules/react-d3-tooltip/README.md"
+          }, {
+            "name": "react-d3-zoom",
+            "md": "./node_modules/react-d3-zoom/README.md"
+          }, {
+            "name": "react-d3-brush",
+            "md": "./node_modules/react-d3-brush/README.md"
+          }]
+        }
+    }
+}
