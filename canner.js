@@ -173,7 +173,7 @@ module.exports = [
             "md": "./intro/intro.md"
           }, {
             "name": "react-d3-core",
-            "md": "./react-d3-core/README.md"
+            "md": "./intro/intro_core.md"
           }, {
             "name": "react-d3-basic",
             "md": "./intro/intro_basic.md"
