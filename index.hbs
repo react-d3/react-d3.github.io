@@ -125,9 +125,14 @@
         <section id="services" class="section text-center">
             <div class="container">
                 <h2 class="section-title wow fadeIn">{{name}}</h2>
-                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                   {{#if md}}
                     <div class="markdown-body">
+                      {{#ifCond name '==' 'Introduction'}}
+                        <iframe src="https://ghbtns.com/github-btn.html?user=react-d3&repo=react-d3.github.io&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                      {{else}}
+                        <iframe src="https://ghbtns.com/github-btn.html?user=react-d3&repo={{name}}&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                      {{/ifCond}}
                       <section data-markdown="{{md}}" >
                       </section>
                     </div>
