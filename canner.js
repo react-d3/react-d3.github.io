@@ -44,6 +44,42 @@ basic_data.unshift({
   "md": "./react-d3-basic/README.md"
 })
 
+var brush_charts = [{
+  "name": "Line",
+  "link": "line",
+},{
+  "name": "Line Multiple",
+  "link": "line_multi"
+},{
+  "name": "Area Stack",
+  "link": "area_stack"
+},{
+  "name": "Bar",
+  "link": "bar"
+},{
+  "name": "Bar Group",
+  "link": "bar_group"
+},{
+  "name": "Bar Stack",
+  "link": "bar_stack"
+},{
+  "name": "Scatter",
+  "link": "scatter"
+}];
+
+var brush_data = brush_charts.map(function(c) {
+  return {
+    "name": c.name,
+    "chart": "<div id='data_brush_" + c.link + "'></div><script src='/react-d3-brush/example/dist/min/brush_" + c.link + ".min.js'></script>",
+    "md": "./brush/md/" + c.link + ".md"
+  }
+})
+
+brush_data.unshift({
+  "name": "introduction",
+  "md": "./react-d3-brush/README.md"
+})
+
 module.exports = [
   {
     "layout": "./index.hbs",
@@ -73,7 +109,7 @@ module.exports = [
             "md": "./react-d3-zoom/README.md"
           }, {
             "name": "react-d3-brush",
-            "md": "./react-d3-brush/README.md"
+            "md": "./intro/intro_brush.md"
           }]
         }
     }
@@ -90,6 +126,21 @@ module.exports = [
         "product": {
           "title": "react-d3",
           "data": basic_data
+        }
+    }
+  }, {
+    "layout": "./gallery.hbs",
+    "filename": "./brush/index.html",
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "data": {
+        "item": "react-d3-brush",
+        "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+        "slogan": "react-d3 brush charts",
+        "description": "Building Brush With Line, bar, Scatter, Area Charts ... with ease.",
+        "banner-img": "/img/brush/cover.png",
+        "product": {
+          "title": "react-d3",
+          "data": brush_data
         }
     }
   }]
