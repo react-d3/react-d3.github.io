@@ -1,0 +1,662 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>react-d3-brush</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google fonts - which you want to use - (rest you can just remove) -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/prettyPhoto.css">
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/github-markdown.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <style>
+        .markdown-body {
+            min-width: 200px;
+            max-width: 790px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+    </style>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body id="top">
+    <header>
+        <!-- NAVIGATION -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- LOGO -->
+                    <a class="navbar-brand page-scroll" href="/">
+                        <img src="https://avatars0.githubusercontent.com/u/14354544?v=3&amp;s=200" alt="" style="width:50px">
+                    </a>
+                    <!-- END LOGO -->
+
+                </div>
+
+                <!-- TOGGLE NAV -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                            <li><a class="page-scroll" href="#0">introduction</a>
+                            </li>
+                            <li><a class="page-scroll" href="#1">Line</a>
+                            </li>
+                            <li><a class="page-scroll" href="#2">Line Multiple</a>
+                            </li>
+                            <li><a class="page-scroll" href="#3">Area Stack</a>
+                            </li>
+                            <li><a class="page-scroll" href="#4">Bar</a>
+                            </li>
+                            <li><a class="page-scroll" href="#5">Bar Group</a>
+                            </li>
+                            <li><a class="page-scroll" href="#6">Bar Stack</a>
+                            </li>
+                            <li><a class="page-scroll" href="#7">Scatter</a>
+                            </li>
+                    </ul>
+                </div>
+                <!-- TOGGLE NAV -->
+
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- END NAVIGATION -->
+    </header>
+
+    <!-- HOME -->
+    <div id="home-area">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <!-- HOME CONTENT -->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="home-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
+                            <h1>react-d3 zoom charts</h1>
+                            <p>Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.</p>
+                        </div>
+                    </div>
+                    <!-- END HOME CONTENT -->
+
+                    <!-- HOME FEATURE IMAGE -->
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="home-feature pull-right center-block wow bounceIn" data-wow-duration="1s" data-wow-delay="1s">
+                            <img class="img-responsive" src="/img/zoom/cover.png" alt="">
+                        </div>
+                    </div>
+                    <!-- END HOME FEATURE IMAGE -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END HOME -->
+
+    <!-- SERVICES -->
+        <a name="0"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">introduction</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+                    <div class="markdown-body">
+                      <h1 id="react-d3-zoom">react-d3-zoom</h1>
+<p><code>react-d3</code> zoom implementation.</p>
+<h2 id="support-zoom-component">Support Zoom Component</h2>
+<ul>
+<li>Line Chart: export as <code>LineZoom</code></li>
+<li>Area Stack Chart: export as <code>AreaStackZoom</code></li>
+<li>Scatter Plot: export as `ScatterZoom</li>
+</ul>
+<h2 id="license">License</h2>
+<p>Apache 2.0</p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="1"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Line</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div style="margin-right: auto; margin-left: auto">
+                      <div id="data_zoom_line"></div><script src="/react-d3-zoom/example/dist/min/zoom_line.min.js"></script>
+                    </div>
+
+                    <div class="markdown-body">
+                      <p>Line Chart Component:</p>
+<pre><code class="lang-js">
+import {
+  default as React,
+  Component,
+} from 'react';
+
+import {
+  LineZoom as LineZoom
+} from 'react-d3-zoom';
+
+// Your Setting props!
+
+const chartSeries = [
+      {
+        field: 'age',
+        name: 'Age',
+        color: '#ff7f0e'
+      }
+    ],
+
+
+// Your other setting props
+
+(() =&gt; {
+
+  React.render(
+    &lt;LineZoom {pass all your props and chartSeries here!} /&gt;,
+    document.getElementById('data_container')
+  )
+})()
+
+// And you have a beautiful chart in react!
+</code></pre>
+<p><a href="/zoom/line">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT LINE ZOOM CHART!!</button>
+</a></p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="2"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Line Multiple</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div style="margin-right: auto; margin-left: auto">
+                      <div id="data_zoom_line_multi"></div><script src="/react-d3-zoom/example/dist/min/zoom_line_multi.min.js"></script>
+                    </div>
+
+                    <div class="markdown-body">
+                      <p>Multiple Line and Area Chart Component:</p>
+<pre><code class="lang-js">
+import {
+  default as React,
+  Component,
+} from 'react';
+
+
+import {
+  LineZoom as LineZoom
+} from 'react-d3-zoom';
+
+
+// Your Setting props!
+
+const chartSeries = [
+      {
+        field: 'New York',
+        name: 'New York Temp',
+        color: '#ff7f0e'
+      },
+      {
+        field: 'San Francisco',
+        name: 'San Francisco Temp',
+        color: '#2ca02c'
+      },
+      {
+        field: 'Austin',
+        name: 'Austin Temp',
+        color: '#7777ff',
+        area: true
+      }
+    ]
+
+// Your other setting props
+
+(() =&gt; {
+
+  React.render(
+    &lt;LineZoom {pass all your props and chartSeries here!} /&gt;,
+    document.getElementById('data_container')
+  )
+})()
+
+// And you have a beautiful chart in react!
+</code></pre>
+<p><a href="/zoom/line_multi">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT MULTI LINE ZOOM CHART!!</button>
+</a></p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="3"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Area Stack</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div style="margin-right: auto; margin-left: auto">
+                      <div id="data_zoom_area_stack"></div><script src="/react-d3-zoom/example/dist/min/zoom_area_stack.min.js"></script>
+                    </div>
+
+                    <div class="markdown-body">
+                      <p>Area Stack Zoom Component:</p>
+<pre><code class="lang-js">
+import {
+  default as React,
+  Component,
+} from 'react';
+
+import {
+  AreaStackZoom as AreaStackZoom
+} from 'react-d3-zoom';
+
+// Your Setting props!
+
+const chartSeries = [
+    {
+      field: 'IE',
+      name: 'IE browser'
+    },
+    {
+      field: 'Chrome',
+      name: 'Chrome browser'
+    },
+    {
+      field: 'Firefox'
+    },
+    {
+      field: 'Safari',
+      name: 'Safari browser'
+    },
+    {
+      field: 'Opera',
+      name: 'Opera browser'
+    }
+  ]
+
+// Your other setting props
+
+(() =&gt; {
+
+  React.render(
+    &lt;AreaStackZoom {pass all your props and chartSeries here!} /&gt;,
+    document.getElementById('data_container')
+  )
+})()
+
+// And you have a beautiful chart in react!
+</code></pre>
+<p><a href="/zoom/area_stack">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT AREA STACK ZOOM CHART!!</button>
+</a></p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="4"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Bar</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div style="margin-right: auto; margin-left: auto">
+                      <div id="data_zoom_bar"></div><script src="/react-d3-zoom/example/dist/min/zoom_bar.min.js"></script>
+                    </div>
+
+                    <div class="markdown-body">
+                      <p>Bar Zoom Component:</p>
+<pre><code class="lang-js">
+import {
+  default as React,
+  Component,
+} from 'react';
+
+
+import {
+  BarZoom as BarZoom
+} from 'react-d3-zoom';
+
+// Your Setting props!
+
+const chartSeries = [
+      {
+        field: 'frequency',
+        name: 'Frequency'
+      }
+    ]
+
+// Your other setting props
+
+(() =&gt; {
+
+  React.render(
+    &lt;BarZoom {pass all your props and chartSeries here!} /&gt;,
+    document.getElementById('data_container')
+  )
+})()
+
+// And you have a beautiful chart in react!
+</code></pre>
+<p><a href="/zoom/bar">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR ZOOM CHART!!</button>
+</a></p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="5"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Bar Group</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div style="margin-right: auto; margin-left: auto">
+                      <div id="data_zoom_bar_group"></div><script src="/react-d3-zoom/example/dist/min/zoom_bar_group.min.js"></script>
+                    </div>
+
+                    <div class="markdown-body">
+                      <p>Bar Group Zoom Chart Component:</p>
+<pre><code class="lang-js">
+import {
+  default as React,
+  Component,
+} from 'react';
+
+import {
+  BarGroupZoom as BarGroupZoom
+} from 'react-d3-zoom';
+
+// Your Setting props!
+
+const chartSeries = [
+      {
+        field: 'Under 5 Years',
+        name: 'Under 5 Years'
+      },
+      {
+        field: '5 to 13 Years',
+        name: '5 to 13 Years'
+      },
+      {
+        field: '14 to 17 Years',
+        name: '14 to 17 Years'
+      },
+      {
+        field: '18 to 24 Years',
+        name: '18 to 24 Years'
+      },
+      {
+        field: '25 to 44 Years',
+        name: '25 to 44 Years'
+      },
+      {
+        field: '45 to 64 Years',
+        name: '45 to 64 Years'
+      },
+      {
+        field: '65 Years and Over',
+        name: '65 Years and Over'
+      },
+
+    ]
+
+// Your other setting props
+
+(() =&gt; {
+
+  React.render(
+    &lt;BarGroupZoom {pass all your props and chartSeries here!} /&gt;,
+    document.getElementById('data_container')
+  )
+})()
+
+// And you have a beautiful chart in react!
+</code></pre>
+<p><a href="/tooltip/bar_group">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR GROUP ZOOM CHART!!</button>
+</a></p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="6"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Bar Stack</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div style="margin-right: auto; margin-left: auto">
+                      <div id="data_zoom_bar_stack"></div><script src="/react-d3-zoom/example/dist/min/zoom_bar_stack.min.js"></script>
+                    </div>
+
+                    <div class="markdown-body">
+                      <p>Bar Stack Zoom Chart Component:</p>
+<pre><code class="lang-js">
+import {
+  default as React,
+  Component,
+} from 'react';
+
+
+import {
+  BarStackZoom as BarStackZoom
+} from 'react-d3-zoom';
+
+// Your Setting props!
+
+const chartSeries = [
+      {
+        field: 'Under 5 Years',
+        name: 'Under 5 Years'
+      },
+      {
+        field: '5 to 13 Years',
+        name: '5 to 13 Years'
+      },
+      {
+        field: '14 to 17 Years',
+        name: '14 to 17 Years'
+      },
+      {
+        field: '18 to 24 Years',
+        name: '18 to 24 Years'
+      },
+      {
+        field: '25 to 44 Years',
+        name: '25 to 44 Years'
+      },
+      {
+        field: '45 to 64 Years',
+        name: '45 to 64 Years'
+      },
+      {
+        field: '65 Years and Over',
+        name: '65 Years and Over'
+      },
+
+    ]
+
+// Your other setting props
+
+
+(() =&gt; {
+
+  React.render(
+    &lt;BarStackZoom {pass all your props and chartSeries here!} /&gt;,
+    document.getElementById('data_container')
+  )
+})()
+
+
+// And you have a beautiful chart in react!
+</code></pre>
+<p><a href="/zoom/bar_stack">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR STACK ZOOM CHART!!</button>
+</a></p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="7"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Scatter</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div style="margin-right: auto; margin-left: auto">
+                      <div id="data_zoom_scatter"></div><script src="/react-d3-zoom/example/dist/min/zoom_scatter.min.js"></script>
+                    </div>
+
+                    <div class="markdown-body">
+                      <p>Scatter Plot Component:</p>
+<pre><code class="lang-js">
+
+import {
+  default as React,
+  Component,
+} from 'react';
+
+import {
+  ScatterZoom as ScatterZoom
+} from 'react-d3-zoom';
+
+
+// Your Setting props!
+
+const chartSeries = [
+      {
+        field: 'close',
+        name: 'Price',
+        color: '#ff7f0e',
+        area: true
+      }
+    ]
+
+// or multi
+
+const chartSeries = [
+      {
+        field: 'New York',
+        name: 'New York Temp',
+        color: '#ff7f0e',
+        symbol: "cross"
+      },
+      {
+        field: 'San Francisco',
+        name: 'San Francisco Temp',
+        color: '#2ca02c',
+        symbol: 'diamond'
+      },
+      {
+        field: 'Austin',
+        name: 'Austin Temp',
+        color: '#7777ff',
+        symbol: 'triangle-down'
+      }
+    ]
+
+// Your other setting props
+
+(() =&gt; {
+
+  React.render(
+    &lt;ScatterZoom {pass all your props and chartSeries here!} /&gt;,
+    document.getElementById('data_container')
+  )
+})()
+
+
+// And you have a beautiful chart in react!
+</code></pre>
+<p><a href="/zoom/scatter">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT SCATTER ZOOM PLOT!!</button>
+</a></p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+    <!-- END SERVICES -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <!-- FOOTER MENU -->
+                <div class="col-md-6">
+                </div>
+                <!-- END FOOTER MENU -->
+
+                <!-- FOOTER CONTENT -->
+                <div class="col-md-6">
+                    <div class="footer-content text-right">
+                        <p>© 2015 License Apache2.0, <a href="/">react-d3-brush</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- END FOOTER CONTENT -->
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- ./container -->
+    </footer>
+    <!-- js files -->
+    <script src="/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/prettyPhoto.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <!-- <script src="/js/main.js"></script> -->
+    <script src="/js/prism.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-67901975-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+</body></html>

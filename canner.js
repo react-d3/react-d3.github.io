@@ -119,6 +119,43 @@ tooltip_data.unshift({
   "md": "./react-d3-tooltip/README.md"
 })
 
+
+var zoom_charts = [{
+  "name": "Line",
+  "link": "line",
+},{
+  "name": "Line Multiple",
+  "link": "line_multi"
+},{
+  "name": "Area Stack",
+  "link": "area_stack"
+},{
+  "name": "Bar",
+  "link": "bar"
+},{
+  "name": "Bar Group",
+  "link": "bar_group"
+},{
+  "name": "Bar Stack",
+  "link": "bar_stack"
+},{
+  "name": "Scatter",
+  "link": "scatter"
+}];
+
+var zoom_data = zoom_charts.map(function(c) {
+  return {
+    "name": c.name,
+    "chart": "<div id='data_zoom_" + c.link + "'></div><script src='/react-d3-zoom/example/dist/min/zoom_" + c.link + ".min.js'></script>",
+    "md": "./zoom/md/" + c.link + ".md"
+  }
+})
+
+zoom_data.unshift({
+  "name": "introduction",
+  "md": "./react-d3-zoom/README.md"
+})
+
 module.exports = [
   {
     "layout": "./index.hbs",
@@ -145,7 +182,7 @@ module.exports = [
             "md": "./intro/intro_tooltip.md"
           }, {
             "name": "react-d3-zoom",
-            "md": "./react-d3-zoom/README.md"
+            "md": "./intro/intro_zoom.md"
           }, {
             "name": "react-d3-brush",
             "md": "./intro/intro_brush.md"
@@ -187,14 +224,30 @@ module.exports = [
     "filename": "./tooltip/index.html",
     "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
     "data": {
-        "item": "react-d3-brush",
-        "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
-        "slogan": "react-d3 tooltip charts",
-        "description": "Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.",
-        "banner-img": "/img/tooltip/cover.png",
-        "product": {
-          "title": "react-d3",
-          "data": tooltip_data
-        }
+      "item": "react-d3-brush",
+      "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+      "slogan": "react-d3 tooltip charts",
+      "description": "Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.",
+      "banner-img": "/img/tooltip/cover.png",
+      "product": {
+        "title": "react-d3",
+        "data": tooltip_data
+      }
     }
-  }]
+  }, {
+    "layout": "./gallery.hbs",
+    "filename": "./zoom/index.html",
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "data": {
+      "item": "react-d3-brush",
+      "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+      "slogan": "react-d3 zoom charts",
+      "description": "Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.",
+      "banner-img": "/img/zoom/cover.png",
+      "product": {
+        "title": "react-d3",
+        "data": zoom_data
+      }
+    }
+  }
+]
