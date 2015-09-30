@@ -235,14 +235,11 @@ export default class NewChart extends Component {
                 <h2 class="section-title wow fadeIn">react-d3-basic</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div class="markdown-body">
-                      <h1 id="react-d3-basics">react-d3-basics</h1>
-<p>A solution for building reusable components for d3 charts.</p>
-<h2 id="install">Install</h2>
-<pre><code>npm install --save react-d3-basic
-</code></pre><h2 id="support-charts">Support Charts</h2>
+                      <h1 id="react-d3-basic">react-d3-basic</h1>
+<p>react-d3 basic charts, charts that we support:</p>
 <ul>
 <li>Line Chart</li>
-<li>Multipule Line Chart</li>
+<li>Multiple Line Chart</li>
 <li>Scatter Plot</li>
 <li>Area Chart</li>
 <li>Area Stack Chart</li>
@@ -252,16 +249,9 @@ export default class NewChart extends Component {
 <li>Pie Chart</li>
 <li>Donut Chart</li>
 </ul>
-<p>See examples in <a href="http://react-d3.github.io/react-d3-basics/gallery.html">Gallery</a></p>
-<h2 id="support-chart-with-brush">Support Chart with Brush</h2>
-<ul>
-<li>Line Chart</li>
-<li>Multipule Line Chart</li>
-<li>Scatter Plot</li>
-<li>Area Stack Chart</li>
-</ul>
-<p>See examples in <a href="http://react-d3.github.io/react-d3-basics/brush_gallery.html">Gallery</a></p>
-<h2 id="docs">Docs</h2>
+<h2 id="install">Install</h2>
+<pre><code>npm install --save react-d3-basic
+</code></pre><h2 id="docs">Docs</h2>
 <h3 id="components">Components</h3>
 <p>Chart shapes components</p>
 <ul>
@@ -292,35 +282,6 @@ export default class NewChart extends Component {
 <li><a href="./docs/charts/scatter_chart.md">Scatter Plot</a></li>
 <li><a href="./docs/charts/pie_chart.md">Pie Chart</a></li>
 <li><a href="./docs/charts/donut_chart.md">Donut Chart</a></li>
-</ul>
-<h2 id="why-">Why?</h2>
-<h4 id="q1-why-building-another-reusable-chart-library-">Q1: Why building another reusable chart library?</h4>
-<p>Nowadays, we had many great libraries to build a reusable charts, such as <code>nvd3</code>, <code>c3</code>, <code>highchart</code>... etc. Those are really great! But what <code>react-d3</code> aimed to build is not only a reusable chart library, but also building reusable chart <strong>components</strong> for further usages.</p>
-<p>For instance, if we want to build a new chart on top of <code>react-d3</code> it is super easy, just call <code>&lt;xaxis&gt;</code>, <code>&lt;yaxis&gt;</code> and pass proper props. and we will build your xaxis and yaxis for you! This concept of building chart components might be a much better solution of building a whole new reusable chart community.</p>
-<h4 id="q2-what-are-some-other-common-problems-that-building-d3-charts-">Q2: What are some other common problems that building d3 charts?</h4>
-<ul>
-<li><p><strong>Reusability</strong> : You have to build your chart over and over again. <code>react-d3</code> is using <code>react</code>, <code>ES6</code> technologies make you easily to import and export your components.</p>
-</li>
-<li><p><strong>Difficult to track data flow</strong> : It is so easy to mess up with your data, because most of the time you are manipulating data.</p>
-</li>
-<li><p><strong>Sync your data to the svgs</strong> : When you finally change your data to a specific format, it's also cause many problems when updating data to your svgs.  Where should I update? Did it update? What data is now? <code>react-d3</code> help you solve the problems.</p>
-</li>
-<li><p><strong>Checking your input data</strong> : Inputting the wrong data, will break your chart easily without knowing the reason.</p>
-</li>
-</ul>
-<h4 id="q3-why-react-">Q3: Why react?</h4>
-<p>There are many main reasons using react as a basic structure.</p>
-<ul>
-<li><p><strong>PropType Check</strong> : React build-in <code>PropTypes</code> for checking props. So now if you pass the wrong format your console will tell you to change to proper prop.</p>
-</li>
-<li><p><strong>Props</strong> : React props make you know your data better. Because props are like Immutable data in react components. So you can track your data more easily.</p>
-</li>
-<li><p><strong>State</strong> : State make d3 much more powerful. Because when state change react will re-render your component with the optimal speed. And also it can make you</p>
-</li>
-<li><p><strong>Components</strong> : Components make it easy to reuse your charts again and again.</p>
-</li>
-<li><p><strong>Rendering</strong> : By default react re-render your component when every props and states change, which make d3 more awesome. Because we can have less problem on making sure if the data is up-to-date or not.</p>
-</li>
 </ul>
 <h2 id="license">License</h2>
 <p>Apache 2.0</p>

@@ -4,3 +4,12 @@
 [submodule "react-d3-tooltip"]
 	path = react-d3-tooltip
 	url = https://github.com/react-d3/react-d3-tooltip
+[submodule "react-d3-zoom"]
+	path = react-d3-zoom
+	url = https://github.com/react-d3/react-d3-zoom
+[submodule "react-d3-basic"]
+	path = react-d3-basic
+	url = https://github.com/react-d3/react-d3-basic
+[submodule "react-d3-brush"]
+	path = react-d3-brush
+	url = https://github.com/react-d3/react-d3-brush

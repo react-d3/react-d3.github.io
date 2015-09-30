@@ -4,7 +4,7 @@
   "description": "Official site",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "example": "cp -r ./node_modules/react-d3-basic/"
+    "init": "git submodule init && git submodule update",
   },
   "repository": {
     "type": "git",
