@@ -1,6 +1,6 @@
 <html><head>
     <meta charset="utf-8">
-    <title>react-d3</title>
+    <title>react-d3-brush</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -46,7 +46,7 @@
                     </button>
 
                     <!-- LOGO -->
-                    <a class="navbar-brand page-scroll" href="#page-top">
+                    <a class="navbar-brand page-scroll" href="/">
                         <img src="https://avatars0.githubusercontent.com/u/14354544?v=3&amp;s=200" alt="" style="width:50px">
                     </a>
                     <!-- END LOGO -->
@@ -98,7 +98,7 @@
                     <!-- HOME FEATURE IMAGE -->
                     <div class="col-md-10 col-sm-10 col-xs-12">
                         <div class="home-feature pull-right center-block wow bounceIn" data-wow-duration="1s" data-wow-delay="1s">
-                            <img class="img-responsive" src="/img/basic/cover.png" alt="">
+                            <img class="img-responsive" src="img/basic/cover.png" alt="">
                         </div>
                     </div>
                     <!-- END HOME FEATURE IMAGE -->
@@ -236,46 +236,55 @@ export default class NewChart extends Component {
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div class="markdown-body">
                       <h1 id="react-d3-basic">react-d3-basic</h1>
-<p><a href="/basic">
-  <button type="button" class="btn btn-success">READ MORE DOCUMENT!!!!</button>
-</a></p>
 <p>react-d3 basic charts, charts that we support:</p>
 <ul>
+<li>Line Chart</li>
 <li>Multiple Line Chart</li>
-</ul>
-<p><img src="/img/basic/multi_line.png" alt="LineChart"></p>
-<ul>
 <li>Scatter Plot</li>
-</ul>
-<p><img src="/img/basic/scatter.png" alt="ScatterChart"></p>
-<ul>
 <li>Area Chart</li>
-</ul>
-<p><img src="/img/basic/area.png" alt="AreaChart"></p>
-<ul>
 <li>Area Stack Chart</li>
-</ul>
-<p><img src="/img/basic/stack_area.png" alt="AreaStackChart"></p>
-<ul>
 <li>Bar Chart</li>
-</ul>
-<p><img src="/img/basic/bar.png" alt="BarChart"></p>
-<ul>
 <li>Bar Group Chart</li>
-</ul>
-<p><img src="/img/basic/bar_group.png" alt="BarGroupChart"></p>
-<ul>
 <li>Bar Stack Chart</li>
-</ul>
-<p><img src="/img/basic/bar_stack.png" alt="BarStackChart"></p>
-<ul>
 <li>Pie Chart</li>
-</ul>
-<p><img src="/img/basic/pie.png" alt="PieChart"></p>
-<ul>
 <li>Donut Chart</li>
 </ul>
-<p><img src="/img/basic/donut.png" alt="DonutChart"></p>
+<h2 id="install">Install</h2>
+<pre><code>npm install --save react-d3-basic
+</code></pre><h2 id="docs">Docs</h2>
+<h3 id="components">Components</h3>
+<p>Chart shapes components</p>
+<ul>
+<li><a href="./docs/components/area.md">area</a></li>
+<li><a href="./docs/components/area_stack.md">area stack</a></li>
+<li><a href="./docs/components/bar.md">bar</a></li>
+<li><a href="./docs/components/bar_group.md">bar group</a></li>
+<li><a href="./docs/components/bar_stack.md">bar stack</a></li>
+<li><a href="./docs/components/line.md">line</a></li>
+<li><a href="./docs/components/pie.md">pie</a></li>
+<li><a href="./docs/components/scatter.md">scatter</a></li>
+</ul>
+<h3 id="inherit">inherit</h3>
+<p>Inherit initial props, state, functions...</p>
+<ul>
+<li><a href="./docs/inherit/pie.md">pieLayout</a></li>
+<li><a href="./docs/inherit/xyplot.md">xyPlot</a></li>
+</ul>
+<h3 id="charts">Charts</h3>
+<p>Building Charts.</p>
+<ul>
+<li><a href="./docs/charts/line_chart.md">Line Chart</a></li>
+<li><a href="./docs/charts/area_chart.md">Area Chart</a></li>
+<li><a href="./docs/charts/area_stack_chart.md">Area Stack Chart</a></li>
+<li><a href="./docs/charts/bar_chart.md">Bar Chart</a></li>
+<li><a href="./docs/charts/bar_group_chart.md">Bar Group Chart</a></li>
+<li><a href="./docs/charts/bar_stack_chart.md">Bar Stack Chart</a></li>
+<li><a href="./docs/charts/scatter_chart.md">Scatter Plot</a></li>
+<li><a href="./docs/charts/pie_chart.md">Pie Chart</a></li>
+<li><a href="./docs/charts/donut_chart.md">Donut Chart</a></li>
+</ul>
+<h2 id="license">License</h2>
+<p>Apache 2.0</p>
 
                     </div>
                 </div>
@@ -374,7 +383,7 @@ export default class NewChart extends Component {
                 <!-- FOOTER CONTENT -->
                 <div class="col-md-6">
                     <div class="footer-content text-right">
-                        <p>© 2015 License Apache2.0, <a href="/">react-d3</a>
+                        <p>© 2015 License Apache2.0, <a href="/">react-d3-brush</a>
                         </p>
                     </div>
                 </div>
