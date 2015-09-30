@@ -1,0 +1,6 @@
+[submodule "react-d3-core"]
+	path = react-d3-core
+	url = https://github.com/react-d3/react-d3-core
+[submodule "react-d3-tooltip"]
+	path = react-d3-tooltip
+	url = https://github.com/react-d3/react-d3-tooltip
