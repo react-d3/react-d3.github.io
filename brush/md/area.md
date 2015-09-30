@@ -30,7 +30,7 @@ const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
 (() => {
 
   React.render(
-    <LineChart {pass all your props and chartSeries here!} />,
+    <LineBrush {pass all your props and chartSeries here!} />,
     document.getElementById('data_container')
   )
 })()
