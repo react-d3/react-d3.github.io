@@ -57,26 +57,20 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="hidden">
-                            <a href="#page-top"></a>
+                          <a href="#page-top"></a>
                         </li>
-                            <li><a class="page-scroll" href="#0">introduction</a>
-                            </li>
-                            <li><a class="page-scroll" href="#1">Line</a>
-                            </li>
-                            <li><a class="page-scroll" href="#2">Line Multiple</a>
-                            </li>
-                            <li><a class="page-scroll" href="#3">Area Stack</a>
-                            </li>
-                            <li><a class="page-scroll" href="#4">Bar</a>
-                            </li>
-                            <li><a class="page-scroll" href="#5">Bar Group</a>
-                            </li>
-                            <li><a class="page-scroll" href="#6">Bar Stack</a>
-                            </li>
-                            <li><a class="page-scroll" href="#7">Scatter</a>
-                            </li>
-                            <li><a class="page-scroll" href="#8">pie</a>
-                            </li>
+                        <li>
+                          <a href="/">Home</a>
+                        </li>
+                        <li>
+                          <a href="/get_start">Get Started</a>
+                        </li>
+                        <li>
+                          <a href="/components">Components</a>
+                        </li>
+                        <li>
+                          <a href="/qa">QA</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- TOGGLE NAV -->
@@ -87,34 +81,6 @@
         <!-- END NAVIGATION -->
     </header>
 
-    <!-- HOME -->
-    <div id="home-area">
-        <div class="overlay">
-            <div class="container">
-                <div class="row">
-                    <!-- HOME CONTENT -->
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="home-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
-                            <h1>react-d3 tooltip charts</h1>
-                            <p>Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.</p>
-                        </div>
-                    </div>
-                    <!-- END HOME CONTENT -->
-
-                    <!-- HOME FEATURE IMAGE -->
-                    <div class="col-md-10 col-sm-10 col-xs-12">
-                        <div class="home-feature pull-right center-block wow bounceIn" data-wow-duration="1s" data-wow-delay="1s">
-                            <img class="img-responsive" src="/img/tooltip/cover.png" alt="">
-                        </div>
-                    </div>
-                    <!-- END HOME FEATURE IMAGE -->
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END HOME -->
-
     <!-- SERVICES -->
         <a name="0"></a>
         <section id="services" class="section text-center">
@@ -123,23 +89,22 @@
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
 
                     <div class="markdown-body">
-                      <h1 id="react-d3-tooltip">react-d3-tooltip</h1>
-<p><a href="https://gemnasium.com/react-d3/react-d3-tooltip"><img src="https://gemnasium.com/react-d3/react-d3-tooltip.svg" alt="Dependency Status"></a></p>
-<p><code>react-d3</code> tooltip implementation.</p>
+                      <h1 id="react-d3-brush">react-d3-brush</h1>
+<p><a href="https://gemnasium.com/react-d3/react-d3-brush"><img src="https://gemnasium.com/react-d3/react-d3-brush.svg" alt="Dependency Status"></a></p>
+<p><code>react-d3</code> brush implementation.</p>
 <h2 id="install">Install</h2>
-<pre><code>npm install --save react-d3-tooltip
-</code></pre><h2 id="support-tooltip-component">Support Tooltip Component</h2>
+<pre><code>npm install --save react-d3-brush
+</code></pre><h2 id="support-brush-component">Support Brush Component</h2>
 <ul>
-<li>Line Chart: export as <code>LineTooltip</code></li>
-<li>Area Stack Chart: export as <code>AreaStackTooltip</code></li>
-<li>Scatter Plot: export as <code>ScatterTooltip</code></li>
-<li>Bar Chart: export as <code>BarTooltip</code></li>
-<li>Bar Stack: export as <code>BarStackTooltip</code></li>
-<li>Bar Group: export as <code>BarGroupTooltip</code></li>
-<li>Pie Chart: export as <code>PieTooltip</code></li>
+<li>Line Chart: export as <code>LineBrush</code></li>
+<li>Area Stack Chart: export as <code>AreaStackBrush</code></li>
+<li>Scatter Plot: export as <code>ScatterBrush</code></li>
+<li>Bar Chart: export as <code>BarBrush</code></li>
+<li>Bar Stack: export as <code>BarStackBrush</code></li>
+<li>Bar Group: export as <code>BarGroupBrush</code></li>
 </ul>
 <h2 id="gallery">Gallery</h2>
-<p><img src="http://www.reactd3.org/img/tooltip/cover.png" alt="img"></p>
+<p><img src="http://www.reactd3.org/img/brush/cover.png" alt="img"></p>
 <h2 id="license">License</h2>
 <p>Apache 2.0</p>
 
@@ -155,11 +120,11 @@
                 <h2 class="section-title wow fadeIn">Line</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_tooltip_line"></div><script src="/react-d3-tooltip/example/dist/min/tooltip_line.min.js"></script>
+                      <div id="data_brush_line"></div><script src="/react-d3-brush/example/dist/min/brush_line.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Line Chart Component:</p>
+                      <p>Line Chart with Brush Component:</p>
 <pre><code class="lang-js">
 import {
   default as React,
@@ -167,8 +132,8 @@ import {
 } from 'react';
 
 import {
-  LineTooltip as LineTooltip
-} from 'react-d3-tooltip';
+  LineBrush as LineBrush
+} from 'react-d3-brush';
 
 // Your Setting props!
 
@@ -180,21 +145,23 @@ const chartSeries = [
       }
     ],
 
+const brushHeight = 200;
+const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
 
-// Your other setting props
+// Your other setting props, such as essential width, height...
 
 (() =&gt; {
 
   React.render(
-    &lt;LineTooltip {pass all your props and chartSeries here!} /&gt;,
+    &lt;LineBrush {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/tooltip/line">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT LINE TOOLTIP CHART!!</button>
+<p><a href="/brush/line">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BRUSH LINE CHART!!</button>
 </a></p>
 
                     </div>
@@ -209,11 +176,11 @@ const chartSeries = [
                 <h2 class="section-title wow fadeIn">Line Multiple</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_tooltip_line_multi"></div><script src="/react-d3-tooltip/example/dist/min/tooltip_line_multi.min.js"></script>
+                      <div id="data_brush_line_multi"></div><script src="/react-d3-brush/example/dist/min/brush_line_multi.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Multiple Line and Area Chart Component:</p>
+                      <p>Multiple Line and Area Chart with Brush Component:</p>
 <pre><code class="lang-js">
 import {
   default as React,
@@ -222,8 +189,8 @@ import {
 
 
 import {
-  LineTooltip as LineTooltip
-} from 'react-d3-tooltip';
+  LineBrush as LineBrush
+} from 'react-d3-brush';
 
 
 // Your Setting props!
@@ -247,20 +214,23 @@ const chartSeries = [
       }
     ]
 
-// Your other setting props
+const brushHeight = 200;
+const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
+
+// Your other setting props, such as essential width, height...
 
 (() =&gt; {
 
   React.render(
-    &lt;LineTooltip {pass all your props and chartSeries here!} /&gt;,
+    &lt;LineBrush {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/tooltip/line_multi">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT MULTI LINE TOOLTIP CHART!!</button>
+<p><a href="/brush/line_multi">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BRUSH MULTI LINE CHART!!</button>
 </a></p>
 
                     </div>
@@ -275,11 +245,11 @@ const chartSeries = [
                 <h2 class="section-title wow fadeIn">Area Stack</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_tooltip_area_stack"></div><script src="/react-d3-tooltip/example/dist/min/tooltip_area_stack.min.js"></script>
+                      <div id="data_brush_area_stack"></div><script src="/react-d3-brush/example/dist/min/brush_area_stack.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Area Stack Tooltip Component:</p>
+                      <p>Area Stack with Brush Component:</p>
 <pre><code class="lang-js">
 import {
   default as React,
@@ -287,8 +257,8 @@ import {
 } from 'react';
 
 import {
-  AreaStackTooltip as AreaStackTooltip
-} from 'react-d3-tooltip';
+  AreaStackBrush as AreaStackBrush
+} from 'react-d3-brush';
 
 // Your Setting props!
 
@@ -314,20 +284,23 @@ const chartSeries = [
     }
   ]
 
-// Your other setting props
+const brushHeight = 200;
+const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
+
+// Your other setting props, such as essential width, height...
 
 (() =&gt; {
 
   React.render(
-    &lt;AreaStackTooltip {pass all your props and chartSeries here!} /&gt;,
+    &lt;AreaStackBrush {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/tooltip/area_stack">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT AREA STACK TOOLTIP CHART!!</button>
+<p><a href="/brush/area_stack">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BRUSH AREA STACK CHART!!</button>
 </a></p>
 
                     </div>
@@ -342,11 +315,11 @@ const chartSeries = [
                 <h2 class="section-title wow fadeIn">Bar</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_tooltip_bar"></div><script src="/react-d3-tooltip/example/dist/min/tooltip_bar.min.js"></script>
+                      <div id="data_brush_bar"></div><script src="/react-d3-brush/example/dist/min/brush_bar.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Bar Tooltip Component:</p>
+                      <p>Bar with Brush Component:</p>
 <pre><code class="lang-js">
 import {
   default as React,
@@ -355,8 +328,8 @@ import {
 
 
 import {
-  BarTooltip as BarTooltip
-} from 'react-d3-tooltip';
+  BarBrush as BarBrush
+} from 'react-d3-brush';
 
 // Your Setting props!
 
@@ -367,20 +340,23 @@ const chartSeries = [
       }
     ]
 
-// Your other setting props
+const brushHeight = 200;
+const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
+
+// Your other setting props, such as essential width, height...
 
 (() =&gt; {
 
   React.render(
-    &lt;BarTooltip {pass all your props and chartSeries here!} /&gt;,
+    &lt;BarBrush {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/tooltip/bar">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR TOOLTIP CHART!!</button>
+<p><a href="/brush/bar">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BRUSH BAR CHART!!</button>
 </a></p>
 
                     </div>
@@ -395,11 +371,11 @@ const chartSeries = [
                 <h2 class="section-title wow fadeIn">Bar Group</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_tooltip_bar_group"></div><script src="/react-d3-tooltip/example/dist/min/tooltip_bar_group.min.js"></script>
+                      <div id="data_brush_bar_group"></div><script src="/react-d3-brush/example/dist/min/brush_bar_group.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Bar Group Tooltip Chart Component:</p>
+                      <p>Bar Group Chart with Brush Component:</p>
 <pre><code class="lang-js">
 import {
   default as React,
@@ -407,8 +383,8 @@ import {
 } from 'react';
 
 import {
-  BarGroupTooltip as BarGroupTooltip
-} from 'react-d3-tooltip';
+  BarGroupBrush as BarGroupBrush
+} from 'react-d3-brush';
 
 // Your Setting props!
 
@@ -444,20 +420,23 @@ const chartSeries = [
 
     ]
 
-// Your other setting props
+const brushHeight = 200;
+const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
+
+// Your other setting props, such as essential width, height...
 
 (() =&gt; {
 
   React.render(
-    &lt;BarGroupTooltip {pass all your props and chartSeries here!} /&gt;,
+    &lt;BarGroupBrush {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/tooltip/bar_group">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR GROUP TOOLTIP CHART!!</button>
+<p><a href="/brush/bar_group">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR GROUP CHART!!</button>
 </a></p>
 
                     </div>
@@ -472,11 +451,11 @@ const chartSeries = [
                 <h2 class="section-title wow fadeIn">Bar Stack</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_tooltip_bar_stack"></div><script src="/react-d3-tooltip/example/dist/min/tooltip_bar_stack.min.js"></script>
+                      <div id="data_brush_bar_stack"></div><script src="/react-d3-brush/example/dist/min/brush_bar_stack.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Bar Stack Tooltip Chart Component:</p>
+                      <p>Bar Stack Chart with Brush Component:</p>
 <pre><code class="lang-js">
 import {
   default as React,
@@ -485,8 +464,8 @@ import {
 
 
 import {
-  BarStackTooltip as BarStackTooltip
-} from 'react-d3-tooltip';
+  BarStackBrush as BarStackBrush
+} from 'react-d3-brush';
 
 // Your Setting props!
 
@@ -522,13 +501,15 @@ const chartSeries = [
 
     ]
 
-// Your other setting props
+const brushHeight = 200;
+const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
 
+// Your other setting props, such as essential width, height...
 
 (() =&gt; {
 
   React.render(
-    &lt;BarStackTooltip {pass all your props and chartSeries here!} /&gt;,
+    &lt;BarStackBrush {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
@@ -536,8 +517,8 @@ const chartSeries = [
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/tooltip/bar_stack">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR STACK TOOLTIP CHART!!</button>
+<p><a href="/brush/bar_stack">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BRUSH BAR STACK CHART!!</button>
 </a></p>
 
                     </div>
@@ -552,11 +533,11 @@ const chartSeries = [
                 <h2 class="section-title wow fadeIn">Scatter</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_tooltip_scatter"></div><script src="/react-d3-tooltip/example/dist/min/tooltip_scatter.min.js"></script>
+                      <div id="data_brush_scatter"></div><script src="/react-d3-brush/example/dist/min/brush_scatter.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Scatter Plot Component:</p>
+                      <p>Scatter Plot with Brush Component:</p>
 <pre><code class="lang-js">
 
 import {
@@ -565,8 +546,8 @@ import {
 } from 'react';
 
 import {
-  ScatterTooltip as ScatterTooltip
-} from 'react-d3-tooltip';
+  ScatterBrush as ScatterBrush
+} from 'react-d3-brush';
 
 
 // Your Setting props!
@@ -603,12 +584,15 @@ const chartSeries = [
       }
     ]
 
-// Your other setting props
+const brushHeight = 200;
+const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
+
+// Your other setting props, such as essential width, height...
 
 (() =&gt; {
 
   React.render(
-    &lt;ScatterTooltip {pass all your props and chartSeries here!} /&gt;,
+    &lt;ScatterBrush {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
@@ -616,82 +600,8 @@ const chartSeries = [
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/tooltip/scatter">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT SCATTER TOOLTIP PLOT!!</button>
-</a></p>
-
-                    </div>
-                </div>
-                <!--.row-->
-            </div>
-            <!--/.container -->
-        </section>
-        <a name="8"></a>
-        <section id="services" class="section text-center">
-            <div class="container">
-                <h2 class="section-title wow fadeIn">pie</h2>
-                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                    <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_tooltip_pie"></div><script src="/react-d3-tooltip/example/dist/min/tooltip_pie.min.js"></script>
-                    </div>
-
-                    <div class="markdown-body">
-                      <p>Pie Chart Component:</p>
-<pre><code class="lang-js">
-import {
-  default as React,
-  Component,
-} from 'react';
-
-
-import {
-  PieTooltip as PieTooltip
-} from 'react-d3-tooltip';
-
-// Your Setting props!
-
-const chartSeries = [
-      {
-        "field": "&lt;5",
-        "name": "less than 5"
-      },
-      {
-        "field": "5-13",
-        "name": "5 to 13"
-      },
-      {
-        "field": "14-17",
-        "name": "14 to 17"
-      },
-      {
-        "field": "18-24",
-        "name": "18 to 24"
-      },
-      {
-        "field": "25-44",
-        "name": "25 to 44"
-      },
-      {
-        "field": "45-64",
-        "name": "45 to 64"
-      }
-    ]
-
-// Your other setting props
-
-(() =&gt; {
-
-  React.render(
-    &lt;PieTooltip {pass all your props and chartSeries here!} /&gt;,
-    document.getElementById('data_container')
-  )
-})()
-
-
-// And you have a beautiful chart in react!
-</code></pre>
-<p><a href="/tooltip/pie">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT PIE TOOLTIP CHART!!</button>
+<p><a href="/basic/scatter">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BRUSH SCATTER PLOT!!</button>
 </a></p>
 
                     </div>
@@ -715,7 +625,7 @@ const chartSeries = [
                 <!-- FOOTER CONTENT -->
                 <div class="col-md-6">
                     <div class="footer-content text-right">
-                        <p>© 2015 License Apache2.0, <a href="/">react-d3-brush</a>
+                        <p>© 2015 License Apache2.0, <a href="/">react-d3</a>
                         </p>
                     </div>
                 </div>

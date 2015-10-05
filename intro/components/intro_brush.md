@@ -2,7 +2,7 @@
 
 `react-d3` brush implementation.
 
-<a href="/brush">
+<a href="/docs/brush">
   <button type="button" class="btn btn-success">READ MORE DOCUMENT!!!!</button>
 </a>
 

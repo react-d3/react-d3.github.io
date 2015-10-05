@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<!--<![endif]-->
-
-<head>
+<html><head>
     <meta charset="utf-8">
-    <title>{{item}}</title>
+    <title>Getting started react-d3</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Google fonts - which you want to use - (rest you can just remove) -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -54,7 +47,7 @@
 
                     <!-- LOGO -->
                     <a class="navbar-brand page-scroll" href="/">
-                        <img src="{{logo}}" alt="" style="width:50px">
+                        <img src="https://avatars0.githubusercontent.com/u/14354544?v=3&amp;s=200" alt="" style="width:50px">
                     </a>
                     <!-- END LOGO -->
 
@@ -89,32 +82,20 @@
     </header>
 
     <!-- SERVICES -->
-    {{#if product}}
-      {{#each product.data}}
-        <a name="{{@index}}"></a>
+        <a name="0"></a>
         <section id="services" class="section text-center">
             <div class="container">
-                <h2 class="section-title wow fadeIn">{{name}}</h2>
+                <h2 class="section-title wow fadeIn">Getting Started</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                  {{#if chart}}
-                    <div style="margin-right: auto; margin-left: auto">
-                      {{{chart}}}
-                    </div>
-                  {{/if}}
-                  {{#if md}}
 
                     <div class="markdown-body">
-                      <section data-markdown="{{md}}" >
-                      </section>
+                      
                     </div>
-                  {{/if}}
                 </div>
                 <!--.row-->
             </div>
             <!--/.container -->
         </section>
-      {{/each}}
-    {{/if}}
     <!-- END SERVICES -->
 
     <!-- FOOTER -->
@@ -130,7 +111,7 @@
                 <!-- FOOTER CONTENT -->
                 <div class="col-md-6">
                     <div class="footer-content text-right">
-                        <p>&copy; 2015 License Apache2.0, <a href="/">react-d3</a>
+                        <p>© 2015 License Apache2.0, <a href="/">react-d3</a>
                         </p>
                     </div>
                 </div>
@@ -158,4 +139,5 @@
       ga('create', 'UA-67901975-1', 'auto');
       ga('send', 'pageview');
     </script>
-</body>
+
+</body></html>

@@ -8,6 +8,6 @@
 !!import '../react-d3-example/line/es5/line_garbage.js';
 
 
-<a href="/basic">
+<a href="/docs/basic">
   <button type="button" class="btn btn-danger btn-lg">See more Charts!</button>
 </a>

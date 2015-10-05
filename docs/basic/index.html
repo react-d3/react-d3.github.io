@@ -1,6 +1,6 @@
 <html><head>
     <meta charset="utf-8">
-    <title>react-d3-brush</title>
+    <title>react-d3-basic</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -57,24 +57,20 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="hidden">
-                            <a href="#page-top"></a>
+                          <a href="#page-top"></a>
                         </li>
-                            <li><a class="page-scroll" href="#0">introduction</a>
-                            </li>
-                            <li><a class="page-scroll" href="#1">Line</a>
-                            </li>
-                            <li><a class="page-scroll" href="#2">Line Multiple</a>
-                            </li>
-                            <li><a class="page-scroll" href="#3">Area Stack</a>
-                            </li>
-                            <li><a class="page-scroll" href="#4">Bar</a>
-                            </li>
-                            <li><a class="page-scroll" href="#5">Bar Group</a>
-                            </li>
-                            <li><a class="page-scroll" href="#6">Bar Stack</a>
-                            </li>
-                            <li><a class="page-scroll" href="#7">Scatter</a>
-                            </li>
+                        <li>
+                          <a href="/">Home</a>
+                        </li>
+                        <li>
+                          <a href="/get_start">Get Started</a>
+                        </li>
+                        <li>
+                          <a href="/components">Components</a>
+                        </li>
+                        <li>
+                          <a href="/qa">QA</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- TOGGLE NAV -->
@@ -85,34 +81,6 @@
         <!-- END NAVIGATION -->
     </header>
 
-    <!-- HOME -->
-    <div id="home-area">
-        <div class="overlay">
-            <div class="container">
-                <div class="row">
-                    <!-- HOME CONTENT -->
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="home-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
-                            <h1>react-d3 zoom charts</h1>
-                            <p>Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.</p>
-                        </div>
-                    </div>
-                    <!-- END HOME CONTENT -->
-
-                    <!-- HOME FEATURE IMAGE -->
-                    <div class="col-md-10 col-sm-10 col-xs-12">
-                        <div class="home-feature pull-right center-block wow bounceIn" data-wow-duration="1s" data-wow-delay="1s">
-                            <img class="img-responsive" src="/img/zoom/cover.png" alt="">
-                        </div>
-                    </div>
-                    <!-- END HOME FEATURE IMAGE -->
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END HOME -->
-
     <!-- SERVICES -->
         <a name="0"></a>
         <section id="services" class="section text-center">
@@ -121,22 +89,57 @@
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
 
                     <div class="markdown-body">
-                      <h1 id="react-d3-zoom">react-d3-zoom</h1>
-<p><a href="https://gemnasium.com/react-d3/react-d3-zoom"><img src="https://gemnasium.com/react-d3/react-d3-zoom.svg" alt="Dependency Status"></a></p>
-<p><code>react-d3</code> zoom implementation.</p>
-<h2 id="install">Install</h2>
-<pre><code>npm install --save react-d3-zoom
-</code></pre><h2 id="support-zoom-component">Support Zoom Component</h2>
+                      <h1 id="react-d3-basic">react-d3-basic</h1>
+<p><a href="https://gemnasium.com/react-d3/react-d3-basic"><img src="https://gemnasium.com/react-d3/react-d3-basic.svg" alt="Dependency Status"></a></p>
+<p>react-d3 basic charts, charts that we support:</p>
 <ul>
-<li>Line Chart: export as <code>LineZoom</code></li>
-<li>Area Stack Chart: export as <code>AreaStackZoom</code></li>
-<li>Scatter Plot: export as <code>ScatterZoom</code></li>
-<li>Bar Chart: export as <code>BarZoom</code></li>
-<li>Bar Stack: export as <code>BarStackZoom</code></li>
-<li>Bar Group: export as <code>BarGroupZoom</code></li>
+<li>Line Chart</li>
+<li>Multiple Line Chart</li>
+<li>Scatter Plot</li>
+<li>Area Chart</li>
+<li>Area Stack Chart</li>
+<li>Bar Chart</li>
+<li>Bar Group Chart</li>
+<li>Bar Stack Chart</li>
+<li>Pie Chart</li>
+<li>Donut Chart</li>
+</ul>
+<h2 id="install">Install</h2>
+<pre><code>npm install --save react-d3-basic
+</code></pre><h2 id="docs">Docs</h2>
+<h3 id="charts">Charts</h3>
+<p>Building Charts.</p>
+<ul>
+<li><a href="./docs/charts/line_chart.md">Line Chart</a></li>
+<li><a href="./docs/charts/area_chart.md">Area Chart</a></li>
+<li><a href="./docs/charts/area_stack_chart.md">Area Stack Chart</a></li>
+<li><a href="./docs/charts/bar_chart.md">Bar Chart</a></li>
+<li><a href="./docs/charts/bar_group_chart.md">Bar Group Chart</a></li>
+<li><a href="./docs/charts/bar_stack_chart.md">Bar Stack Chart</a></li>
+<li><a href="./docs/charts/scatter_chart.md">Scatter Plot</a></li>
+<li><a href="./docs/charts/pie_chart.md">Pie Chart</a></li>
+<li><a href="./docs/charts/donut_chart.md">Donut Chart</a></li>
+</ul>
+<h3 id="detail-components">Detail Components</h3>
+<p>Chart shapes components</p>
+<ul>
+<li><a href="./docs/components/area.md">area</a></li>
+<li><a href="./docs/components/area_stack.md">area stack</a></li>
+<li><a href="./docs/components/bar.md">bar</a></li>
+<li><a href="./docs/components/bar_group.md">bar group</a></li>
+<li><a href="./docs/components/bar_stack.md">bar stack</a></li>
+<li><a href="./docs/components/line.md">line</a></li>
+<li><a href="./docs/components/pie.md">pie</a></li>
+<li><a href="./docs/components/scatter.md">scatter</a></li>
+</ul>
+<h3 id="inherit">inherit</h3>
+<p>Inherit initial props, state, functions...</p>
+<ul>
+<li><a href="./docs/inherit/pie.md">pieLayout</a></li>
+<li><a href="./docs/inherit/xyplot.md">xyPlot</a></li>
 </ul>
 <h2 id="gallery">Gallery</h2>
-<p><img src="http://www.reactd3.org/img/zoom/cover.png" alt="img"></p>
+<p><img src="http://www.reactd3.org/img/basic/cover.png" alt="img"></p>
 <h2 id="license">License</h2>
 <p>Apache 2.0</p>
 
@@ -152,7 +155,7 @@
                 <h2 class="section-title wow fadeIn">Line</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_zoom_line"></div><script src="/react-d3-zoom/example/dist/min/zoom_line.min.js"></script>
+                      <div id="data_line"></div><script src="/react-d3-basic/example/dist/min/line.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
@@ -164,8 +167,8 @@ import {
 } from 'react';
 
 import {
-  LineZoom as LineZoom
-} from 'react-d3-zoom';
+  LineChart as LineChart
+} from 'react-d3-basic';
 
 // Your Setting props!
 
@@ -183,15 +186,15 @@ const chartSeries = [
 (() =&gt; {
 
   React.render(
-    &lt;LineZoom {pass all your props and chartSeries here!} /&gt;,
+    &lt;LineChart {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/zoom/line">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT LINE ZOOM CHART!!</button>
+<p><a href="/basic/line">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT LINE CHART!!</button>
 </a></p>
 
                     </div>
@@ -206,7 +209,7 @@ const chartSeries = [
                 <h2 class="section-title wow fadeIn">Line Multiple</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_zoom_line_multi"></div><script src="/react-d3-zoom/example/dist/min/zoom_line_multi.min.js"></script>
+                      <div id="data_line_multi"></div><script src="/react-d3-basic/example/dist/min/line_multi.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
@@ -219,8 +222,8 @@ import {
 
 
 import {
-  LineZoom as LineZoom
-} from 'react-d3-zoom';
+  LineChart as LineChart
+} from 'react-d3-basic';
 
 
 // Your Setting props!
@@ -249,15 +252,15 @@ const chartSeries = [
 (() =&gt; {
 
   React.render(
-    &lt;LineZoom {pass all your props and chartSeries here!} /&gt;,
+    &lt;LineChart {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/zoom/line_multi">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT MULTI LINE ZOOM CHART!!</button>
+<p><a href="/basic/line_multi">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT MULTI LINE CHART!!</button>
 </a></p>
 
                     </div>
@@ -269,14 +272,14 @@ const chartSeries = [
         <a name="3"></a>
         <section id="services" class="section text-center">
             <div class="container">
-                <h2 class="section-title wow fadeIn">Area Stack</h2>
+                <h2 class="section-title wow fadeIn">Area</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_zoom_area_stack"></div><script src="/react-d3-zoom/example/dist/min/zoom_area_stack.min.js"></script>
+                      <div id="data_area"></div><script src="/react-d3-basic/example/dist/min/area.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Area Stack Zoom Component:</p>
+                      <p>Area Chart Component:</p>
 <pre><code class="lang-js">
 import {
   default as React,
@@ -284,8 +287,62 @@ import {
 } from 'react';
 
 import {
-  AreaStackZoom as AreaStackZoom
-} from 'react-d3-zoom';
+  LineChart as LineChart
+} from 'react-d3-basic';
+
+// Your Setting props!
+
+const chartSeries = [
+      {
+        field: 'close',
+        name: 'Price',
+        color: '#ff7f0e',
+        area: true
+      }
+    ]
+
+// Your other setting props
+
+(() =&gt; {
+
+  React.render(
+    &lt;LineChart {pass all your props and chartSeries here!} /&gt;,
+    document.getElementById('data_container')
+  )
+})()
+
+// And you have a beautiful chart in react!
+</code></pre>
+<p><a href="/basic/area">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT AREA CHART!!</button>
+</a></p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="4"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Area Stack</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div style="margin-right: auto; margin-left: auto">
+                      <div id="data_area_stack"></div><script src="/react-d3-basic/example/dist/min/area_stack.min.js"></script>
+                    </div>
+
+                    <div class="markdown-body">
+                      <p>Area Stack Component:</p>
+<pre><code class="lang-js">
+import {
+  default as React,
+  Component,
+} from 'react';
+
+import {
+  AreaStackChart as AreaStackChart
+} from 'react-d3-basic';
 
 // Your Setting props!
 
@@ -316,15 +373,15 @@ const chartSeries = [
 (() =&gt; {
 
   React.render(
-    &lt;AreaStackZoom {pass all your props and chartSeries here!} /&gt;,
+    &lt;AreaStackChart {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/zoom/area_stack">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT AREA STACK ZOOM CHART!!</button>
+<p><a href="/basic/area_stack">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT AREA STACK CHART!!</button>
 </a></p>
 
                     </div>
@@ -333,17 +390,17 @@ const chartSeries = [
             </div>
             <!--/.container -->
         </section>
-        <a name="4"></a>
+        <a name="5"></a>
         <section id="services" class="section text-center">
             <div class="container">
                 <h2 class="section-title wow fadeIn">Bar</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_zoom_bar"></div><script src="/react-d3-zoom/example/dist/min/zoom_bar.min.js"></script>
+                      <div id="data_bar"></div><script src="/react-d3-basic/example/dist/min/bar.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Bar Zoom Component:</p>
+                      <p>Bar Component:</p>
 <pre><code class="lang-js">
 import {
   default as React,
@@ -352,8 +409,8 @@ import {
 
 
 import {
-  BarZoom as BarZoom
-} from 'react-d3-zoom';
+  BarChart as BarChart
+} from 'react-d3-basic';
 
 // Your Setting props!
 
@@ -369,92 +426,15 @@ const chartSeries = [
 (() =&gt; {
 
   React.render(
-    &lt;BarZoom {pass all your props and chartSeries here!} /&gt;,
+    &lt;BarChart {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/zoom/bar">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR ZOOM CHART!!</button>
-</a></p>
-
-                    </div>
-                </div>
-                <!--.row-->
-            </div>
-            <!--/.container -->
-        </section>
-        <a name="5"></a>
-        <section id="services" class="section text-center">
-            <div class="container">
-                <h2 class="section-title wow fadeIn">Bar Group</h2>
-                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                    <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_zoom_bar_group"></div><script src="/react-d3-zoom/example/dist/min/zoom_bar_group.min.js"></script>
-                    </div>
-
-                    <div class="markdown-body">
-                      <p>Bar Group Zoom Chart Component:</p>
-<pre><code class="lang-js">
-import {
-  default as React,
-  Component,
-} from 'react';
-
-import {
-  BarGroupZoom as BarGroupZoom
-} from 'react-d3-zoom';
-
-// Your Setting props!
-
-const chartSeries = [
-      {
-        field: 'Under 5 Years',
-        name: 'Under 5 Years'
-      },
-      {
-        field: '5 to 13 Years',
-        name: '5 to 13 Years'
-      },
-      {
-        field: '14 to 17 Years',
-        name: '14 to 17 Years'
-      },
-      {
-        field: '18 to 24 Years',
-        name: '18 to 24 Years'
-      },
-      {
-        field: '25 to 44 Years',
-        name: '25 to 44 Years'
-      },
-      {
-        field: '45 to 64 Years',
-        name: '45 to 64 Years'
-      },
-      {
-        field: '65 Years and Over',
-        name: '65 Years and Over'
-      },
-
-    ]
-
-// Your other setting props
-
-(() =&gt; {
-
-  React.render(
-    &lt;BarGroupZoom {pass all your props and chartSeries here!} /&gt;,
-    document.getElementById('data_container')
-  )
-})()
-
-// And you have a beautiful chart in react!
-</code></pre>
-<p><a href="/tooltip/bar_group">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR GROUP ZOOM CHART!!</button>
+<p><a href="/basic/bar">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR CHART!!</button>
 </a></p>
 
                     </div>
@@ -466,14 +446,91 @@ const chartSeries = [
         <a name="6"></a>
         <section id="services" class="section text-center">
             <div class="container">
-                <h2 class="section-title wow fadeIn">Bar Stack</h2>
+                <h2 class="section-title wow fadeIn">Bar Group</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_zoom_bar_stack"></div><script src="/react-d3-zoom/example/dist/min/zoom_bar_stack.min.js"></script>
+                      <div id="data_bar_group"></div><script src="/react-d3-basic/example/dist/min/bar_group.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Bar Stack Zoom Chart Component:</p>
+                      <p>Bar Group Chart Component:</p>
+<pre><code class="lang-js">
+import {
+  default as React,
+  Component,
+} from 'react';
+
+import {
+  BarGroupChart as BarGroupChart
+} from 'react-d3-basic';
+
+// Your Setting props!
+
+const chartSeries = [
+      {
+        field: 'Under 5 Years',
+        name: 'Under 5 Years'
+      },
+      {
+        field: '5 to 13 Years',
+        name: '5 to 13 Years'
+      },
+      {
+        field: '14 to 17 Years',
+        name: '14 to 17 Years'
+      },
+      {
+        field: '18 to 24 Years',
+        name: '18 to 24 Years'
+      },
+      {
+        field: '25 to 44 Years',
+        name: '25 to 44 Years'
+      },
+      {
+        field: '45 to 64 Years',
+        name: '45 to 64 Years'
+      },
+      {
+        field: '65 Years and Over',
+        name: '65 Years and Over'
+      },
+
+    ]
+
+// Your other setting props
+
+(() =&gt; {
+
+  React.render(
+    &lt;BarGroupChart {pass all your props and chartSeries here!} /&gt;,
+    document.getElementById('data_container')
+  )
+})()
+
+// And you have a beautiful chart in react!
+</code></pre>
+<p><a href="/basic/bar_group">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR GROUP CHART!!</button>
+</a></p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="7"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Bar Stack</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div style="margin-right: auto; margin-left: auto">
+                      <div id="data_bar_stack"></div><script src="/react-d3-basic/example/dist/min/bar_stack.min.js"></script>
+                    </div>
+
+                    <div class="markdown-body">
+                      <p>Bar Stack Chart Component:</p>
 <pre><code class="lang-js">
 import {
   default as React,
@@ -482,8 +539,8 @@ import {
 
 
 import {
-  BarStackZoom as BarStackZoom
-} from 'react-d3-zoom';
+  BarStackChart as BarStackChart
+} from 'react-d3-basic';
 
 // Your Setting props!
 
@@ -525,7 +582,7 @@ const chartSeries = [
 (() =&gt; {
 
   React.render(
-    &lt;BarStackZoom {pass all your props and chartSeries here!} /&gt;,
+    &lt;BarStackChart {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
@@ -533,8 +590,8 @@ const chartSeries = [
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/zoom/bar_stack">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR STACK ZOOM CHART!!</button>
+<p><a href="/basic/bar_stack">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR STACK CHART!!</button>
 </a></p>
 
                     </div>
@@ -543,13 +600,13 @@ const chartSeries = [
             </div>
             <!--/.container -->
         </section>
-        <a name="7"></a>
+        <a name="8"></a>
         <section id="services" class="section text-center">
             <div class="container">
                 <h2 class="section-title wow fadeIn">Scatter</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_zoom_scatter"></div><script src="/react-d3-zoom/example/dist/min/zoom_scatter.min.js"></script>
+                      <div id="data_scatter"></div><script src="/react-d3-basic/example/dist/min/scatter.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
@@ -562,8 +619,8 @@ import {
 } from 'react';
 
 import {
-  ScatterZoom as ScatterZoom
-} from 'react-d3-zoom';
+  ScatterPlot as ScatterPlot
+} from 'react-d3-basic';
 
 
 // Your Setting props!
@@ -605,7 +662,7 @@ const chartSeries = [
 (() =&gt; {
 
   React.render(
-    &lt;ScatterZoom {pass all your props and chartSeries here!} /&gt;,
+    &lt;ScatterPlot {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
@@ -613,8 +670,158 @@ const chartSeries = [
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/zoom/scatter">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT SCATTER ZOOM PLOT!!</button>
+<p><a href="/basic/scatter">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT SCATTER PLOT!!</button>
+</a></p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="9"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Pie</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div style="margin-right: auto; margin-left: auto">
+                      <div id="data_pie"></div><script src="/react-d3-basic/example/dist/min/pie.min.js"></script>
+                    </div>
+
+                    <div class="markdown-body">
+                      <p>Pie Chart Component:</p>
+<pre><code class="lang-js">
+import {
+  default as React,
+  Component,
+} from 'react';
+
+
+import {
+  PieChart as PieChart
+} from 'react-d3-basic';
+
+// Your Setting props!
+
+const chartSeries = [
+      {
+        "field": "&lt;5",
+        "name": "less than 5"
+      },
+      {
+        "field": "5-13",
+        "name": "5 to 13"
+      },
+      {
+        "field": "14-17",
+        "name": "14 to 17"
+      },
+      {
+        "field": "18-24",
+        "name": "18 to 24"
+      },
+      {
+        "field": "25-44",
+        "name": "25 to 44"
+      },
+      {
+        "field": "45-64",
+        "name": "45 to 64"
+      }
+    ]
+
+// Your other setting props
+
+(() =&gt; {
+
+  React.render(
+    &lt;PieChart {pass all your props and chartSeries here!} /&gt;,
+    document.getElementById('data_container')
+  )
+})()
+
+
+// And you have a beautiful chart in react!
+</code></pre>
+<p><a href="/basic/pie">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT PIE CHART!!</button>
+</a></p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="10"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Donut</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div style="margin-right: auto; margin-left: auto">
+                      <div id="data_donut"></div><script src="/react-d3-basic/example/dist/min/donut.min.js"></script>
+                    </div>
+
+                    <div class="markdown-body">
+                      <p>Donut Chart Component:</p>
+<pre><code class="lang-js">
+import {
+  default as React,
+  Component,
+} from 'react';
+
+import {
+  PieChart as PieChart
+} from 'react-d3-basic';
+
+// Your Setting props!
+
+const radius = Math.min(width, height - 120) / 2;
+const outerRadius= {radius - 10};
+const innerRadius= {40};
+
+const chartSeries = [
+      {
+        "field": "&lt;5",
+        "name": "less than 5"
+      },
+      {
+        "field": "5-13",
+        "name": "5 to 13"
+      },
+      {
+        "field": "14-17",
+        "name": "14 to 17"
+      },
+      {
+        "field": "18-24",
+        "name": "18 to 24"
+      },
+      {
+        "field": "25-44",
+        "name": "25 to 44"
+      },
+      {
+        "field": "45-64",
+        "name": "45 to 64"
+      }
+    ]
+
+// Your other setting props
+
+(() =&gt; {
+
+  React.render(
+    &lt;PieChart {pass all your props and chartSeries here!} /&gt;,
+    document.getElementById('data_container')
+  )
+})()
+
+// And you have a beautiful chart in react!
+</code></pre>
+<p><a href="/basic/donut">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT DONUT CHART!!</button>
 </a></p>
 
                     </div>
@@ -638,7 +845,7 @@ const chartSeries = [
                 <!-- FOOTER CONTENT -->
                 <div class="col-md-6">
                     <div class="footer-content text-right">
-                        <p>© 2015 License Apache2.0, <a href="/">react-d3-brush</a>
+                        <p>© 2015 License Apache2.0, <a href="/">react-d3</a>
                         </p>
                     </div>
                 </div>

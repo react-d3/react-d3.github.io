@@ -35,7 +35,7 @@ var basic_data = charts.map(function(c) {
   return {
     "name": c.name,
     "chart": "<div id='data_" + c.link + "'></div><script src='/react-d3-basic/example/dist/min/" + c.link + ".min.js'></script>",
-    "md": "./basic/md/" + c.link + ".md"
+    "md": "./docs/basic/md/" + c.link + ".md"
   }
 })
 
@@ -71,7 +71,7 @@ var brush_data = brush_charts.map(function(c) {
   return {
     "name": c.name,
     "chart": "<div id='data_brush_" + c.link + "'></div><script src='/react-d3-brush/example/dist/min/brush_" + c.link + ".min.js'></script>",
-    "md": "./brush/md/" + c.link + ".md"
+    "md": "./docs/brush/md/" + c.link + ".md"
   }
 })
 
@@ -110,7 +110,7 @@ var tooltip_data = tooltip_charts.map(function(c) {
   return {
     "name": c.name,
     "chart": "<div id='data_tooltip_" + c.link + "'></div><script src='/react-d3-tooltip/example/dist/min/tooltip_" + c.link + ".min.js'></script>",
-    "md": "./tooltip/md/" + c.link + ".md"
+    "md": "./docs/tooltip/md/" + c.link + ".md"
   }
 })
 
@@ -147,7 +147,7 @@ var zoom_data = zoom_charts.map(function(c) {
   return {
     "name": c.name,
     "chart": "<div id='data_zoom_" + c.link + "'></div><script src='/react-d3-zoom/example/dist/min/zoom_" + c.link + ".min.js'></script>",
-    "md": "./zoom/md/" + c.link + ".md"
+    "md": "./docs/zoom/md/" + c.link + ".md"
   }
 })
 
@@ -156,8 +156,7 @@ zoom_data.unshift({
   "md": "./react-d3-zoom/README.md"
 })
 
-module.exports = [
-  {
+module.exports = [{
     "layout": "./index.hbs",
     "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
     "data": {
@@ -192,34 +191,83 @@ module.exports = [
               },
               {
                 "md": "./intro/demo_dist/demo_chart.md"
-              }
-            ]
-          },{
-            "name": "Components",
-            "components": [
+              },
               {
-                "name": "react-d3-core",
-                "md": "./intro/intro_core.md"
-              }, {
-                "name": "react-d3-basic",
-                "md": "./intro/intro_basic.md"
-              }, {
-                "name": "react-d3-tooltip",
-                "md": "./intro/intro_tooltip.md"
-              }, {
-                "name": "react-d3-zoom",
-                "md": "./intro/intro_zoom.md"
-              }, {
-                "name": "react-d3-brush",
-                "md": "./intro/intro_brush.md"
+                "md": "./intro/demo_dist/demo_brush.md"
+              },
+              {
+                "md": "./intro/demo_dist/demo_zoom.md"
+              },
+              {
+                "md": "./intro/demo_dist/demo_tooltip.md"
               }
             ]
           }]
         }
     }
-  }, {
+  },{
     "layout": "./gallery.hbs",
-    "filename": "./basic/index.html",
+    "filename": "./get_start/index.html",
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "data": {
+      "item": "Getting started react-d3",
+      "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+      "product": {
+        "title": "react-d3",
+        "data": [{
+          "name": "Getting Started",
+          "md": "./intro/get_start/intro.md"
+        }]
+      }
+    }
+  },{
+    "layout": "./gallery.hbs",
+    "filename": "./components/index.html",
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "data": {
+      "item": "react-d3 components",
+      "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+      "product": {
+        "title": "react-d3",
+        "data": [{
+          "name": "Introduction",
+          "md": "./intro/components/intro.md"
+        }, {
+          "name": "react-d3-core",
+          "md": "./intro/components/intro_core.md"
+        }, {
+          "name": "react-d3-basic",
+          "md": "./intro/components/intro_basic.md"
+        }, {
+          "name": "react-d3-tooltip",
+          "md": "./intro/components/intro_tooltip.md"
+        }, {
+          "name": "react-d3-zoom",
+          "md": "./intro/components/intro_zoom.md"
+        }, {
+          "name": "react-d3-brush",
+          "md": "./intro/components/intro_brush.md"
+        }]
+      }
+    }
+  },{
+    "layout": "./gallery.hbs",
+    "filename": "./qa/index.html",
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "data": {
+      "item": "react-d3 QA",
+      "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+      "product": {
+        "title": "react-d3",
+        "data": [{
+          "name": "QA",
+          "md": "./intro/qa/intro_qa.md"
+        }]
+      }
+    }
+  },{
+    "layout": "./gallery.hbs",
+    "filename": "./docs/basic/index.html",
     "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
     "data": {
         "item": "react-d3-basic",
@@ -234,7 +282,7 @@ module.exports = [
     }
   }, {
     "layout": "./gallery.hbs",
-    "filename": "./brush/index.html",
+    "filename": "./docs/brush/index.html",
     "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
     "data": {
         "item": "react-d3-brush",
@@ -249,7 +297,7 @@ module.exports = [
     }
   }, {
     "layout": "./gallery.hbs",
-    "filename": "./tooltip/index.html",
+    "filename": "./docs/tooltip/index.html",
     "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
     "data": {
       "item": "react-d3-brush",
@@ -264,7 +312,7 @@ module.exports = [
     }
   }, {
     "layout": "./gallery.hbs",
-    "filename": "./zoom/index.html",
+    "filename": "./docs/zoom/index.html",
     "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
     "data": {
       "item": "react-d3-brush",

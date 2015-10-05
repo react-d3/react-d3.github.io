@@ -1,6 +1,6 @@
 # react-d3-tooltip
 
-<a href="/tooltip">
+<a href="/docs/tooltip">
   <button type="button" class="btn btn-success">READ MORE DOCUMENT!!!!</button>
 </a>
 

@@ -1,6 +1,6 @@
 # react-d3-zoom
 
-<a href="/zoom">
+<a href="/docs/zoom">
   <button type="button" class="btn btn-success">READ MORE DOCUMENT!!!!</button>
 </a>
 

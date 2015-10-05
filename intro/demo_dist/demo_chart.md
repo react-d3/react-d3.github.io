@@ -53,7 +53,7 @@ var LineChart = require('react-d3-basic').LineChart;
     xScale = 'time',
     xAxisClassName = 'x-axis',
     xLabel = "Month",
-
+    xLabelPosition = "left",
     // your y accessor
     y = function(d) {
       return +d;
@@ -97,7 +97,7 @@ var LineChart = require('react-d3-basic').LineChart;
         xOrient= {xOrient}
         xTickOrient= {xTickOrient}
         xLabel = {xLabel}
-        xLabelPosition = 'bottom'
+        xLabelPosition = {xLabelPosition}
         y= {y}
         yOrient= {yOrient}
         yDomain= {yDomain}
@@ -114,6 +114,6 @@ var LineChart = require('react-d3-basic').LineChart;
 ```
 
 
-<a href="/basic">
+<a href="/docs/basic">
   <button type="button" class="btn btn-danger btn-lg">See more Charts!</button>
 </a>

@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<!--<![endif]-->
-
-<head>
+<html><head>
     <meta charset="utf-8">
-    <title>{{item}}</title>
+    <title>react-d3 QA</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Google fonts - which you want to use - (rest you can just remove) -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -54,7 +47,7 @@
 
                     <!-- LOGO -->
                     <a class="navbar-brand page-scroll" href="/">
-                        <img src="{{logo}}" alt="" style="width:50px">
+                        <img src="https://avatars0.githubusercontent.com/u/14354544?v=3&amp;s=200" alt="" style="width:50px">
                     </a>
                     <!-- END LOGO -->
 
@@ -89,32 +82,52 @@
     </header>
 
     <!-- SERVICES -->
-    {{#if product}}
-      {{#each product.data}}
-        <a name="{{@index}}"></a>
+        <a name="0"></a>
         <section id="services" class="section text-center">
             <div class="container">
-                <h2 class="section-title wow fadeIn">{{name}}</h2>
+                <h2 class="section-title wow fadeIn">QA</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                  {{#if chart}}
-                    <div style="margin-right: auto; margin-left: auto">
-                      {{{chart}}}
-                    </div>
-                  {{/if}}
-                  {{#if md}}
 
                     <div class="markdown-body">
-                      <section data-markdown="{{md}}" >
-                      </section>
+                      <h2 id="why-">Why?</h2>
+<h4 id="q1-why-building-another-reusable-chart-library-">Q1: Why building another reusable chart library?</h4>
+<p>Nowadays, we had many great libraries to build a reusable charts, such as <code>nvd3</code>, <code>c3</code>, <code>highchart</code>... etc. Those are really great! But what <code>react-d3</code> aimed to build is not only a reusable chart library, but also building reusable chart <strong>components</strong> for further usages.</p>
+<p>For instance, if we want to build a new chart on top of <code>react-d3</code> it is super easy, just call <code>&lt;xaxis&gt;</code>, <code>&lt;yaxis&gt;</code> and pass proper props. and we will build your xaxis and yaxis for you! This concept of building chart components might be a much better solution of building a whole new reusable chart community.</p>
+<h4 id="q2-what-are-some-other-common-problems-that-building-d3-charts-">Q2: What are some other common problems that building d3 charts?</h4>
+<ul>
+<li><p><strong>Reusability</strong> : You have to build your chart over and over again. <code>react-d3</code> is using <code>react</code>, <code>ES6</code> technologies make you easily to import and export your components.</p>
+</li>
+<li><p><strong>Difficult to track data flow</strong> : It is so easy to mess up with your data, because most of the time you are manipulating data.</p>
+</li>
+<li><p><strong>Sync your data to the svgs</strong> : When you finally change your data to a specific format, it's also cause many problems when updating data to your svgs.  Where should I update? Did it update? What data is now? <code>react-d3</code> help you solve the problems.</p>
+</li>
+<li><p><strong>Checking your input data</strong> : Inputting the wrong data, will break your chart easily without knowing the reason.</p>
+</li>
+</ul>
+<h4 id="q3-why-react-">Q3: Why react?</h4>
+<p>There are many main reasons using react as a basic structure.</p>
+<ul>
+<li><p><strong>PropType Check</strong> : React build-in <code>PropTypes</code> for checking props. So now if you pass the wrong format your console will tell you to change to proper prop.</p>
+</li>
+<li><p><strong>Props</strong> : React props make you know your data better. Because props are like Immutable data in react components. So you can track your data more easily.</p>
+</li>
+<li><p><strong>State</strong> : State make d3 much more powerful. Because when state change react will re-render your component with the optimal speed. And also it can make you</p>
+</li>
+<li><p><strong>Components</strong> : Components make it easy to reuse your charts again and again.</p>
+</li>
+<li><p><strong>Rendering</strong> : By default react re-render your component when every props and states change, which make d3 more awesome. Because we can have less problem on making sure if the data is up-to-date or not.</p>
+</li>
+</ul>
+<h3 id="why-we-are-different-from-other-react-d3-library-or-other-reusable-chart-library-">Why we are different from other react-d3 library, or other reusable chart library?</h3>
+<p>We have a whole new point of view to build a better reusable chart component library.  Unlike other react-d3 or reusable chart library. Which means you can build other charts(like bubble chart for example) using or tooltip utils, zoom utils, axes utils, ... etc.</p>
+<p>Building a highly reusable <code>component</code> library is what we are trying to do. <code>MAKE EVERYTHING COMPONENT</code> and we will try to build every type of charts using <code>react-d3</code> core components.</p>
+
                     </div>
-                  {{/if}}
                 </div>
                 <!--.row-->
             </div>
             <!--/.container -->
         </section>
-      {{/each}}
-    {{/if}}
     <!-- END SERVICES -->
 
     <!-- FOOTER -->
@@ -130,7 +143,7 @@
                 <!-- FOOTER CONTENT -->
                 <div class="col-md-6">
                     <div class="footer-content text-right">
-                        <p>&copy; 2015 License Apache2.0, <a href="/">react-d3</a>
+                        <p>© 2015 License Apache2.0, <a href="/">react-d3</a>
                         </p>
                     </div>
                 </div>
@@ -158,4 +171,5 @@
       ga('create', 'UA-67901975-1', 'auto');
       ga('send', 'pageview');
     </script>
-</body>
+
+</body></html>

@@ -57,24 +57,20 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="hidden">
-                            <a href="#page-top"></a>
+                          <a href="#page-top"></a>
                         </li>
-                            <li><a class="page-scroll" href="#0">introduction</a>
-                            </li>
-                            <li><a class="page-scroll" href="#1">Line</a>
-                            </li>
-                            <li><a class="page-scroll" href="#2">Line Multiple</a>
-                            </li>
-                            <li><a class="page-scroll" href="#3">Area Stack</a>
-                            </li>
-                            <li><a class="page-scroll" href="#4">Bar</a>
-                            </li>
-                            <li><a class="page-scroll" href="#5">Bar Group</a>
-                            </li>
-                            <li><a class="page-scroll" href="#6">Bar Stack</a>
-                            </li>
-                            <li><a class="page-scroll" href="#7">Scatter</a>
-                            </li>
+                        <li>
+                          <a href="/">Home</a>
+                        </li>
+                        <li>
+                          <a href="/get_start">Get Started</a>
+                        </li>
+                        <li>
+                          <a href="/components">Components</a>
+                        </li>
+                        <li>
+                          <a href="/qa">QA</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- TOGGLE NAV -->
@@ -85,34 +81,6 @@
         <!-- END NAVIGATION -->
     </header>
 
-    <!-- HOME -->
-    <div id="home-area">
-        <div class="overlay">
-            <div class="container">
-                <div class="row">
-                    <!-- HOME CONTENT -->
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="home-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
-                            <h1>react-d3 brush charts</h1>
-                            <p>Building Brush With Line, bar, Scatter, Area Charts ... with ease.</p>
-                        </div>
-                    </div>
-                    <!-- END HOME CONTENT -->
-
-                    <!-- HOME FEATURE IMAGE -->
-                    <div class="col-md-10 col-sm-10 col-xs-12">
-                        <div class="home-feature pull-right center-block wow bounceIn" data-wow-duration="1s" data-wow-delay="1s">
-                            <img class="img-responsive" src="/img/brush/cover.png" alt="">
-                        </div>
-                    </div>
-                    <!-- END HOME FEATURE IMAGE -->
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END HOME -->
-
     <!-- SERVICES -->
         <a name="0"></a>
         <section id="services" class="section text-center">
@@ -121,22 +89,22 @@
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
 
                     <div class="markdown-body">
-                      <h1 id="react-d3-brush">react-d3-brush</h1>
-<p><a href="https://gemnasium.com/react-d3/react-d3-brush"><img src="https://gemnasium.com/react-d3/react-d3-brush.svg" alt="Dependency Status"></a></p>
-<p><code>react-d3</code> brush implementation.</p>
+                      <h1 id="react-d3-zoom">react-d3-zoom</h1>
+<p><a href="https://gemnasium.com/react-d3/react-d3-zoom"><img src="https://gemnasium.com/react-d3/react-d3-zoom.svg" alt="Dependency Status"></a></p>
+<p><code>react-d3</code> zoom implementation.</p>
 <h2 id="install">Install</h2>
-<pre><code>npm install --save react-d3-brush
-</code></pre><h2 id="support-brush-component">Support Brush Component</h2>
+<pre><code>npm install --save react-d3-zoom
+</code></pre><h2 id="support-zoom-component">Support Zoom Component</h2>
 <ul>
-<li>Line Chart: export as <code>LineBrush</code></li>
-<li>Area Stack Chart: export as <code>AreaStackBrush</code></li>
-<li>Scatter Plot: export as <code>ScatterBrush</code></li>
-<li>Bar Chart: export as <code>BarBrush</code></li>
-<li>Bar Stack: export as <code>BarStackBrush</code></li>
-<li>Bar Group: export as <code>BarGroupBrush</code></li>
+<li>Line Chart: export as <code>LineZoom</code></li>
+<li>Area Stack Chart: export as <code>AreaStackZoom</code></li>
+<li>Scatter Plot: export as <code>ScatterZoom</code></li>
+<li>Bar Chart: export as <code>BarZoom</code></li>
+<li>Bar Stack: export as <code>BarStackZoom</code></li>
+<li>Bar Group: export as <code>BarGroupZoom</code></li>
 </ul>
 <h2 id="gallery">Gallery</h2>
-<p><img src="http://www.reactd3.org/img/brush/cover.png" alt="img"></p>
+<p><img src="http://www.reactd3.org/img/zoom/cover.png" alt="img"></p>
 <h2 id="license">License</h2>
 <p>Apache 2.0</p>
 
@@ -152,11 +120,11 @@
                 <h2 class="section-title wow fadeIn">Line</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_brush_line"></div><script src="/react-d3-brush/example/dist/min/brush_line.min.js"></script>
+                      <div id="data_zoom_line"></div><script src="/react-d3-zoom/example/dist/min/zoom_line.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Line Chart with Brush Component:</p>
+                      <p>Line Chart Component:</p>
 <pre><code class="lang-js">
 import {
   default as React,
@@ -164,8 +132,8 @@ import {
 } from 'react';
 
 import {
-  LineBrush as LineBrush
-} from 'react-d3-brush';
+  LineZoom as LineZoom
+} from 'react-d3-zoom';
 
 // Your Setting props!
 
@@ -177,23 +145,21 @@ const chartSeries = [
       }
     ],
 
-const brushHeight = 200;
-const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
 
-// Your other setting props, such as essential width, height...
+// Your other setting props
 
 (() =&gt; {
 
   React.render(
-    &lt;LineBrush {pass all your props and chartSeries here!} /&gt;,
+    &lt;LineZoom {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/brush/line">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT BRUSH LINE CHART!!</button>
+<p><a href="/zoom/line">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT LINE ZOOM CHART!!</button>
 </a></p>
 
                     </div>
@@ -208,11 +174,11 @@ const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
                 <h2 class="section-title wow fadeIn">Line Multiple</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_brush_line_multi"></div><script src="/react-d3-brush/example/dist/min/brush_line_multi.min.js"></script>
+                      <div id="data_zoom_line_multi"></div><script src="/react-d3-zoom/example/dist/min/zoom_line_multi.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Multiple Line and Area Chart with Brush Component:</p>
+                      <p>Multiple Line and Area Chart Component:</p>
 <pre><code class="lang-js">
 import {
   default as React,
@@ -221,8 +187,8 @@ import {
 
 
 import {
-  LineBrush as LineBrush
-} from 'react-d3-brush';
+  LineZoom as LineZoom
+} from 'react-d3-zoom';
 
 
 // Your Setting props!
@@ -246,23 +212,20 @@ const chartSeries = [
       }
     ]
 
-const brushHeight = 200;
-const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
-
-// Your other setting props, such as essential width, height...
+// Your other setting props
 
 (() =&gt; {
 
   React.render(
-    &lt;LineBrush {pass all your props and chartSeries here!} /&gt;,
+    &lt;LineZoom {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/brush/line_multi">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT BRUSH MULTI LINE CHART!!</button>
+<p><a href="/zoom/line_multi">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT MULTI LINE ZOOM CHART!!</button>
 </a></p>
 
                     </div>
@@ -277,11 +240,11 @@ const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
                 <h2 class="section-title wow fadeIn">Area Stack</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_brush_area_stack"></div><script src="/react-d3-brush/example/dist/min/brush_area_stack.min.js"></script>
+                      <div id="data_zoom_area_stack"></div><script src="/react-d3-zoom/example/dist/min/zoom_area_stack.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Area Stack with Brush Component:</p>
+                      <p>Area Stack Zoom Component:</p>
 <pre><code class="lang-js">
 import {
   default as React,
@@ -289,8 +252,8 @@ import {
 } from 'react';
 
 import {
-  AreaStackBrush as AreaStackBrush
-} from 'react-d3-brush';
+  AreaStackZoom as AreaStackZoom
+} from 'react-d3-zoom';
 
 // Your Setting props!
 
@@ -316,23 +279,20 @@ const chartSeries = [
     }
   ]
 
-const brushHeight = 200;
-const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
-
-// Your other setting props, such as essential width, height...
+// Your other setting props
 
 (() =&gt; {
 
   React.render(
-    &lt;AreaStackBrush {pass all your props and chartSeries here!} /&gt;,
+    &lt;AreaStackZoom {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/brush/area_stack">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT BRUSH AREA STACK CHART!!</button>
+<p><a href="/zoom/area_stack">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT AREA STACK ZOOM CHART!!</button>
 </a></p>
 
                     </div>
@@ -347,11 +307,11 @@ const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
                 <h2 class="section-title wow fadeIn">Bar</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_brush_bar"></div><script src="/react-d3-brush/example/dist/min/brush_bar.min.js"></script>
+                      <div id="data_zoom_bar"></div><script src="/react-d3-zoom/example/dist/min/zoom_bar.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Bar with Brush Component:</p>
+                      <p>Bar Zoom Component:</p>
 <pre><code class="lang-js">
 import {
   default as React,
@@ -360,8 +320,8 @@ import {
 
 
 import {
-  BarBrush as BarBrush
-} from 'react-d3-brush';
+  BarZoom as BarZoom
+} from 'react-d3-zoom';
 
 // Your Setting props!
 
@@ -372,23 +332,20 @@ const chartSeries = [
       }
     ]
 
-const brushHeight = 200;
-const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
-
-// Your other setting props, such as essential width, height...
+// Your other setting props
 
 (() =&gt; {
 
   React.render(
-    &lt;BarBrush {pass all your props and chartSeries here!} /&gt;,
+    &lt;BarZoom {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/brush/bar">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT BRUSH BAR CHART!!</button>
+<p><a href="/zoom/bar">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR ZOOM CHART!!</button>
 </a></p>
 
                     </div>
@@ -403,11 +360,11 @@ const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
                 <h2 class="section-title wow fadeIn">Bar Group</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_brush_bar_group"></div><script src="/react-d3-brush/example/dist/min/brush_bar_group.min.js"></script>
+                      <div id="data_zoom_bar_group"></div><script src="/react-d3-zoom/example/dist/min/zoom_bar_group.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Bar Group Chart with Brush Component:</p>
+                      <p>Bar Group Zoom Chart Component:</p>
 <pre><code class="lang-js">
 import {
   default as React,
@@ -415,8 +372,8 @@ import {
 } from 'react';
 
 import {
-  BarGroupBrush as BarGroupBrush
-} from 'react-d3-brush';
+  BarGroupZoom as BarGroupZoom
+} from 'react-d3-zoom';
 
 // Your Setting props!
 
@@ -452,23 +409,20 @@ const chartSeries = [
 
     ]
 
-const brushHeight = 200;
-const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
-
-// Your other setting props, such as essential width, height...
+// Your other setting props
 
 (() =&gt; {
 
   React.render(
-    &lt;BarGroupBrush {pass all your props and chartSeries here!} /&gt;,
+    &lt;BarGroupZoom {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/brush/bar_group">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR GROUP CHART!!</button>
+<p><a href="/tooltip/bar_group">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR GROUP ZOOM CHART!!</button>
 </a></p>
 
                     </div>
@@ -483,11 +437,11 @@ const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
                 <h2 class="section-title wow fadeIn">Bar Stack</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_brush_bar_stack"></div><script src="/react-d3-brush/example/dist/min/brush_bar_stack.min.js"></script>
+                      <div id="data_zoom_bar_stack"></div><script src="/react-d3-zoom/example/dist/min/zoom_bar_stack.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Bar Stack Chart with Brush Component:</p>
+                      <p>Bar Stack Zoom Chart Component:</p>
 <pre><code class="lang-js">
 import {
   default as React,
@@ -496,8 +450,8 @@ import {
 
 
 import {
-  BarStackBrush as BarStackBrush
-} from 'react-d3-brush';
+  BarStackZoom as BarStackZoom
+} from 'react-d3-zoom';
 
 // Your Setting props!
 
@@ -533,15 +487,13 @@ const chartSeries = [
 
     ]
 
-const brushHeight = 200;
-const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
+// Your other setting props
 
-// Your other setting props, such as essential width, height...
 
 (() =&gt; {
 
   React.render(
-    &lt;BarStackBrush {pass all your props and chartSeries here!} /&gt;,
+    &lt;BarStackZoom {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
@@ -549,8 +501,8 @@ const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/brush/bar_stack">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT BRUSH BAR STACK CHART!!</button>
+<p><a href="/zoom/bar_stack">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR STACK ZOOM CHART!!</button>
 </a></p>
 
                     </div>
@@ -565,11 +517,11 @@ const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
                 <h2 class="section-title wow fadeIn">Scatter</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div style="margin-right: auto; margin-left: auto">
-                      <div id="data_brush_scatter"></div><script src="/react-d3-brush/example/dist/min/brush_scatter.min.js"></script>
+                      <div id="data_zoom_scatter"></div><script src="/react-d3-zoom/example/dist/min/zoom_scatter.min.js"></script>
                     </div>
 
                     <div class="markdown-body">
-                      <p>Scatter Plot with Brush Component:</p>
+                      <p>Scatter Plot Component:</p>
 <pre><code class="lang-js">
 
 import {
@@ -578,8 +530,8 @@ import {
 } from 'react';
 
 import {
-  ScatterBrush as ScatterBrush
-} from 'react-d3-brush';
+  ScatterZoom as ScatterZoom
+} from 'react-d3-zoom';
 
 
 // Your Setting props!
@@ -616,15 +568,12 @@ const chartSeries = [
       }
     ]
 
-const brushHeight = 200;
-const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
-
-// Your other setting props, such as essential width, height...
+// Your other setting props
 
 (() =&gt; {
 
   React.render(
-    &lt;ScatterBrush {pass all your props and chartSeries here!} /&gt;,
+    &lt;ScatterZoom {pass all your props and chartSeries here!} /&gt;,
     document.getElementById('data_container')
   )
 })()
@@ -632,8 +581,8 @@ const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
 
 // And you have a beautiful chart in react!
 </code></pre>
-<p><a href="/basic/scatter">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT BRUSH SCATTER PLOT!!</button>
+<p><a href="/zoom/scatter">
+  <button type="button" class="btn btn-success">LEARN MORE ABOUT SCATTER ZOOM PLOT!!</button>
 </a></p>
 
                     </div>
@@ -657,7 +606,7 @@ const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
                 <!-- FOOTER CONTENT -->
                 <div class="col-md-6">
                     <div class="footer-content text-right">
-                        <p>© 2015 License Apache2.0, <a href="/">react-d3-brush</a>
+                        <p>© 2015 License Apache2.0, <a href="/">react-d3</a>
                         </p>
                     </div>
                 </div>

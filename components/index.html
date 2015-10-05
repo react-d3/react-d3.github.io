@@ -1,0 +1,299 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>react-d3 components</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google fonts - which you want to use - (rest you can just remove) -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/prettyPhoto.css">
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/github-markdown.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <style>
+        .markdown-body {
+            min-width: 200px;
+            max-width: 790px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+    </style>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body id="top">
+    <header>
+        <!-- NAVIGATION -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- LOGO -->
+                    <a class="navbar-brand page-scroll" href="/">
+                        <img src="https://avatars0.githubusercontent.com/u/14354544?v=3&amp;s=200" alt="" style="width:50px">
+                    </a>
+                    <!-- END LOGO -->
+
+                </div>
+
+                <!-- TOGGLE NAV -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                          <a href="#page-top"></a>
+                        </li>
+                        <li>
+                          <a href="/">Home</a>
+                        </li>
+                        <li>
+                          <a href="/get_start">Get Started</a>
+                        </li>
+                        <li>
+                          <a href="/components">Components</a>
+                        </li>
+                        <li>
+                          <a href="/qa">QA</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- TOGGLE NAV -->
+
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- END NAVIGATION -->
+    </header>
+
+    <!-- SERVICES -->
+        <a name="0"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Introduction</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+                    <div class="markdown-body">
+                      <p>Building a component chart library is the core of <code>react-d3</code>, we tried to wrap react component on every d3 svg, layouts. So you could pick and choose the components you want. And rebuild a new chart from ground up very quickly.</p>
+<p>So we built <code>react-d3</code> as a highly modular library. You can check out the modules below, to look for further information.</p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="1"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">react-d3-core</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+                    <div class="markdown-body">
+                      <h1 id="react-d3-core">react-d3-core</h1>
+<p><a href="/docs/core">
+  <button type="button" class="btn btn-success">READ MORE DOCUMENT!!!!</button>
+</a></p>
+<p><a href="https://github.com/react-d3/react-d3-core">
+  <button type="button" class="btn btn-default">OPEN SOURCE ON GITHUB</button>
+</a></p>
+<p><code>react-d3-core</code> is includes the core components of the <code>react-d3</code> projects. The reason we extract the main component here, is because of reusability. For instance, we use grid, axes over and over again in line chart, area chart, bar chart ... etc. If we move these system a little bit forward to a react component we can declare it more easily in the future.  </p>
+<p>Such as we need xaxis, yaxis, grid in a new chart.  We can install <code>react-d3-core</code> and import them.</p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="2"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">react-d3-basic</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+                    <div class="markdown-body">
+                      <h1 id="react-d3-basic">react-d3-basic</h1>
+<p><a href="/docs/basic">
+  <button type="button" class="btn btn-success">READ MORE DOCUMENT!!!!</button>
+</a></p>
+<p><a href="https://github.com/react-d3/react-d3-basic">
+  <button type="button" class="btn btn-default">OPEN SOURCE ON GITHUB</button>
+</a></p>
+<p>react-d3 basic charts, charts that we support:</p>
+<ul>
+<li>Multiple Line Chart</li>
+<li>Scatter Plot</li>
+<li>Area Chart</li>
+<li>Area Stack Chart</li>
+<li>Bar Chart</li>
+<li>Bar Group Chart</li>
+<li>Bar Stack Chart</li>
+<li>Pie Chart</li>
+<li>Donut Chart</li>
+</ul>
+<p><img src="/img/basic/cover.png" alt="img"></p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="3"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">react-d3-tooltip</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+                    <div class="markdown-body">
+                      <h1 id="react-d3-tooltip">react-d3-tooltip</h1>
+<p><a href="/docs/tooltip">
+  <button type="button" class="btn btn-success">READ MORE DOCUMENT!!!!</button>
+</a></p>
+<p><a href="https://github.com/react-d3/react-d3-tooltip">
+  <button type="button" class="btn btn-default">OPEN SOURCE ON GITHUB</button>
+</a></p>
+<p><code>react-d3</code> tooltip implementation.</p>
+<h2 id="support-tooltip-component">Support Tooltip Component</h2>
+<ul>
+<li>Line Chart: export as <code>LineTooltip</code></li>
+<li>Area Stack Chart: export as <code>AreaStackTooltip</code></li>
+<li>Scatter Plot: export as <code>ScatterTooltip</code></li>
+<li>Bar Chart: export as <code>BarTooltip</code></li>
+<li>Bar Stack: export as <code>BarStackTooltip</code></li>
+<li>Bar Group: export as <code>BarGroupTooltip</code></li>
+<li>Pie Chart: export as <code>PieTooltip</code></li>
+</ul>
+<p><img src="/img/tooltip/cover.png" alt="img"></p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="4"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">react-d3-zoom</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+                    <div class="markdown-body">
+                      <h1 id="react-d3-zoom">react-d3-zoom</h1>
+<p><a href="/docs/zoom">
+  <button type="button" class="btn btn-success">READ MORE DOCUMENT!!!!</button>
+</a></p>
+<p><a href="https://github.com/react-d3/react-d3-zoom">
+  <button type="button" class="btn btn-default">OPEN SOURCE ON GITHUB</button>
+</a></p>
+<p><code>react-d3</code> zoom implementation.</p>
+<h2 id="support-zoom-component">Support Zoom Component</h2>
+<ul>
+<li>Line Chart: export as <code>LineZoom</code></li>
+<li>Area Stack Chart: export as <code>AreaStackZoom</code></li>
+<li>Scatter Plot: export as <code>ScatterZoom</code></li>
+<li>Bar Chart: export as <code>BarZoom</code></li>
+<li>Bar Stack: export as <code>BarStackZoom</code></li>
+<li>Bar Group: export as <code>BarGroupZoom</code></li>
+</ul>
+<p><img src="/img/zoom/cover.png" alt="img"></p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="5"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">react-d3-brush</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+                    <div class="markdown-body">
+                      <h1 id="react-d3-brush">react-d3-brush</h1>
+<p><code>react-d3</code> brush implementation.</p>
+<p><a href="/docs/brush">
+  <button type="button" class="btn btn-success">READ MORE DOCUMENT!!!!</button>
+</a></p>
+<p><a href="https://github.com/react-d3/react-d3-brush">
+  <button type="button" class="btn btn-default">OPEN SOURCE ON GITHUB</button>
+</a></p>
+<h2 id="support-brush-component">Support Brush Component</h2>
+<ul>
+<li>Line Chart: export as <code>LineBrush</code></li>
+<li>Area Stack Chart: export as <code>AreaStackBrush</code></li>
+<li>Scatter Plot: export as <code>ScatterBrush</code></li>
+<li>Bar Chart: export as <code>BarBrush</code></li>
+<li>Bar Stack: export as <code>BarStackBrush</code></li>
+<li>Bar Group: export as <code>BarGroupBrush</code></li>
+</ul>
+<p><img src="/img/brush/cover.png" alt="img"></p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+    <!-- END SERVICES -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <!-- FOOTER MENU -->
+                <div class="col-md-6">
+                </div>
+                <!-- END FOOTER MENU -->
+
+                <!-- FOOTER CONTENT -->
+                <div class="col-md-6">
+                    <div class="footer-content text-right">
+                        <p>© 2015 License Apache2.0, <a href="/">react-d3</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- END FOOTER CONTENT -->
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- ./container -->
+    </footer>
+    <!-- js files -->
+    <script src="/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/prettyPhoto.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <!-- <script src="/js/main.js"></script> -->
+    <script src="/js/prism.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-67901975-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+</body></html>
