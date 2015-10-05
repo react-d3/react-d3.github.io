@@ -170,22 +170,50 @@ module.exports = [
           "title": "react-d3",
           "data": [{
             "name": "Introduction",
-            "md": "./intro/intro.md"
-          }, {
-            "name": "react-d3-core",
-            "md": "./intro/intro_core.md"
-          }, {
-            "name": "react-d3-basic",
-            "md": "./intro/intro_basic.md"
-          }, {
-            "name": "react-d3-tooltip",
-            "md": "./intro/intro_tooltip.md"
-          }, {
-            "name": "react-d3-zoom",
-            "md": "./intro/intro_zoom.md"
-          }, {
-            "name": "react-d3-brush",
-            "md": "./intro/intro_brush.md"
+            "feature": [
+              {
+                "name": "Preserve d3 flexibility",
+                "description": "<code>react-d3</code> is a highly module library. You can build new d3 charts using <code>react-d3</code> to create axis using <code>xaxis</code> component,  <code>yaxis</code> component, label using <code>label</code> component, legend <code>legend</code> component... etc, in other word, it extends the flexibility of <code>d3</code> library so you can assemble a whole new chart using core components."
+              },
+              {
+                "name": "Provide high level chart library",
+                "description": "<code>react-d3</code> support high level components which you can install and create a line chart, bar chart, pie chart... etc, within a component."
+              },
+              {
+                "name": "Better data flow, and structures",
+                "description": "<code>react-d3</code> combine the power of <code>d3</code> flexibility and the data flow, structures, components, virtual DOM, and others benefits that <code>react.js</code> provide."
+              }
+            ]
+          },{
+            "name": "Demo",
+            "demo": [
+              {
+                "md": "./intro/demo_dist/demo_core.md"
+              },
+              {
+                "md": "./intro/demo_dist/demo_chart.md"
+              }
+            ]
+          },{
+            "name": "Components",
+            "components": [
+              {
+                "name": "react-d3-core",
+                "md": "./intro/intro_core.md"
+              }, {
+                "name": "react-d3-basic",
+                "md": "./intro/intro_basic.md"
+              }, {
+                "name": "react-d3-tooltip",
+                "md": "./intro/intro_tooltip.md"
+              }, {
+                "name": "react-d3-zoom",
+                "md": "./intro/intro_zoom.md"
+              }, {
+                "name": "react-d3-brush",
+                "md": "./intro/intro_brush.md"
+              }
+            ]
           }]
         }
     }

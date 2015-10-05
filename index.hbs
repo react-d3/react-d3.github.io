@@ -30,7 +30,7 @@
     <style>
         .markdown-body {
             min-width: 200px;
-            max-width: 790px;
+            max-width: 850px;
             margin: 0 auto;
             padding: 30px;
         }
@@ -105,9 +105,14 @@
                     <!-- HOME FEATURE IMAGE -->
                     {{#if banner-img}}
                     <div class="col-md-10 col-sm-10 col-xs-12">
-                        <div class="home-feature pull-right center-block wow bounceIn" data-wow-duration="1s" data-wow-delay="1s">
-                            <img class="img-responsive" src="{{banner-img}}" alt="">
-                        </div>
+                      <div class="home-feature pull-right center-block wow bounceIn" data-wow-duration="1s" data-wow-delay="1s">
+                        <a href="/basic">
+                          <button type="button" class="btn btn-danger btn-lg">Get Started</button>
+                        </a>
+                        <a href="http://github.com/react-d3">
+                          <button type="button" class="btn btn-danger btn-lg">Open srouce on Github</button>
+                        </a>
+                      </div>
                     </div>
                     {{/if}}
                     <!-- END HOME FEATURE IMAGE -->
@@ -125,11 +130,49 @@
         <section id="services" class="section text-center">
             <div class="container">
                 <h2 class="section-title wow fadeIn">{{name}}</h2>
-                    <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                  {{#if feature}}
+                    {{#each feature}}
+                      <div class="col-md-4 col-sm-6">
+                          <div class="single-service text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                              <div class="row" style="margin-bottom:20px">
+                                  <div class="col-md-12">
+                                      <div class="service-content">
+                                          {{#if name}}
+                                          <h3>{{name}}</h3>
+                                          {{/if}}
+                                          {{#if description}}
+                                          <p>{{{description}}}</p>
+                                          {{/if}}
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    {{/each}}
+                  {{/if}}
+                  {{#if demo}}
+                    {{#each demo}}
+                      <div class="markdown-body">
+                          <div class="single-service text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                              <div class="row" style="margin-bottom:20px">
+                                  <div class="service-content">
+                                      {{#if md}}
+                                      <section data-markdown="{{md}}" >
+                                      </section>
+                                      {{/if}}
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    {{/each}}
+                  {{/if}}
                   {{#if md}}
                     <div class="markdown-body">
                       {{#ifCond name '==' 'Introduction'}}
-                        <iframe src="https://ghbtns.com/github-btn.html?user=react-d3&repo=react-d3.github.io&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                        <a href="https://github.com/react-d3">
+                          <button type="button" class="btn btn-success">OPEN SOURCE ON GITHUB</button>
+                        </a>
                       {{else}}
                         <iframe src="https://ghbtns.com/github-btn.html?user=react-d3&repo={{name}}&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
                       {{/ifCond}}

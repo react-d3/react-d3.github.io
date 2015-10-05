@@ -26,7 +26,6 @@ h2 {
 }
 h3 {
     font-size: 1.7em;
-    text-transform: uppercase;
     font-weight: 300;
     margin-bottom: 20px;
     color: #111;
@@ -73,6 +72,7 @@ a:hover {
     -o-transition: background-color .3s ease;
     transition: background-color .3s ease;
 }
+
 .button:hover {
     text-decoration: none;
     background: #454545;
@@ -81,6 +81,12 @@ a:hover {
 .overlay {
     background: rgba(43, 191, 217, 0.90);
 }
+
+.btn-lg {
+  margin: 5px;
+  font-size: 30px;
+}
+
 /* NAVIGATION
 ================================================ */
 
@@ -106,7 +112,7 @@ a:hover {
 ================================================ */
 
 #home-area {
-    background: url(../img/header-bg.jpg) no-repeat;
+    background: url(/img/basic/cover.png) no-repeat;
     background-position: 50% 50%;
     background-size: cover;
 }
@@ -160,6 +166,10 @@ a:hover {
     margin-left: 65px;
     margin-top: -66px;
 }
+.demo {
+  border: 3px solid #CCC;
+}
+
 /* PORTFOLIO
 ================================================ */
 
