@@ -15,4 +15,4 @@
 	url = https://github.com/react-d3/react-d3-brush
 [submodule "react-d3-example"]
 	path = react-d3-example
-	url = git@github.com:react-d3/react-d3-example.git
+	url = https://github.com/react-d3/react-d3-example
