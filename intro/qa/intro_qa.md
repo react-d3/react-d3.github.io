@@ -33,7 +33,7 @@ There are many main reasons using react as a basic structure.
 - **Rendering** : By default react re-render your component when every props and states change, which make d3 more awesome. Because we can have less problem on making sure if the data is up-to-date or not.
 
 
-### Why we are different from other react-d3 library, or other reusable chart library?
+#### Q4: Why we are different from other react-d3 library, or other reusable chart library?
 
 We have a whole new point of view to build a better reusable chart component library.  Unlike other react-d3 or reusable chart library. Which means you can build other charts(like bubble chart for example) using or tooltip utils, zoom utils, axes utils, ... etc.
 

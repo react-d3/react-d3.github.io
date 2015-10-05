@@ -216,7 +216,22 @@ module.exports = [{
         "title": "react-d3",
         "data": [{
           "name": "Getting Started",
-          "md": "./intro/get_start/intro.md"
+          "md": "./intro/get_start/data_prepare.md"
+        },{
+          "name": "Install and setup react-d3 packages",
+          "md": "./intro/get_start/install_pkg.md"
+        },{
+          "name": "Write chart",
+          "md": "./intro/get_start/write_chart.md"
+        },{
+          "name": "Load into your html",
+          "md": "./intro/get_start/load_html.md"
+        },{
+          "name": "Result",
+          "md": "./intro/get_start/result.md"
+        },{
+          "name": "Code on Github",
+          "md": "./intro/get_start/code.md"
         }]
       }
     }
