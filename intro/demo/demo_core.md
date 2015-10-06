@@ -18,3 +18,7 @@ This example demo the power of storing data in state and props, makes you build 
 <script src="../../react-d3-example/dist/min/es5/xaxis_click.min.js"></script>
 
 !!import '../../react-d3-example/xaxis/xaxis_click.js';
+
+<a href="/docs/core">
+  <button type="button" class="btn btn-danger btn-lg">See more Core components!</button>
+</a>

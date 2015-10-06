@@ -1,3 +1,32 @@
+var core = [{
+  "name": "Xaxis",
+  "link": "xaxis",
+},{
+  "name": "Yaxis",
+  "link": "yaxis"
+},{
+  "name": "Grid",
+  "link": "grid"
+},{
+  "name": "Legend",
+  "link": "legend"
+},{
+  "name": "Chart",
+  "link": "chart"
+}];
+
+var core_data = core.map(function(c) {
+  return {
+    "name": c.name,
+    "md": "./docs/core/md/" + c.link + ".md"
+  }
+})
+
+core_data.unshift({
+  "name": "introduction",
+  "md": "./docs/core/md/README.md"
+})
+
 
 var charts = [{
   "name": "Line",
@@ -289,6 +318,18 @@ module.exports = [{
         "product": {
           "title": "react-d3",
           "data": basic_data
+        }
+    }
+  },{
+    "layout": "./gallery.hbs",
+    "filename": "./docs/core/index.html",
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "data": {
+        "item": "react-d3-core",
+        "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+        "product": {
+          "title": "react-d3",
+          "data": core_data
         }
     }
   }

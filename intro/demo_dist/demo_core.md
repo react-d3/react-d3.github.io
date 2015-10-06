@@ -134,3 +134,7 @@ var Xaxis = require('react-d3-core').Xaxis;
   )
 })()
 ```
+
+<a href="/docs/core">
+  <button type="button" class="btn btn-danger btn-lg">See more Core components!</button>
+</a>

@@ -1,0 +1,495 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>react-d3-core</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google fonts - which you want to use - (rest you can just remove) -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/prettyPhoto.css">
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/github-markdown.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <style>
+        .markdown-body {
+            min-width: 200px;
+            max-width: 790px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+    </style>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body id="top">
+    <header>
+        <!-- NAVIGATION -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- LOGO -->
+                    <a class="navbar-brand page-scroll" href="/">
+                        <img src="https://avatars0.githubusercontent.com/u/14354544?v=3&amp;s=200" alt="" style="width:50px">
+                    </a>
+                    <!-- END LOGO -->
+
+                </div>
+
+                <!-- TOGGLE NAV -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                          <a href="#page-top"></a>
+                        </li>
+                        <li>
+                          <a href="/">Home</a>
+                        </li>
+                        <li>
+                          <a href="/get_start">Get Started</a>
+                        </li>
+                        <li>
+                          <a href="/components">Components</a>
+                        </li>
+                        <li>
+                          <a href="/qa">QA</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- TOGGLE NAV -->
+
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- END NAVIGATION -->
+    </header>
+
+    <!-- SERVICES -->
+        <a name="0"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">introduction</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+                    <div class="markdown-body">
+                      <h1 id="react-d3-core">react-d3-core</h1>
+<p><a href="https://gemnasium.com/react-d3/react-d3-core"><img src="https://gemnasium.com/react-d3/react-d3-core.svg" alt="Dependency Status"></a></p>
+<p>react d3 core components for reusability.</p>
+<h2 id="install">Install</h2>
+<pre><code>npm install react-d3-core
+</code></pre><h2 id="introduction">Introduction</h2>
+<p><code>react-d3-core</code> is includes the core components of the <code>react-d3</code> projects. The reason we extract the main component here, is because of reusability. For instance, we use grid, axes over and over again in line chart, area chart, bar chart ... etc. If we move these system a little bit forward to a react component we can declare it more easily in the future.  </p>
+<p>Such as we need xaxis, yaxis, grid in a new chart.  We can install <code>react-d3-core</code> and import them.</p>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="1"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Xaxis</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+                    <div class="markdown-body">
+                      <p>Xaxis Component:</p>
+<p></p><div id="garbage-xaxis" class="demo"></div><p></p>
+<script src="/react-d3-example/dist/min/es5/xaxis_garbage.min.js"></script>
+
+<pre><code class="lang-js">"use strict";
+
+var React = require('react');
+var Xaxis = require('react-d3-core').Xaxis;
+
+(function() {
+  // load your general data, for building xDomain.
+  var chartData = require("dsv?delimiter=,!../data/garbage.csv");
+  // your date format, use for parsing
+  var parseDate = d3.time.format("%YM%m").parse;
+
+  // setting you svg width
+  var width = 500,
+    // setting your svg height
+    height = 100,
+    // setting your margins of your svg
+    margins = {top: 20, right: 50, bottom: 20, left: 50},
+    // your x Axis accessor
+    x = function(d) {
+      return parseDate(d.month);
+    },
+    // set your x domain
+    xDomain = d3.extent(chartData, function(d){ return x(d) }),
+    // set your x range
+    xRange = [0, width - margins.left - margins.right],
+    // your scale type 'linear', 'ordinal', 'time'... etc.
+    xScale = 'time',
+    // set your label name
+    xLabel = "Month";
+
+  React.render(
+    &lt;svg width={width} height={height}&gt;
+      &lt;Xaxis
+        width= {width}
+        height= {height}
+        margins= {margins}
+        x= {x}
+        xDomain= {xDomain}
+        xRange = {xRange}
+        xScale= {xScale}
+        xLabel= {xLabel}
+      /&gt;
+    &lt;/svg&gt;
+  , document.getElementById('garbage-xaxis')
+  )
+})()
+</code></pre>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="2"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Yaxis</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+                    <div class="markdown-body">
+                      <p>Yaxis Component:</p>
+<p></p><div id="garbage-yaxis" class="demo"></div><p></p>
+<script src="/react-d3-example/dist/min/es5/yaxis_garbage.min.js"></script>
+
+<pre><code class="lang-js">"use strict";
+
+var React = require('react');
+var Yaxis = require('react-d3-core').Yaxis;
+
+(function() {
+  // load your general data, for building xDomain.
+  var chartData = require("dsv?delimiter=,!../data/garbage.csv");
+
+  // setting you svg width
+  var width = 500,
+    // setting your svg height
+    height = 300,
+    // setting your margins of your svg
+    margins = {top: 20, right: 50, bottom: 20, left: 50},
+    // your y Axis accessor
+    y = function(d) {
+      return +d.total;
+    },
+    // set your y domain
+    yDomain = d3.extent(chartData, function(d){ return y(d); }),
+    // set your y range
+    yRange = [(height - margins.top - margins.bottom), 0],
+    // your scale type 'linear', 'ordinal', 'time'... etc.
+    yScale = 'linear',
+    // set your label name
+    yLabel = "Total",
+    yLabelPosition = 'right',
+    yOrient = "right",
+    yTickOrient = "left";
+
+  React.render(
+    &lt;svg width={width} height={height}&gt;
+      &lt;Yaxis
+        width= {width}
+        height= {height}
+        margins= {margins}
+        y= {y}
+        yDomain= {yDomain}
+        yRange = {yRange}
+        yScale= {yScale}
+        yLabel= {yLabel}
+        yLabelPosition= {yLabelPosition}
+        yOrient= {yOrient}
+        yTickOrient= {yTickOrient}
+      /&gt;
+    &lt;/svg&gt;
+  , document.getElementById('garbage-yaxis')
+  )
+})()
+</code></pre>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="3"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Grid</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+                    <div class="markdown-body">
+                      <p>Grid Component:</p>
+<p></p><div id="blank-grid" class="demo"></div><p></p>
+<script src="/react-d3-example/dist/min/es5/grid.min.js"></script>
+
+<pre><code class="lang-js">var React = require('react');
+var Grid = require('react-d3-core').Grid;
+
+(function() {
+
+  var generalChartData = require('json!../data/user_sample.json');
+
+  var width = 700,
+    height = 400,
+    margins = {top: 20, right: 50, bottom: 30, left: 50},
+    gridAxisClassName = "test-grid-class",
+    y = function(d) {
+      return d.age;
+    },
+    yDomain = d3.extent(generalChartData, y),
+    yRange = [height - margins.top - margins.bottom, 0],
+    yScale = 'linear',
+    x = function(d) {
+      return d.index;
+    },
+    xDomain = d3.extent(generalChartData, x),
+    xRange = [0, width - margins.left - margins.right],
+    xScale = 'linear';
+
+
+  React.render(
+    &lt;svg width={width} height={height}&gt;
+      &lt;Grid
+        width= {width}
+        height= {height}
+        margins= {margins}
+        type= {'y'}
+        gridAxisClassName= {gridAxisClassName}
+        y= {y}
+        yDomain= {yDomain}
+        yRange= {yRange}
+        yScale= {yScale}
+      /&gt;
+      &lt;Grid
+        width= {width}
+        height= {height}
+        margins= {margins}
+        type= {'x'}
+        gridAxisClassName= {gridAxisClassName}
+        x= {x}
+        xDomain= {xDomain}
+        xRange= {xRange}
+        xScale= {xScale}
+      /&gt;
+    &lt;/svg&gt;
+  , document.getElementById('blank-grid')
+  )
+})()
+</code></pre>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="4"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Legend</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+                    <div class="markdown-body">
+                      <p>Legend Component:</p>
+<p></p><div id="blank-legend" class="demo"></div><p></p>
+<script src="/react-d3-example/dist/min/es5/legend.min.js"></script>
+
+<pre><code class="lang-js">"use strict";
+
+var React = require('react');
+var Legend = require('react-d3-core').Legend;
+
+(function() {
+  var width = 500,
+    height = 400,
+    margins = {top: 40, right: 50, bottom: 40, left: 50},
+    legendClassName = "test-legend-class",
+    legendPosition = 'left',
+    legendOffset = 90,
+    chartSeries = [
+      {
+        field: 'Under 5 Years',
+        name: 'Under 5 Years',
+        color: '#1f77b4'
+      },
+      {
+        field: '5 to 13 Years',
+        name: '5 to 13 Years',
+        color: '#ff7f0e'
+      },
+      {
+        field: '14 to 17 Years',
+        name: '14 to 17 Years',
+        color: '#2ca02c'
+      },
+      {
+        field: '18 to 24 Years',
+        name: '18 to 24 Years',
+        color: '#d62728'
+      },
+      {
+        field: '25 to 44 Years',
+        name: '25 to 44 Years',
+        color: '#9467bd'
+      },
+      {
+        field: '45 to 64 Years',
+        name: '45 to 64 Years',
+        color: '#8c564b'
+      },
+      {
+        field: '65 Years and Over',
+        name: '65 Years and Over',
+        color: '#e377c2'
+      },
+
+    ]
+
+  React.render(
+    &lt;svg width= {width} height= {height}&gt;
+      &lt;rect height= {"100%"} width= {"100%"} fill= {"#CCC"} /&gt;
+      &lt;Legend
+        width= {width}
+        height= {height}
+        margins= {margins}
+        legendClassName= {legendClassName}
+        legendPosition= {legendPosition}
+        legendOffset= {legendOffset}
+        chartSeries = {chartSeries}
+      /&gt;
+    &lt;/svg&gt;
+  , document.getElementById('blank-legend')
+  )
+})()
+</code></pre>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <a name="5"></a>
+        <section id="services" class="section text-center">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Chart</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+                    <div class="markdown-body">
+                      <p>Chart Component:</p>
+<p></p><div id="blank-container" class="demo"></div><p></p>
+<script src="/react-d3-example/dist/min/es5/chart.min.js"></script>
+
+<pre><code class="lang-js">var React = require('react');
+var Chart = require('react-d3-core').Chart;
+
+// Example
+(function() {
+
+  var width = 500,
+    height = 400,
+    margins = {top: 20, right: 50, bottom: 20, left: 50},
+    id = "test-chart",
+    svgClassName = "test-chart-class",
+    titleClassName = "test-chart-title-class";
+
+  // chart title
+  var title = "test chart lib";
+  var style = {
+    fill: 'red'
+  };
+
+  React.render(
+    &lt;Chart
+      title= {title}
+      width= {width}
+      height= {height}
+      margins= {margins}
+      id= {id}
+      svgClassName= {svgClassName}
+      titleClassName= {titleClassName}&gt;
+      &lt;rect style={style} width="100%" height="100%"/&gt;
+    &lt;/Chart&gt;
+  , document.getElementById('blank-container'))
+
+})()
+</code></pre>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+    <!-- END SERVICES -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <!-- FOOTER MENU -->
+                <div class="col-md-6">
+                </div>
+                <!-- END FOOTER MENU -->
+
+                <!-- FOOTER CONTENT -->
+                <div class="col-md-6">
+                    <div class="footer-content text-right">
+                        <p>© 2015 License Apache2.0, <a href="/">react-d3</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- END FOOTER CONTENT -->
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- ./container -->
+    </footer>
+    <!-- js files -->
+    <script src="/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/prettyPhoto.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <!-- <script src="/js/main.js"></script> -->
+    <script src="/js/prism.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-67901975-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+</body></html>

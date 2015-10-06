@@ -14,3 +14,8 @@ smashmd:
 	smashmd ./docs/basic/md_origin/donut.md > ./docs/basic/md/donut.md
 	smashmd ./docs/basic/md_origin/pie.md > ./docs/basic/md/pie.md
 	smashmd ./docs/basic/md_origin/scatter.md > ./docs/basic/md/scatter.md
+	smashmd ./docs/core/md_origin/chart.md > ./docs/core/md/chart.md
+	smashmd ./docs/core/md_origin/grid.md > ./docs/core/md/grid.md
+	smashmd ./docs/core/md_origin/legend.md > ./docs/core/md/legend.md
+	smashmd ./docs/core/md_origin/xaxis.md > ./docs/core/md/xaxis.md
+	smashmd ./docs/core/md_origin/yaxis.md > ./docs/core/md/yaxis.md
