@@ -25,3 +25,12 @@ smashmd:
 	smashmd ./docs/brush/md_origin/bar.md > ./docs/brush/md/bar.md
 	smashmd ./docs/brush/md_origin/bar_group.md > ./docs/brush/md/bar_group.md
 	smashmd ./docs/brush/md_origin/bar_stack.md > ./docs/brush/md/bar_stack.md
+	smashmd ./docs/brush/md_origin/scatter.md > ./docs/brush/md/scatter.md
+	smashmd ./docs/tooltip/md_origin/line.md > ./docs/tooltip/md/line.md
+	smashmd ./docs/tooltip/md_origin/line_multi.md > ./docs/tooltip/md/line_multi.md
+	smashmd ./docs/tooltip/md_origin/area_stack.md > ./docs/tooltip/md/area_stack.md
+	smashmd ./docs/tooltip/md_origin/bar.md > ./docs/tooltip/md/bar.md
+	smashmd ./docs/tooltip/md_origin/bar_group.md > ./docs/tooltip/md/bar_group.md
+	smashmd ./docs/tooltip/md_origin/bar_stack.md > ./docs/tooltip/md/bar_stack.md
+	smashmd ./docs/tooltip/md_origin/scatter.md > ./docs/tooltip/md/scatter.md
+	smashmd ./docs/tooltip/md_origin/pie.md > ./docs/tooltip/md/pie.md

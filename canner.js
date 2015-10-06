@@ -98,7 +98,6 @@ var brush_charts = [{
 var brush_data = brush_charts.map(function(c) {
   return {
     "name": c.name,
-    "chart": "<div id='data_brush_" + c.link + "'></div><script src='/react-d3-brush/example/dist/min/brush_" + c.link + ".min.js'></script>",
     "md": "./docs/brush/md/" + c.link + ".md"
   }
 })
@@ -137,14 +136,13 @@ var tooltip_charts = [{
 var tooltip_data = tooltip_charts.map(function(c) {
   return {
     "name": c.name,
-    "chart": "<div id='data_tooltip_" + c.link + "'></div><script src='/react-d3-tooltip/example/dist/min/tooltip_" + c.link + ".min.js'></script>",
     "md": "./docs/tooltip/md/" + c.link + ".md"
   }
 })
 
 tooltip_data.unshift({
   "name": "introduction",
-  "md": "./react-d3-tooltip/README.md"
+  "md": "./docs/tooltip/md/README.md"
 })
 
 
@@ -347,26 +345,25 @@ module.exports = [{
           "data": brush_data
         }
     }
-  }
+  },
+  {
+   "layout": "./gallery.hbs",
+   "filename": "./docs/tooltip/index.html",
+   "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+   "data": {
+     "item": "react-d3-brush",
+     "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+     "slogan": "react-d3 tooltip charts",
+     "description": "Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.",
+     "banner-img": "/img/tooltip/cover.png",
+     "product": {
+       "title": "react-d3",
+       "data": tooltip_data
+     }
+   }
+ }
 ]
 
-
- // {
-//   "layout": "./gallery.hbs",
-//   "filename": "./docs/tooltip/index.html",
-//   "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
-//   "data": {
-//     "item": "react-d3-brush",
-//     "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
-//     "slogan": "react-d3 tooltip charts",
-//     "description": "Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.",
-//     "banner-img": "/img/tooltip/cover.png",
-//     "product": {
-//       "title": "react-d3",
-//       "data": tooltip_data
-//     }
-//   }
-// }, {
 //   "layout": "./gallery.hbs",
 //   "filename": "./docs/zoom/index.html",
 //   "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
