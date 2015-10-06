@@ -105,7 +105,7 @@ var brush_data = brush_charts.map(function(c) {
 
 brush_data.unshift({
   "name": "introduction",
-  "md": "./react-d3-brush/README.md"
+  "md": "./docs/brush/md/README.md"
 })
 
 var tooltip_charts = [{
@@ -332,26 +332,26 @@ module.exports = [{
           "data": core_data
         }
     }
+  },{
+    "layout": "./gallery.hbs",
+    "filename": "./docs/brush/index.html",
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "data": {
+        "item": "react-d3-brush",
+        "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+        "slogan": "react-d3 brush charts",
+        "description": "Building Brush With Line, bar, Scatter, Area Charts ... with ease.",
+        "banner-img": "/img/brush/cover.png",
+        "product": {
+          "title": "react-d3",
+          "data": brush_data
+        }
+    }
   }
 ]
 
 
-// , {
-//   "layout": "./gallery.hbs",
-//   "filename": "./docs/brush/index.html",
-//   "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
-//   "data": {
-//       "item": "react-d3-brush",
-//       "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
-//       "slogan": "react-d3 brush charts",
-//       "description": "Building Brush With Line, bar, Scatter, Area Charts ... with ease.",
-//       "banner-img": "/img/brush/cover.png",
-//       "product": {
-//         "title": "react-d3",
-//         "data": brush_data
-//       }
-//   }
-// }, {
+ // {
 //   "layout": "./gallery.hbs",
 //   "filename": "./docs/tooltip/index.html",
 //   "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],

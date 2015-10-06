@@ -19,3 +19,9 @@ smashmd:
 	smashmd ./docs/core/md_origin/legend.md > ./docs/core/md/legend.md
 	smashmd ./docs/core/md_origin/xaxis.md > ./docs/core/md/xaxis.md
 	smashmd ./docs/core/md_origin/yaxis.md > ./docs/core/md/yaxis.md
+	smashmd ./docs/brush/md_origin/line.md > ./docs/brush/md/line.md
+	smashmd ./docs/brush/md_origin/line_multi.md > ./docs/brush/md/line_multi.md
+	smashmd ./docs/brush/md_origin/area_stack.md > ./docs/brush/md/area_stack.md
+	smashmd ./docs/brush/md_origin/bar.md > ./docs/brush/md/bar.md
+	smashmd ./docs/brush/md_origin/bar_group.md > ./docs/brush/md/bar_group.md
+	smashmd ./docs/brush/md_origin/bar_stack.md > ./docs/brush/md/bar_stack.md

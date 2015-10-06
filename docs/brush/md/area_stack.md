@@ -1,56 +1,102 @@
-Area Stack with Brush Component:
+Area Stack Brush:
+
+<div id="area-stack" class="demo"></div>
+<script src="/react-d3-example/dist/min/es5/area_stack_brush.min.js"></script>
 
 ```js
+"use strict";
 
-import {
-  default as React,
-  Component,
-} from 'react';
+var React = require('react');
+var AreaStackBrush = require('react-d3-brush').AreaStackBrush;
 
-import {
-  AreaStackBrush as AreaStackBrush
-} from 'react-d3-brush';
+(function() {
+  var generalChartData = require('dsv?delimiter=,!../data/stack_test.csv')
 
-// Your Setting props!
+  var parseDate = d3.time.format("%m/%d/%y").parse;
 
-const chartSeries = [
-    {
-      field: 'IE',
-      name: 'IE browser'
+  var width = 700,
+    height = 400,
+    margins = {top: 50, right: 50, bottom: 50, left: 50},
+    id = "test-chart",
+    title = "Stack Area Chart",
+    svgClassName = "test-chart-class",
+    titleClassName = "test-chart-title-class",
+    legendClassName = "test-legend",
+    legendPosition = "right",
+    showLegend = true,
+    showXAxis = true,
+    showYAxis = true,
+    chartSeries = [
+      {
+        field: "Group1",
+        name: "Group 1"
+      },
+      {
+        field: "Group2",
+        name: "Group 2"
+      },
+      {
+        field: "Group3",
+        name: "Group 3"
+      }
+    ],
+    x = function(d) {
+      return parseDate(d.date);
     },
-    {
-      field: 'Chrome',
-      name: 'Chrome browser'
+    xOrient = 'bottom',
+    xTickOrient = 'bottom',
+    xDomain = d3.extent(generalChartData, function(d) { return x(d); }),
+    xRange = [0, width - margins.left - margins.right],
+    xScale = 'time',
+    xAxisClassName = 'x-axis',
+    xLabel = "Date",
+    y = function(d) {
+      return +d;
     },
-    {
-      field: 'Firefox'
-    },
-    {
-      field: 'Safari',
-      name: 'Safari browser'
-    },
-    {
-      field: 'Opera',
-      name: 'Opera browser'
-    }
-  ]
-
-const brushHeight = 200;
-const yBrushRange = [brushHeight - margins.top - margins.bottom, 0];
-
-// Your other setting props, such as essential width, height...
-
-(() => {
+    yOrient = 'left',
+    yTickOrient = 'right',
+    yDomain = [0, 100],
+    yRange = [height - margins.top - margins.bottom, 0],
+    yScale = 'linear',
+    yAxisClassName = 'y-axis',
+    // your brush height
+    brushHeight = 100;
 
   React.render(
-    <AreaStackBrush {pass all your props and chartSeries here!} />,
-    document.getElementById('data_container')
+      <AreaStackBrush
+        title= {title}
+        data= {generalChartData}
+        width= {width}
+        height= {height}
+        id= {id}
+        margins= {margins}
+        svgClassName= {svgClassName}
+        titleClassName= {titleClassName}
+        yAxisClassName= {yAxisClassName}
+        xAxisClassName= {xAxisClassName}
+        legendClassName= {legendClassName}
+        legendPosition= {legendPosition}
+        categoricalColors= {d3.scale.category10()}
+        chartSeries = {chartSeries}
+        showLegend= {showLegend}
+        showXAxis= {showXAxis}
+        showYAxis= {showYAxis}
+        x= {x}
+        xDomain= {xDomain}
+        xRange= {xRange}
+        xScale= {xScale}
+        xOrient= {xOrient}
+        xTickOrient= {xTickOrient}
+        xLabel = {xLabel}
+        y= {y}
+        yOrient= {yOrient}
+        yDomain= {yDomain}
+        yRange= {yRange}
+        yScale= {yScale}
+        yTickOrient= {yTickOrient}
+        brushHeight= {brushHeight}
+      />
+  , document.getElementById('area-stack')
   )
 })()
-
-// And you have a beautiful chart in react!
 ```
-
-<a href="/brush/area_stack">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT BRUSH AREA STACK CHART!!</button>
-</a>
