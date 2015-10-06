@@ -1,20 +1,41 @@
 Bar Stack Chart Component:
 
+<div id="data_bar_stack" class="demo"></div>
+<script src="/react-d3-example/dist/min/es5/bar_stack.min.js"></script>
+
 ```js
+"use strict";
 
-import {
-  default as React,
-  Component,
-} from 'react';
+var React = require('react');
+var Chart = require('react-d3-core').Chart;
+var BarStackChart = require('react-d3-basic').BarStackChart;
 
+(function() {
+  var generalChartData = require('dsv?delimiter=,!../data/age.csv')
 
-import {
-  BarStackChart as BarStackChart
-} from 'react-d3-basic';
+  var ageNames = d3.keys(generalChartData[0]).filter(function(key) { return key !== "State"; });
 
-// Your Setting props!
+  generalChartData.forEach(function(d) {
+    var y0 = 0;
+    d.ages = ageNames.map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
+    d.total = d.ages[d.ages.length - 1].y1;
+  });
 
-const chartSeries = [
+  var width = 700,
+    height = 400,
+    margins = {top: 50, right: 50, bottom: 50, left: 50},
+    id = "test-chart",
+    title = "Bar Stack Chart",
+    svgClassName = "test-chart-class",
+    titleClassName = "test-chart-title-class",
+    legendClassName = "test-legend",
+    legendPosition = "right",
+    showLegend = true,
+    showXAxis = true,
+    showYAxis = true,
+    showXGrid = true,
+    showYGrid = true,
+    chartSeries = [
       {
         field: 'Under 5 Years',
         name: 'Under 5 Years'
@@ -44,23 +65,91 @@ const chartSeries = [
         name: '65 Years and Over'
       },
 
-    ]
+    ],
+    x = function(d) {
+      return d.State;
+    },
+    xOrient = 'bottom',
+    xTickOrient = 'bottom',
+    xDomain = generalChartData.map(function(d) { return d.State; }),
+    xRangeRoundBands = {interval: [0, width - margins.left - margins.right], padding: .1},
+    xScale = 'ordinal',
+    xAxisClassName = 'x-axis',
+    xLabel = "Age",
+    xLabelPosition = 'bottom',
+    xTickPadding = 3,
+    xInnerTickSize = 6,
+    xOuterTickSize = 6,
+    y = function(d) {
+      return +d;
+    },
+    yOrient = 'left',
+    yTickOrient = 'left',
+    yRange = [height - margins.top - margins.bottom, 0],
+    yDomain = [0, d3.max(generalChartData, function(d) { return d.total; })],
+    yScale = 'linear',
+    yAxisClassName = 'y-axis',
+    yLabel = "Population",
+    yTickFormat = d3.format(".2s"),
+    yLabelPosition = 'right',
+    yTickPadding = 4,
+    yInnerTickSize = 6,
+    yOuterTickSize = 6
 
-// Your other setting props
-
-
-(() => {
 
   React.render(
-    <BarStackChart {pass all your props and chartSeries here!} />,
-    document.getElementById('data_container')
+    <Chart
+      title={title}
+      id={id}
+      width={width}
+      height={height}
+      >
+      <BarStackChart
+        title= {title}
+        data= {generalChartData}
+        width= {width}
+        height= {height}
+        id= {id}
+        margins= {margins}
+        svgClassName= {svgClassName}
+        titleClassName= {titleClassName}
+        yAxisClassName= {yAxisClassName}
+        xAxisClassName= {xAxisClassName}
+        legendClassName= {legendClassName}
+        legendPosition= {legendPosition}
+        categoricalColors= {d3.scale.category10()}
+        chartSeries = {chartSeries}
+        showLegend= {showLegend}
+        showXAxis= {showXAxis}
+        showYAxis= {showYAxis}
+        x= {x}
+        showXGrid= {showXGrid}
+        xDomain= {xDomain}
+        xRangeRoundBands= {xRangeRoundBands}
+        xScale= {xScale}
+        xOrient= {xOrient}
+        xTickOrient= {xTickOrient}
+        xTickPadding = {xTickPadding}
+        xInnerTickSize = {xInnerTickSize}
+        xOuterTickSize = {xOuterTickSize}
+        xLabel = {xLabel}
+        xLabelPosition = {xLabelPosition}
+        y= {y}
+        showYGrid= {showYGrid}
+        yOrient= {yOrient}
+        yRange= {yRange}
+        yDomain= {yDomain}
+        yScale= {yScale}
+        yTickOrient= {yTickOrient}
+        yTickPadding = {yTickPadding}
+        yInnerTickSize = {yInnerTickSize}
+        yOuterTickSize = {yOuterTickSize}
+        yTickFormat= {yTickFormat}
+        yLabel = {yLabel}
+        yLabelPosition = {yLabelPosition}
+      />
+    </Chart>
+  , document.getElementById('data_bar_stack')
   )
 })()
-
-
-// And you have a beautiful chart in react!
 ```
-
-<a href="/basic/bar_stack">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT BAR STACK CHART!!</button>
-</a>

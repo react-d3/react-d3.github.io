@@ -34,14 +34,13 @@ var charts = [{
 var basic_data = charts.map(function(c) {
   return {
     "name": c.name,
-    "chart": "<div id='data_" + c.link + "'></div><script src='/react-d3-basic/example/dist/min/" + c.link + ".min.js'></script>",
     "md": "./docs/basic/md/" + c.link + ".md"
   }
 })
 
 basic_data.unshift({
   "name": "introduction",
-  "md": "./react-d3-basic/README.md"
+  "md": "./docs/basic/md/README.md"
 })
 
 var brush_charts = [{
@@ -287,58 +286,58 @@ module.exports = [{
     "data": {
         "item": "react-d3-basic",
         "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
-        "slogan": "react-d3 basic charts",
-        "description": "Building Line, bar, Scatter, Area Charts ... with ease.",
-        "banner-img": "/img/basic/cover.png",
         "product": {
           "title": "react-d3",
           "data": basic_data
         }
     }
-  }, {
-    "layout": "./gallery.hbs",
-    "filename": "./docs/brush/index.html",
-    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
-    "data": {
-        "item": "react-d3-brush",
-        "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
-        "slogan": "react-d3 brush charts",
-        "description": "Building Brush With Line, bar, Scatter, Area Charts ... with ease.",
-        "banner-img": "/img/brush/cover.png",
-        "product": {
-          "title": "react-d3",
-          "data": brush_data
-        }
-    }
-  }, {
-    "layout": "./gallery.hbs",
-    "filename": "./docs/tooltip/index.html",
-    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
-    "data": {
-      "item": "react-d3-brush",
-      "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
-      "slogan": "react-d3 tooltip charts",
-      "description": "Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.",
-      "banner-img": "/img/tooltip/cover.png",
-      "product": {
-        "title": "react-d3",
-        "data": tooltip_data
-      }
-    }
-  }, {
-    "layout": "./gallery.hbs",
-    "filename": "./docs/zoom/index.html",
-    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
-    "data": {
-      "item": "react-d3-brush",
-      "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
-      "slogan": "react-d3 zoom charts",
-      "description": "Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.",
-      "banner-img": "/img/zoom/cover.png",
-      "product": {
-        "title": "react-d3",
-        "data": zoom_data
-      }
-    }
   }
 ]
+
+
+// , {
+//   "layout": "./gallery.hbs",
+//   "filename": "./docs/brush/index.html",
+//   "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+//   "data": {
+//       "item": "react-d3-brush",
+//       "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+//       "slogan": "react-d3 brush charts",
+//       "description": "Building Brush With Line, bar, Scatter, Area Charts ... with ease.",
+//       "banner-img": "/img/brush/cover.png",
+//       "product": {
+//         "title": "react-d3",
+//         "data": brush_data
+//       }
+//   }
+// }, {
+//   "layout": "./gallery.hbs",
+//   "filename": "./docs/tooltip/index.html",
+//   "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+//   "data": {
+//     "item": "react-d3-brush",
+//     "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+//     "slogan": "react-d3 tooltip charts",
+//     "description": "Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.",
+//     "banner-img": "/img/tooltip/cover.png",
+//     "product": {
+//       "title": "react-d3",
+//       "data": tooltip_data
+//     }
+//   }
+// }, {
+//   "layout": "./gallery.hbs",
+//   "filename": "./docs/zoom/index.html",
+//   "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+//   "data": {
+//     "item": "react-d3-brush",
+//     "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+//     "slogan": "react-d3 zoom charts",
+//     "description": "Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.",
+//     "banner-img": "/img/zoom/cover.png",
+//     "product": {
+//       "title": "react-d3",
+//       "data": zoom_data
+//     }
+//   }
+// }

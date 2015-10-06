@@ -14,7 +14,7 @@ var LineChart = require('react-d3-basic').LineChart;
 
 (function() {
   // load your general data
-  var chartData = require('dsv?delimiter=,!../../data/garbage.csv');
+  var chartData = require('dsv?delimiter=,!../data/garbage.csv');
   // your date format, use for parsing
   var parseDate = d3.time.format("%YM%m").parse;
 

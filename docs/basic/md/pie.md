@@ -1,20 +1,35 @@
 Pie Chart Component:
 
+<div id="data_pie" class="demo"></div>
+<script src="/react-d3-example/dist/min/es5/pie.min.js"></script>
+
 ```js
+"use strict";
 
-import {
-  default as React,
-  Component,
-} from 'react';
+var React = require('react');
+var Chart = require('react-d3-core').Chart;
+var PieChart = require('react-d3-basic').PieChart;
 
+(function() {
+  var generalChartData = require('dsv?delimiter=,!../data/pie_test.csv')
 
-import {
-  PieChart as PieChart
-} from 'react-d3-basic';
-
-// Your Setting props!
-
-const chartSeries = [
+  var width = 700,
+    height = 400,
+    radius = Math.min(width, height - 180) / 2,
+    margins = {top: 50, right: 30, bottom: 20, left: 50},
+    id = "test-chart",
+    title = "Pie Chart",
+    svgClassName = "test-chart-class",
+    titleClassName = "test-chart-title-class",
+    legendClassName = "test-legend",
+    showLegend = false,
+    value = function(d) {
+      return +d.population;
+    },
+    name = function(d) {
+      return d.age;
+    },
+    chartSeries = [
       {
         "field": "<5",
         "name": "less than 5"
@@ -39,22 +54,42 @@ const chartSeries = [
         "field": "45-64",
         "name": "45 to 64"
       }
-    ]
+    ],
+    legendPosition = 'left',
+    outerRadius = radius - 10,
+    innerRadius = 0;
 
-// Your other setting props
-
-(() => {
 
   React.render(
-    <PieChart {pass all your props and chartSeries here!} />,
-    document.getElementById('data_container')
+    <Chart
+      title={title}
+      id={id}
+      width={width}
+      height={height}
+      >
+      <PieChart
+        title= {title}
+        data= {generalChartData}
+        width= {width}
+        height= {height}
+        radius= {radius}
+        id= {id}
+        margins= {margins}
+        chartSeries= {chartSeries}
+        svgClassName= {svgClassName}
+        titleClassName= {titleClassName}
+        legendClassName= {legendClassName}
+        legendPosition= {legendPosition}
+        categoricalColors= {d3.scale.category10()}
+        showLegend= {showLegend}
+        value = {value}
+        name = {name}
+        outerRadius= {outerRadius}
+        innerRadius= {innerRadius}
+        pieSort = {d3.descending}
+      />
+    </Chart>
+  , document.getElementById('data_pie')
   )
 })()
-
-
-// And you have a beautiful chart in react!
 ```
-
-<a href="/basic/pie">
-  <button type="button" class="btn btn-success">LEARN MORE ABOUT PIE CHART!!</button>
-</a>

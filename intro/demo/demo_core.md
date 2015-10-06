@@ -5,7 +5,7 @@ This is an example of building a xais using `react-d3`, `react-d3` provide some 
 <div id="garbage-xaxis" class="demo"></div>
 <script src="../../react-d3-example/dist/min/es5/xaxis_garbage.min.js"></script>
 
-!!import '../react-d3-example/xaxis/es5/xaxis_garbage.js';
+!!import '../../react-d3-example/xaxis/xaxis_garbage.js';
 
 
 ## Simple xaxis component with React state change
@@ -17,4 +17,4 @@ This example demo the power of storing data in state and props, makes you build 
 <div id="click-xaxis" class="demo"></div>
 <script src="../../react-d3-example/dist/min/es5/xaxis_click.min.js"></script>
 
-!!import '../react-d3-example/xaxis/es5/xaxis_click.js';
+!!import '../../react-d3-example/xaxis/xaxis_click.js';
