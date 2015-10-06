@@ -34,3 +34,10 @@ smashmd:
 	smashmd ./docs/tooltip/md_origin/bar_stack.md > ./docs/tooltip/md/bar_stack.md
 	smashmd ./docs/tooltip/md_origin/scatter.md > ./docs/tooltip/md/scatter.md
 	smashmd ./docs/tooltip/md_origin/pie.md > ./docs/tooltip/md/pie.md
+	smashmd ./docs/zoom/md_origin/line.md > ./docs/zoom/md/line.md
+	smashmd ./docs/zoom/md_origin/line_multi.md > ./docs/zoom/md/line_multi.md
+	smashmd ./docs/zoom/md_origin/area_stack.md > ./docs/zoom/md/area_stack.md
+	smashmd ./docs/zoom/md_origin/bar.md > ./docs/zoom/md/bar.md
+	smashmd ./docs/zoom/md_origin/bar_group.md > ./docs/zoom/md/bar_group.md
+	smashmd ./docs/zoom/md_origin/bar_stack.md > ./docs/zoom/md/bar_stack.md
+	smashmd ./docs/zoom/md_origin/scatter.md > ./docs/zoom/md/scatter.md

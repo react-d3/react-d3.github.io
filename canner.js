@@ -172,14 +172,13 @@ var zoom_charts = [{
 var zoom_data = zoom_charts.map(function(c) {
   return {
     "name": c.name,
-    "chart": "<div id='data_zoom_" + c.link + "'></div><script src='/react-d3-zoom/example/dist/min/zoom_" + c.link + ".min.js'></script>",
     "md": "./docs/zoom/md/" + c.link + ".md"
   }
 })
 
 zoom_data.unshift({
   "name": "introduction",
-  "md": "./react-d3-zoom/README.md"
+  "md": "./docs/zoom/md/README.md"
 })
 
 module.exports = [{
@@ -361,21 +360,20 @@ module.exports = [{
        "data": tooltip_data
      }
    }
+ },{
+   "layout": "./gallery.hbs",
+   "filename": "./docs/zoom/index.html",
+   "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+   "data": {
+     "item": "react-d3-brush",
+     "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+     "slogan": "react-d3 zoom charts",
+     "description": "Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.",
+     "banner-img": "/img/zoom/cover.png",
+     "product": {
+       "title": "react-d3",
+       "data": zoom_data
+     }
+   }
  }
 ]
-
-//   "layout": "./gallery.hbs",
-//   "filename": "./docs/zoom/index.html",
-//   "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
-//   "data": {
-//     "item": "react-d3-brush",
-//     "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
-//     "slogan": "react-d3 zoom charts",
-//     "description": "Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.",
-//     "banner-img": "/img/zoom/cover.png",
-//     "product": {
-//       "title": "react-d3",
-//       "data": zoom_data
-//     }
-//   }
-// }
