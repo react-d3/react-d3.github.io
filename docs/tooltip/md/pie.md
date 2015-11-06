@@ -1,12 +1,13 @@
 Scatter Plot Tooltip:
 
 <div id="data_tooltip_pie" class="demo"></div>
-<script src="/react-d3-example/dist/min/es5/pie_tooltip.min.js"></script>
+<script src="/react-d3-example/dist/simple/min/pie_tooltip.min.js"></script>
 
 ```js
 "use strict";
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var PieTooltip = require('react-d3-tooltip').PieTooltip;
 
 (function() {
@@ -14,16 +15,7 @@ var PieTooltip = require('react-d3-tooltip').PieTooltip;
 
   var width = 700,
     height = 300,
-    // set your pie chart radius
-    radius = Math.min(width, height - 120) / 2,
-    margins = {top: 50, right: 50, bottom: 20, left: 50},
-    id = "test-chart",
     title = "Pie Chart With Tooltip",
-    svgClassName = "test-chart-class",
-    titleClassName = "test-chart-title-class",
-    legendClassName = "test-legend",
-    // show legend or not
-    showLegend = true,
     // value accessor
     value = function(d) {
       return +d.population;
@@ -59,37 +51,18 @@ var PieTooltip = require('react-d3-tooltip').PieTooltip;
         "field": "45-64",
         "name": "45 to 64"
       }
-    ],
-    legendPosition = 'right',
-    // your outer radius
-    outerRadius = radius,
-    // your inner radius, if greater than 0, it will become a donut chart
-    innerRadius = 0,
-    // d3.descending for sort by descending, d3.ascending for sort by ascending.
-    pieSort = d3.descending;
+    ];
 
 
-  React.render(
+  ReactDOM.render(
     <PieTooltip
       title= {title}
       data= {generalChartData}
       width= {width}
       height= {height}
-      radius= {radius}
-      id= {id}
-      margins= {margins}
       chartSeries= {chartSeries}
-      svgClassName= {svgClassName}
-      titleClassName= {titleClassName}
-      legendClassName= {legendClassName}
-      legendPosition= {legendPosition}
-      categoricalColors= {d3.scale.category10()}
-      showLegend= {showLegend}
       value = {value}
       name = {name}
-      outerRadius= {outerRadius}
-      innerRadius= {innerRadius}
-      pieSort = {pieSort}
     />
   , document.getElementById('data_tooltip_pie')
   )

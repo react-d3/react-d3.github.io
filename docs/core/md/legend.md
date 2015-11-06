@@ -1,12 +1,13 @@
 Legend Component:
 
 <div id="blank-legend" class="demo"></div>
-<script src="/react-d3-example/dist/min/es5/legend.min.js"></script>
+<script src="/react-d3-example/dist/detail/min/legend.min.js"></script>
 
 ```js
 "use strict";
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var Legend = require('react-d3-core').Legend;
 
 (function() {
@@ -55,19 +56,16 @@ var Legend = require('react-d3-core').Legend;
 
     ]
 
-  React.render(
-    <svg width= {width} height= {height}>
-      <rect height= {"100%"} width= {"100%"} fill= {"#CCC"} />
-      <Legend
-        width= {width}
-        height= {height}
-        margins= {margins}
-        legendClassName= {legendClassName}
-        legendPosition= {legendPosition}
-        legendOffset= {legendOffset}
-        chartSeries = {chartSeries}
-      />
-    </svg>
+  ReactDOM.render(
+    <Legend
+      width= {width}
+      height= {height}
+      margins= {margins}
+      legendClassName= {legendClassName}
+      legendPosition= {legendPosition}
+      legendOffset= {legendOffset}
+      chartSeries = {chartSeries}
+    />
   , document.getElementById('blank-legend')
   )
 })()

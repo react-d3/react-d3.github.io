@@ -1,6 +1,6 @@
 Legend Component:
 
 <div id="blank-legend" class="demo"></div>
-<script src="/react-d3-example/dist/min/es5/legend.min.js"></script>
+<script src="/react-d3-example/dist/detail/min/legend.min.js"></script>
 
-!!import '../../../react-d3-example/legend/legend.js';
+!!import '../../../react-d3-example/detail/legend/legend.js';

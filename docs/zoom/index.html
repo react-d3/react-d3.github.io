@@ -142,11 +142,12 @@
                     <div class="markdown-body">
                       <p>Line Chart Zoom:</p>
 <p></p><div id="line-garbage" class="demo"></div><p></p>
-<script src="/react-d3-example/dist/min/es5/line_garbage_zoom.min.js"></script>
+<script src="/react-d3-example/dist/simple/min/line_garbage_zoom.min.js"></script>
 
 <pre><code class="lang-js">"use strict"
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var LineZoom = require('react-d3-zoom').LineZoom;
 
 (function() {
@@ -157,17 +158,8 @@ var LineZoom = require('react-d3-zoom').LineZoom;
 
   var width = 700,
     height = 300,
-    margins = {top: 30, right: 70, bottom: 30, left: 50},
-    id = "simple-line-chart",
+    margins = {left: 100, right: 100, top: 50, bottom: 50},
     title = "Taiwan refuse disposal",
-    svgClassName = "simple-line-chart",
-    titleClassName = "test-chart-title-class",
-    // show legend or not
-    showLegend = true,
-    // show xaxis or not
-    showXAxis = true,
-    // show yaxis or not
-    showYAxis = true,
     // chart series,
     // field: is what field your data want to be selected
     // name: the name of the field that display in legend
@@ -183,60 +175,18 @@ var LineZoom = require('react-d3-zoom').LineZoom;
     x = function(d) {
       return parseDate(d.month);
     },
-    xOrient = 'bottom',
-    xTickOrient = 'top',
-    xDomain = d3.extent(chartData, function(d){ return x(d) }),
-    xRange = [0, width - margins.left - margins.right],
-    xScale = 'time',
-    xAxisClassName = 'x-axis',
-    xLabel = "Month",
-    xLabelPosition = "left",
-    // your y accessor
-    y = function(d) {
-      return +d;
-    },
-    yOrient = 'right',
-    yTickOrient = 'right',
-    // find max and min
-    yDomain = d3.extent(chartData, function(d) {return d.total;}),
-    yRange = [height - margins.top - margins.bottom, 0],
-    yScale = 'linear',
-    yAxisClassName = 'y-axis',
-    yLabelPosition = 'left',
-    yLabel = "Amount";
+    xScale = 'time';
 
-  React.render(
+  ReactDOM.render(
       &lt;LineZoom
         title= {title}
         data= {chartData}
         width= {width}
         height= {height}
-        id= {id}
         margins= {margins}
-        svgClassName= {svgClassName}
-        titleClassName= {titleClassName}
-        yAxisClassName= {yAxisClassName}
-        xAxisClassName= {xAxisClassName}
         chartSeries= {chartSeries}
-        showLegend= {showLegend}
-        showXAxis= {showXAxis}
-        showYAxis= {showYAxis}
         x= {x}
-        xDomain= {xDomain}
-        xRange= {xRange}
         xScale= {xScale}
-        xOrient= {xOrient}
-        xTickOrient= {xTickOrient}
-        xLabel = {xLabel}
-        xLabelPosition = {xLabelPosition}
-        y= {y}
-        yOrient= {yOrient}
-        yDomain= {yDomain}
-        yRange= {yRange}
-        yScale= {yScale}
-        yTickOrient= {yTickOrient}
-        yLabel = {yLabel}
-        yLabelPosition = {yLabelPosition}
       /&gt;
   , document.getElementById('line-garbage')
   )
@@ -258,11 +208,12 @@ var LineZoom = require('react-d3-zoom').LineZoom;
                     <div class="markdown-body">
                       <p>Line Multiple Chart Zoom:</p>
 <p></p><div id="line-multi-garbage" class="demo"></div><p></p>
-<script src="/react-d3-example/dist/min/es5/line_multi_garbage_zoom.min.js"></script>
+<script src="/react-d3-example/dist/simple/min/line_multi_garbage_zoom.min.js"></script>
 
 <pre><code class="lang-js">"use strict"
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var LineZoom = require('react-d3-zoom').LineZoom;
 
 (function() {
@@ -274,17 +225,8 @@ var LineZoom = require('react-d3-zoom').LineZoom;
 
   var width = 700,
     height = 300,
-    margins = {top: 30, right: 70, bottom: 30, left: 50},
-    id = "simple-area-chart",
+    margins = {left: 100, right: 100, top: 50, bottom: 50},
     title = "Taiwan refuse disposal - Multi line",
-    svgClassName = "simple-area-chart",
-    titleClassName = "test-chart-title-class",
-    // show legend or not
-    showLegend = true,
-    // show xaxis or not
-    showXAxis = true,
-    // show yaxis or not
-    showYAxis = true,
     // chart series,
     // field: is what field your data want to be selected
     // name: the name of the field that display in legend
@@ -308,62 +250,18 @@ var LineZoom = require('react-d3-zoom').LineZoom;
     x = function(d) {
       return parseDate(d.month);
     },
-    xOrient = 'bottom',
-    xTickOrient = 'top',
-    xDomain = d3.extent(chartData, function(d){ return x(d) }),
-    xRange = [0, width - margins.left - margins.right],
-    xScale = 'time',
-    xAxisClassName = 'x-axis',
-    xLabel = "Month",
-    xLabelPosition = "left",
-    // your y accessor
-    y = function(d) {
-      return +d;
-    },
-    yOrient = 'right',
-    yTickOrient = 'right',
-    // find max and min
-    yDomain = [0, d3.max(chartData, function(d) {return d.total;})],
-    yRange = [height - margins.top - margins.bottom, 0],
-    yScale = 'linear',
-    yAxisClassName = 'y-axis',
-    yLabelPosition = 'left',
-    yLabel = "Amount",
-    categoricalColors= d3.scale.category10()
+    xScale = 'time';
 
-  React.render(
+  ReactDOM.render(
     &lt;LineZoom
       title= {title}
       data= {chartData}
+      chartSeries= {chartSeries}
       width= {width}
       height= {height}
-      id= {id}
       margins= {margins}
-      svgClassName= {svgClassName}
-      titleClassName= {titleClassName}
-      yAxisClassName= {yAxisClassName}
-      xAxisClassName= {xAxisClassName}
-      chartSeries= {chartSeries}
-      showLegend= {showLegend}
-      showXAxis= {showXAxis}
-      showYAxis= {showYAxis}
       x= {x}
-      xDomain= {xDomain}
-      xRange= {xRange}
       xScale= {xScale}
-      xOrient= {xOrient}
-      xTickOrient= {xTickOrient}
-      xLabel = {xLabel}
-      xLabelPosition = {xLabelPosition}
-      y= {y}
-      yOrient= {yOrient}
-      yDomain= {yDomain}
-      yRange= {yRange}
-      yScale= {yScale}
-      yTickOrient= {yTickOrient}
-      yLabel = {yLabel}
-      yLabelPosition = {yLabelPosition}
-      categoricalColors= {d3.scale.category10()}
     /&gt;
   , document.getElementById('line-multi-garbage')
   )
@@ -385,11 +283,12 @@ var LineZoom = require('react-d3-zoom').LineZoom;
                     <div class="markdown-body">
                       <p>Area Stack Zoom:</p>
 <p></p><div id="area-stack" class="demo"></div><p></p>
-<script src="/react-d3-example/dist/min/es5/area_stack_zoom.min.js"></script>
+<script src="/react-d3-example/dist/simple/min/area_stack_zoom.min.js"></script>
 
 <pre><code class="lang-js">"use strict";
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var AreaStackZoom = require('react-d3-zoom').AreaStackZoom;
 
 (function() {
@@ -399,16 +298,7 @@ var AreaStackZoom = require('react-d3-zoom').AreaStackZoom;
 
   var width = 700,
     height = 400,
-    margins = {top: 50, right: 50, bottom: 50, left: 50},
-    id = "test-chart",
     title = "Stack Area Chart",
-    svgClassName = "test-chart-class",
-    titleClassName = "test-chart-title-class",
-    legendClassName = "test-legend",
-    legendPosition = "right",
-    showLegend = true,
-    showXAxis = true,
-    showYAxis = true,
     chartSeries = [
       {
         field: "Group1",
@@ -426,55 +316,17 @@ var AreaStackZoom = require('react-d3-zoom').AreaStackZoom;
     x = function(d) {
       return parseDate(d.date);
     },
-    xOrient = 'bottom',
-    xTickOrient = 'bottom',
-    xDomain = d3.extent(generalChartData, function(d) { return x(d); }),
-    xRange = [0, width - margins.left - margins.right],
-    xScale = 'time',
-    xAxisClassName = 'x-axis',
-    xLabel = "Date",
-    y = function(d) {
-      return +d;
-    },
-    yOrient = 'left',
-    yTickOrient = 'right',
-    yDomain = [0, 100],
-    yRange = [height - margins.top - margins.bottom, 0],
-    yScale = 'linear',
-    yAxisClassName = 'y-axis';
+    xScale = 'time';
 
-  React.render(
+  ReactDOM.render(
       &lt;AreaStackZoom
         title= {title}
         data= {generalChartData}
         width= {width}
         height= {height}
-        id= {id}
-        margins= {margins}
-        svgClassName= {svgClassName}
-        titleClassName= {titleClassName}
-        yAxisClassName= {yAxisClassName}
-        xAxisClassName= {xAxisClassName}
-        legendClassName= {legendClassName}
-        legendPosition= {legendPosition}
-        categoricalColors= {d3.scale.category10()}
         chartSeries = {chartSeries}
-        showLegend= {showLegend}
-        showXAxis= {showXAxis}
-        showYAxis= {showYAxis}
         x= {x}
-        xDomain= {xDomain}
-        xRange= {xRange}
         xScale= {xScale}
-        xOrient= {xOrient}
-        xTickOrient= {xTickOrient}
-        xLabel = {xLabel}
-        y= {y}
-        yOrient= {yOrient}
-        yDomain= {yDomain}
-        yRange= {yRange}
-        yScale= {yScale}
-        yTickOrient= {yTickOrient}
       /&gt;
   , document.getElementById('area-stack')
   )
@@ -496,11 +348,12 @@ var AreaStackZoom = require('react-d3-zoom').AreaStackZoom;
                     <div class="markdown-body">
                       <p>Bar Zoom:</p>
 <p></p><div id="data_bar" class="demo"></div><p></p>
-<script src="/react-d3-example/dist/min/es5/bar_zoom.min.js"></script>
+<script src="/react-d3-example/dist/simple/min/bar_zoom.min.js"></script>
 
 <pre><code class="lang-js">"use strict";
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var BarZoom = require('react-d3-zoom').BarZoom;
 
 (function() {
@@ -508,16 +361,7 @@ var BarZoom = require('react-d3-zoom').BarZoom;
 
   var width = 700,
     height = 400,
-    margins = {top: 50, right: 50, bottom: 50, left: 50},
-    id = "test-chart",
-    title = "Bar Chart",
-    svgClassName = "test-chart-class",
-    titleClassName = "test-chart-title-class",
-    legendClassName = "test-legend",
-    legendPosition = "right",
-    showLegend = true,
-    showXAxis = true,
-    showYAxis = true,
+    title = "Bar Chart with zoom",
     chartSeries = [
       {
         field: 'frequency',
@@ -527,62 +371,19 @@ var BarZoom = require('react-d3-zoom').BarZoom;
     x = function(d) {
       return d.letter;
     },
-    xOrient = 'bottom',
-    xTickOrient = 'bottom',
-    xDomain = generalChartData.map(function(d) { return d.letter; }),
-    xRangeRoundBands = {interval: [0, width - margins.left - margins.right], padding: .1},
     xScale = 'ordinal',
-    xAxisClassName = 'x-axis',
-    xLabel = "Letter",
-    xLabelPosition = 'bottom',
-    y = function(d) {
-      return +d;
-    },
-    yOrient = 'left',
-    yTickOrient = 'right',
-    yRange = [height - margins.top - margins.bottom, 0],
-    yDomain = [0, +d3.max(generalChartData, function(d) { return d.frequency; })],
-    yScale = 'linear',
-    yAxisClassName = 'y-axis',
-    yLabel = "Frequency",
-    yTicks = [10, "%"],
-    yLabelPosition = 'left';
+    yTicks = [10, "%"];
 
-  React.render(
+  ReactDOM.render(
       &lt;BarZoom
         title= {title}
         data= {generalChartData}
         width= {width}
         height= {height}
-        id= {id}
-        margins= {margins}
-        svgClassName= {svgClassName}
-        titleClassName= {titleClassName}
-        yAxisClassName= {yAxisClassName}
-        xAxisClassName= {xAxisClassName}
-        legendClassName= {legendClassName}
-        legendPosition= {legendPosition}
-        categoricalColors= {d3.scale.category10()}
         chartSeries = {chartSeries}
-        showLegend= {showLegend}
-        showXAxis= {showXAxis}
-        showYAxis= {showYAxis}
         x= {x}
-        xDomain= {xDomain}
-        xRangeRoundBands= {xRangeRoundBands}
         xScale= {xScale}
-        xOrient= {xOrient}
-        xTickOrient= {xTickOrient}
-        xLabel = {xLabel}
-        y= {y}
-        yOrient= {yOrient}
-        yRange= {yRange}
-        yDomain= {yDomain}
-        yScale= {yScale}
-        yTickOrient= {yTickOrient}
         yTicks= {yTicks}
-        yLabel = {yLabel}
-        yLabelPosition = {yLabelPosition}
       /&gt;
   , document.getElementById('data_bar')
   )
@@ -604,36 +405,20 @@ var BarZoom = require('react-d3-zoom').BarZoom;
                     <div class="markdown-body">
                       <p>Bar Group Zoom:</p>
 <p></p><div id="data_bar_group" class="demo"></div><p></p>
-<script src="/react-d3-example/dist/min/es5/bar_group_zoom.min.js"></script>
+<script src="/react-d3-example/dist/simple/min/bar_group_zoom.min.js"></script>
 
 <pre><code class="lang-js">"use strict";
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var BarGroupZoom = require('react-d3-zoom').BarGroupZoom;
 
 (function() {
   var generalChartData = require('dsv?delimiter=,!../data/age.csv')
 
-  var ageNames = d3.keys(generalChartData[0]).filter(function(key) { return key !== "State"; });
-
-  generalChartData.forEach(function(d) {
-    d.ages = ageNames.map(function(name) { return {name: name, value: +d[name]}; });
-  });
-
   var width = 700,
     height = 400,
-    margins = {top: 50, right: 50, bottom: 50, left: 50},
-    id = "test-chart",
     title = "Bar Group Chart",
-    svgClassName = "test-chart-class",
-    titleClassName = "test-chart-title-class",
-    legendClassName = "test-legend",
-    legendPosition = 'right',
-    labelOffset = 30,
-
-    showLegend = true,
-    showXAxis = true,
-    showYAxis = true,
     chartSeries = [
       {
         field: 'Under 5 Years',
@@ -668,66 +453,23 @@ var BarGroupZoom = require('react-d3-zoom').BarGroupZoom;
     x = function(d) {
       return d.State;
     },
-    xOrient = 'bottom',
-    xTickOrient = 'bottom',
-    xDomain = generalChartData.map(function(d) { return d.State; }),
-    xRangeRoundBands = {interval: [0, width - margins.left - margins.right], padding: .1},
     xScale = 'ordinal',
-    xAxisClassName = 'x-axis',
     xLabel = "Age",
-    xLabelPosition = 'bottom',
-    y = function(d) {
-      return +d;
-    },
-    yOrient = 'left',
-    yTickOrient = 'right',
-    yRange = [height - margins.top - margins.bottom, 0],
-    yDomain = [0, d3.max(generalChartData, function(d) { return d3.max(d.ages, function(d) { return d.value; }); })],
-    yScale = 'linear',
-    yAxisClassName = 'y-axis',
     yLabel = "Population",
-    yTickFormat = d3.format(".2s"),
-    yLabelPosition = 'left',
-    categoricalColors = d3.scale.category10();
+    yTickFormat = d3.format(".2s");
 
-
-  React.render(
+  ReactDOM.render(
       &lt;BarGroupZoom
         title= {title}
         data= {generalChartData}
         width= {width}
         height= {height}
-        id= {id}
-        margins= {margins}
-        svgClassName= {svgClassName}
-        labelOffset = {labelOffset}
-        titleClassName= {titleClassName}
-        yAxisClassName= {yAxisClassName}
-        xAxisClassName= {xAxisClassName}
-        legendClassName= {legendClassName}
-        legendPosition= {legendPosition}
-        categoricalColors= {categoricalColors}
         chartSeries = {chartSeries}
-        showLegend= {showLegend}
-        showXAxis= {showXAxis}
-        showYAxis= {showYAxis}
         x= {x}
-        xDomain= {xDomain}
-        xRangeRoundBands= {xRangeRoundBands}
         xScale= {xScale}
-        xOrient= {xOrient}
-        xTickOrient= {xTickOrient}
         xLabel = {xLabel}
-        xLabelPosition = {xLabelPosition}
-        y= {y}
-        yOrient= {yOrient}
-        yRange= {yRange}
-        yDomain= {yDomain}
-        yScale= {yScale}
-        yTickOrient= {yTickOrient}
         yTickFormat= {yTickFormat}
         yLabel = {yLabel}
-        yLabelPosition = {yLabelPosition}
       /&gt;
   , document.getElementById('data_bar_group')
   )
@@ -749,41 +491,21 @@ var BarGroupZoom = require('react-d3-zoom').BarGroupZoom;
                     <div class="markdown-body">
                       <p>Bar Stack Chart Zoom:</p>
 <p></p><div id="data_zoom_bar_stack" class="demo"></div><p></p>
-<script src="/react-d3-example/dist/min/es5/bar_stack_zoom.min.js"></script>
+<script src="/react-d3-example/dist/simple/min/bar_stack_zoom.min.js"></script>
 
 <pre><code class="lang-js">"use strict";
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var BarStackZoom = require('react-d3-zoom').BarStackZoom;
 
 (function() {
   // loading data
   var generalChartData = require('dsv?delimiter=,!../data/age.csv')
 
-  // find find keys
-  var ageNames = d3.keys(generalChartData[0]).filter(function(key) { return key !== "State"; });
-
-  // add values in fields use for finding maximum value of the chart, see yDomain prop.
-  generalChartData.forEach(function(d) {
-    var y0 = 0;
-    d.ages = ageNames.map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
-    d.total = d.ages[d.ages.length - 1].y1;
-  });
-
   var width = 700,
     height = 400,
-    margins = {top: 50, right: 50, bottom: 50, left: 50},
-    id = "test-chart",
     title = "Bar Stack Chart With Zoom",
-    svgClassName = "test-chart-class",
-    titleClassName = "test-chart-title-class",
-    legendClassName = "test-legend",
-    legendPosition = 'right',
-    showLegend = true,
-    showXAxis = true,
-    showYAxis = true,
-    showXGrid = true,
-    showYGrid = true,
     // what fields you want to build in the chart
     // field is for the field in your csv field
     // name is for the name you want to show in your legend.
@@ -822,84 +544,20 @@ var BarStackZoom = require('react-d3-zoom').BarStackZoom;
     x = function(d) {
       return d.State;
     },
-    xOrient = 'bottom',
-    xTickOrient = 'bottom',
-    // set your ordinal domain
-    xDomain = generalChartData.map(function(d) { return d.State; }),
-    // set xRangeRoundBands
-    xRangeRoundBands = {interval: [0, width - margins.left - margins.right], padding: .1},
-    // set x scale: ordinal scale
     xScale = 'ordinal',
-    xAxisClassName = 'x-axis',
-    xLabel = "Age",
-    xLabelPosition = 'bottom',
-    xTickPadding = 3,
-    xInnerTickSize = 6,
-    xOuterTickSize = 6,
-    // y axis accessor
-    y = function(d) {
-      return +d;
-    },
-    yOrient = 'left',
-    yTickOrient = 'left',
-    yRange = [height - margins.top - margins.bottom, 0],
-    // y axis domain, set your min and max.
-    yDomain = [0, d3.max(generalChartData, function(d) { return d.total; })],
-    yScale = 'linear',
-    yAxisClassName = 'y-axis',
-    yLabel = "Population",
     // y tick format
-    yTickFormat = d3.format(".2s"),
-    yLabelPosition = 'left',
-    yTickPadding = 4,
-    yInnerTickSize = 6,
-    yOuterTickSize = 6
+    yTickFormat = d3.format(".2s");
 
-
-  React.render(
+  ReactDOM.render(
     &lt;BarStackZoom
       title= {title}
       data= {generalChartData}
       width= {width}
       height= {height}
-      id= {id}
-      margins= {margins}
-      svgClassName= {svgClassName}
-      titleClassName= {titleClassName}
-      yAxisClassName= {yAxisClassName}
-      xAxisClassName= {xAxisClassName}
-      legendClassName= {legendClassName}
-      legendPosition= {legendPosition}
-      categoricalColors= {d3.scale.category10()}
       chartSeries = {chartSeries}
-      showLegend= {showLegend}
-      showXAxis= {showXAxis}
-      showYAxis= {showYAxis}
       x= {x}
-      showXGrid= {showXGrid}
-      xDomain= {xDomain}
-      xRangeRoundBands= {xRangeRoundBands}
       xScale= {xScale}
-      xOrient= {xOrient}
-      xTickOrient= {xTickOrient}
-      xTickPadding = {xTickPadding}
-      xInnerTickSize = {xInnerTickSize}
-      xOuterTickSize = {xOuterTickSize}
-      xLabel = {xLabel}
-      xLabelPosition = {xLabelPosition}
-      y= {y}
-      showYGrid= {showYGrid}
-      yOrient= {yOrient}
-      yRange= {yRange}
-      yDomain= {yDomain}
-      yScale= {yScale}
-      yTickOrient= {yTickOrient}
-      yTickPadding = {yTickPadding}
-      yInnerTickSize = {yInnerTickSize}
-      yOuterTickSize = {yOuterTickSize}
       yTickFormat= {yTickFormat}
-      yLabel = {yLabel}
-      yLabelPosition = {yLabelPosition}
     /&gt;
   , document.getElementById('data_zoom_bar_stack')
   )
@@ -921,11 +579,12 @@ var BarStackZoom = require('react-d3-zoom').BarStackZoom;
                     <div class="markdown-body">
                       <p>Scatter Plot Zoom:</p>
 <p></p><div id="scatter-garbage" class="demo"></div><p></p>
-<script src="/react-d3-example/dist/min/es5/scatter_garbage_zoom.min.js"></script>
+<script src="/react-d3-example/dist/simple/min/scatter_garbage_zoom.min.js"></script>
 
 <pre><code class="lang-js">"use strict"
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var ScatterZoom = require('react-d3-zoom').ScatterZoom;
 
 (function() {
@@ -937,17 +596,8 @@ var ScatterZoom = require('react-d3-zoom').ScatterZoom;
 
   var width = 700,
     height = 300,
-    margins = {top: 30, right: 70, bottom: 30, left: 50},
-    id = "simple-area-chart",
+    margins = {top: 50, right: 100, bottom: 50, left: 100},
     title = "Taiwan refuse disposal - Multi line",
-    svgClassName = "simple-area-chart",
-    titleClassName = "test-chart-title-class",
-    // show legend or not
-    showLegend = true,
-    // show xaxis or not
-    showXAxis = true,
-    // show yaxis or not
-    showYAxis = true,
     // chart series,
     // field: is what field your data want to be selected
     // name: the name of the field that display in legend
@@ -976,62 +626,18 @@ var ScatterZoom = require('react-d3-zoom').ScatterZoom;
     x = function(d) {
       return parseDate(d.month);
     },
-    xOrient = 'bottom',
-    xTickOrient = 'top',
-    xDomain = d3.extent(chartData, function(d){ return x(d) }),
-    xRange = [0, width - margins.left - margins.right],
-    xScale = 'time',
-    xAxisClassName = 'x-axis',
-    xLabel = "Month",
-    xLabelPosition = "left",
-    // your y accessor
-    y = function(d) {
-      return +d;
-    },
-    yOrient = 'right',
-    yTickOrient = 'right',
-    // find max and min
-    yDomain = [0, d3.max(chartData, function(d) {return d.total;})],
-    yRange = [height - margins.top - margins.bottom, 0],
-    yScale = 'linear',
-    yAxisClassName = 'y-axis',
-    yLabelPosition = 'left',
-    yLabel = "Amount",
-    categoricalColors= d3.scale.category10()
+    xScale = 'time';
 
-  React.render(
+  ReactDOM.render(
       &lt;ScatterZoom
         title= {title}
         data= {chartData}
+        chartSeries= {chartSeries}
         width= {width}
         height= {height}
-        id= {id}
         margins= {margins}
-        svgClassName= {svgClassName}
-        titleClassName= {titleClassName}
-        yAxisClassName= {yAxisClassName}
-        xAxisClassName= {xAxisClassName}
-        chartSeries= {chartSeries}
-        showLegend= {showLegend}
-        showXAxis= {showXAxis}
-        showYAxis= {showYAxis}
         x= {x}
-        xDomain= {xDomain}
-        xRange= {xRange}
         xScale= {xScale}
-        xOrient= {xOrient}
-        xTickOrient= {xTickOrient}
-        xLabel = {xLabel}
-        xLabelPosition = {xLabelPosition}
-        y= {y}
-        yOrient= {yOrient}
-        yDomain= {yDomain}
-        yRange= {yRange}
-        yScale= {yScale}
-        yTickOrient= {yTickOrient}
-        yLabel = {yLabel}
-        yLabelPosition = {yLabelPosition}
-        categoricalColors= {d3.scale.category10()}
       /&gt;
   , document.getElementById('scatter-garbage')
   )

@@ -1,12 +1,13 @@
 Xaxis Component:
 
 <div id="garbage-xaxis" class="demo"></div>
-<script src="/react-d3-example/dist/min/es5/xaxis_garbage.min.js"></script>
+<script src="/react-d3-example/dist/detail/min/xaxis_garbage.min.js"></script>
 
 ```js
 "use strict";
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var Xaxis = require('react-d3-core').Xaxis;
 
 (function() {
@@ -34,7 +35,7 @@ var Xaxis = require('react-d3-core').Xaxis;
     // set your label name
     xLabel = "Month";
 
-  React.render(
+  ReactDOM.render(
     <svg width={width} height={height}>
       <Xaxis
         width= {width}

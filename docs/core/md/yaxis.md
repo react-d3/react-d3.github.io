@@ -1,12 +1,13 @@
 Yaxis Component:
 
 <div id="garbage-yaxis" class="demo"></div>
-<script src="/react-d3-example/dist/min/es5/yaxis_garbage.min.js"></script>
+<script src="/react-d3-example/dist/detail/min/yaxis_garbage.min.js"></script>
 
 ```js
 "use strict";
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var Yaxis = require('react-d3-core').Yaxis;
 
 (function() {
@@ -35,7 +36,7 @@ var Yaxis = require('react-d3-core').Yaxis;
     yOrient = "right",
     yTickOrient = "left";
 
-  React.render(
+  ReactDOM.render(
     <svg width={width} height={height}>
       <Yaxis
         width= {width}

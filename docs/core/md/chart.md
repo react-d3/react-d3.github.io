@@ -1,10 +1,11 @@
 Chart Component:
 
 <div id="blank-container" class="demo"></div>
-<script src="/react-d3-example/dist/min/es5/chart.min.js"></script>
+<script src="/react-d3-example/dist/detail/min/chart.min.js"></script>
 
 ```js
 var React = require('react');
+var ReactDOM = require('react-dom');
 var Chart = require('react-d3-core').Chart;
 
 // Example
@@ -23,7 +24,7 @@ var Chart = require('react-d3-core').Chart;
     fill: 'red'
   };
 
-  React.render(
+  ReactDOM.render(
     <Chart
       title= {title}
       width= {width}

@@ -134,11 +134,12 @@
                     <div class="markdown-body">
                       <p>Xaxis Component:</p>
 <p></p><div id="garbage-xaxis" class="demo"></div><p></p>
-<script src="/react-d3-example/dist/min/es5/xaxis_garbage.min.js"></script>
+<script src="/react-d3-example/dist/detail/min/xaxis_garbage.min.js"></script>
 
 <pre><code class="lang-js">"use strict";
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var Xaxis = require('react-d3-core').Xaxis;
 
 (function() {
@@ -166,7 +167,7 @@ var Xaxis = require('react-d3-core').Xaxis;
     // set your label name
     xLabel = "Month";
 
-  React.render(
+  ReactDOM.render(
     &lt;svg width={width} height={height}&gt;
       &lt;Xaxis
         width= {width}
@@ -199,11 +200,12 @@ var Xaxis = require('react-d3-core').Xaxis;
                     <div class="markdown-body">
                       <p>Yaxis Component:</p>
 <p></p><div id="garbage-yaxis" class="demo"></div><p></p>
-<script src="/react-d3-example/dist/min/es5/yaxis_garbage.min.js"></script>
+<script src="/react-d3-example/dist/detail/min/yaxis_garbage.min.js"></script>
 
 <pre><code class="lang-js">"use strict";
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var Yaxis = require('react-d3-core').Yaxis;
 
 (function() {
@@ -232,7 +234,7 @@ var Yaxis = require('react-d3-core').Yaxis;
     yOrient = "right",
     yTickOrient = "left";
 
-  React.render(
+  ReactDOM.render(
     &lt;svg width={width} height={height}&gt;
       &lt;Yaxis
         width= {width}
@@ -268,9 +270,10 @@ var Yaxis = require('react-d3-core').Yaxis;
                     <div class="markdown-body">
                       <p>Grid Component:</p>
 <p></p><div id="blank-grid" class="demo"></div><p></p>
-<script src="/react-d3-example/dist/min/es5/grid.min.js"></script>
+<script src="/react-d3-example/dist/detail/min/grid.min.js"></script>
 
 <pre><code class="lang-js">var React = require('react');
+var ReactDOM = require('react-dom');
 var Grid = require('react-d3-core').Grid;
 
 (function() {
@@ -295,7 +298,7 @@ var Grid = require('react-d3-core').Grid;
     xScale = 'linear';
 
 
-  React.render(
+  ReactDOM.render(
     &lt;svg width={width} height={height}&gt;
       &lt;Grid
         width= {width}
@@ -340,11 +343,12 @@ var Grid = require('react-d3-core').Grid;
                     <div class="markdown-body">
                       <p>Legend Component:</p>
 <p></p><div id="blank-legend" class="demo"></div><p></p>
-<script src="/react-d3-example/dist/min/es5/legend.min.js"></script>
+<script src="/react-d3-example/dist/detail/min/legend.min.js"></script>
 
 <pre><code class="lang-js">"use strict";
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var Legend = require('react-d3-core').Legend;
 
 (function() {
@@ -393,19 +397,16 @@ var Legend = require('react-d3-core').Legend;
 
     ]
 
-  React.render(
-    &lt;svg width= {width} height= {height}&gt;
-      &lt;rect height= {"100%"} width= {"100%"} fill= {"#CCC"} /&gt;
-      &lt;Legend
-        width= {width}
-        height= {height}
-        margins= {margins}
-        legendClassName= {legendClassName}
-        legendPosition= {legendPosition}
-        legendOffset= {legendOffset}
-        chartSeries = {chartSeries}
-      /&gt;
-    &lt;/svg&gt;
+  ReactDOM.render(
+    &lt;Legend
+      width= {width}
+      height= {height}
+      margins= {margins}
+      legendClassName= {legendClassName}
+      legendPosition= {legendPosition}
+      legendOffset= {legendOffset}
+      chartSeries = {chartSeries}
+    /&gt;
   , document.getElementById('blank-legend')
   )
 })()
@@ -426,9 +427,10 @@ var Legend = require('react-d3-core').Legend;
                     <div class="markdown-body">
                       <p>Chart Component:</p>
 <p></p><div id="blank-container" class="demo"></div><p></p>
-<script src="/react-d3-example/dist/min/es5/chart.min.js"></script>
+<script src="/react-d3-example/dist/detail/min/chart.min.js"></script>
 
 <pre><code class="lang-js">var React = require('react');
+var ReactDOM = require('react-dom');
 var Chart = require('react-d3-core').Chart;
 
 // Example
@@ -447,7 +449,7 @@ var Chart = require('react-d3-core').Chart;
     fill: 'red'
   };
 
-  React.render(
+  ReactDOM.render(
     &lt;Chart
       title= {title}
       width= {width}

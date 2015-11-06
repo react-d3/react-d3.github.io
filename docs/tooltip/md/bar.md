@@ -1,12 +1,13 @@
 Bar Tooltip:
 
 <div id="data_bar" class="demo"></div>
-<script src="/react-d3-example/dist/min/es5/bar_tooltip.min.js"></script>
+<script src="/react-d3-example/dist/simple/min/bar_tooltip.min.js"></script>
 
 ```js
 "use strict";
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var BarTooltip = require('react-d3-tooltip').BarTooltip;
 
 (function() {
@@ -14,16 +15,7 @@ var BarTooltip = require('react-d3-tooltip').BarTooltip;
 
   var width = 700,
     height = 400,
-    margins = {top: 50, right: 50, bottom: 50, left: 50},
-    id = "test-chart",
-    title = "Bar Chart",
-    svgClassName = "test-chart-class",
-    titleClassName = "test-chart-title-class",
-    legendClassName = "test-legend",
-    legendPosition = "right",
-    showLegend = true,
-    showXAxis = true,
-    showYAxis = true,
+    title = "Bar Chart with tooltip",
     chartSeries = [
       {
         field: 'frequency',
@@ -33,62 +25,19 @@ var BarTooltip = require('react-d3-tooltip').BarTooltip;
     x = function(d) {
       return d.letter;
     },
-    xOrient = 'bottom',
-    xTickOrient = 'bottom',
-    xDomain = generalChartData.map(function(d) { return d.letter; }),
-    xRangeRoundBands = {interval: [0, width - margins.left - margins.right], padding: .1},
     xScale = 'ordinal',
-    xAxisClassName = 'x-axis',
-    xLabel = "Letter",
-    xLabelPosition = 'bottom',
-    y = function(d) {
-      return +d;
-    },
-    yOrient = 'left',
-    yTickOrient = 'right',
-    yRange = [height - margins.top - margins.bottom, 0],
-    yDomain = [0, +d3.max(generalChartData, function(d) { return d.frequency; })],
-    yScale = 'linear',
-    yAxisClassName = 'y-axis',
-    yLabel = "Frequency",
-    yTicks = [10, "%"],
-    yLabelPosition = 'left';
+    yTicks = [10, "%"];
 
-  React.render(
+  ReactDOM.render(
       <BarTooltip
         title= {title}
         data= {generalChartData}
         width= {width}
         height= {height}
-        id= {id}
-        margins= {margins}
-        svgClassName= {svgClassName}
-        titleClassName= {titleClassName}
-        yAxisClassName= {yAxisClassName}
-        xAxisClassName= {xAxisClassName}
-        legendClassName= {legendClassName}
-        legendPosition= {legendPosition}
-        categoricalColors= {d3.scale.category10()}
         chartSeries = {chartSeries}
-        showLegend= {showLegend}
-        showXAxis= {showXAxis}
-        showYAxis= {showYAxis}
         x= {x}
-        xDomain= {xDomain}
-        xRangeRoundBands= {xRangeRoundBands}
         xScale= {xScale}
-        xOrient= {xOrient}
-        xTickOrient= {xTickOrient}
-        xLabel = {xLabel}
-        y= {y}
-        yOrient= {yOrient}
-        yRange= {yRange}
-        yDomain= {yDomain}
-        yScale= {yScale}
-        yTickOrient= {yTickOrient}
         yTicks= {yTicks}
-        yLabel = {yLabel}
-        yLabelPosition = {yLabelPosition}
       />
   , document.getElementById('data_bar')
   )

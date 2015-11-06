@@ -212,9 +212,6 @@ module.exports = [{
             "name": "Demo",
             "demo": [
               {
-                "md": "./intro/demo_dist/demo_core.md"
-              },
-              {
                 "md": "./intro/demo_dist/demo_chart.md"
               },
               {
@@ -273,9 +270,6 @@ module.exports = [{
           "name": "Introduction",
           "md": "./intro/components/intro.md"
         }, {
-          "name": "react-d3-core",
-          "md": "./intro/components/intro_core.md"
-        }, {
           "name": "react-d3-basic",
           "md": "./intro/components/intro_basic.md"
         }, {
@@ -287,6 +281,9 @@ module.exports = [{
         }, {
           "name": "react-d3-brush",
           "md": "./intro/components/intro_brush.md"
+        }, {
+          "name": "react-d3-core",
+          "md": "./intro/components/intro_core.md"
         }]
       }
     }
