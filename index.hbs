@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <title>{{item}}</title>
-    <meta name="description" content="Painless Building D3 Charts - A whole new solution for building reusable components for d3 charts.">
+    <meta name="description" content="A Javascript Library For Building Composable And Declarative Charts">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -126,16 +126,14 @@
                 <div class="row">
                     <!-- HOME CONTENT -->
                     {{#ifCond description '||' slogan }}
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="home-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
-                            {{#if slogan}}
-                            <h1>{{slogan}}</h1>
-                            {{/if}}
-                            {{#if description}}
-                            <p>{{description}}</p>
-                            {{/if}}
-                        </div>
-                    </div>
+                      <div class="home-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
+                          {{#if slogan}}
+                          <h1>{{slogan}}</h1>
+                          {{/if}}
+                          {{#if description}}
+                          <p>{{description}}</p>
+                          {{/if}}
+                      </div>
                     {{/ifCond}}
                     <!-- END HOME CONTENT -->
 
@@ -173,7 +171,7 @@
                                   <div class="col-md-12">
                                       <div class="service-content">
                                           {{#if name}}
-                                          <h3>{{name}}</h3>
+                                          <h3>{{{name}}}</h3>
                                           {{/if}}
                                           {{#if description}}
                                           <p>{{{description}}}</p>
@@ -187,16 +185,12 @@
                   {{/if}}
                   {{#if demo}}
                     {{#each demo}}
-                      <div class="markdown-body">
+                      <div class="home-md">
                           <div class="single-service text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                              <div class="row" style="margin-bottom:20px">
-                                  <div class="service-content">
-                                      {{#if md}}
-                                      <section data-markdown="{{md}}" >
-                                      </section>
-                                      {{/if}}
-                                  </div>
-                              </div>
+                              {{#if md}}
+                              <section data-markdown="{{md}}" >
+                              </section>
+                              {{/if}}
                           </div>
                       </div>
                     {{/each}}

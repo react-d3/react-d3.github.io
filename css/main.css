@@ -24,7 +24,7 @@ h1 {
 }
 h2 {
     font-size: 1.8em;
-    /*text-transform: uppercase;*/
+    text-transform: uppercase;
     color: #606060;
 }
 h3 {
@@ -53,7 +53,7 @@ a:hover {
     transition: background-color .3s ease;
 }
 .section {
-    padding: 75px 0;
+    padding: 35px 0;
 }
 .section-title {
     margin-bottom: 50px;
@@ -123,6 +123,13 @@ a:hover {
     padding-top: 80px;
     padding-bottom: 65px;
 }
+#home-area button {
+  background: rgba(242, 65, 16, 0.95);
+  border: rgb(168, 36, 0);
+}
+#home-area button:hover {
+  background: #DE3D10;
+}
 .home-content {
     color: #fff;
     padding-top: 100px;
@@ -148,6 +155,31 @@ a:hover {
     color: #222;
 }
 .home-feature {}
+
+.home-right {
+  width: 500px;
+  float: right;
+}
+.home-left {
+  width: 50%;
+  float: left;
+}
+.home-md {
+  clear: both;
+  margin-bottom: 30px;
+}
+.home-md p {
+  width: 52%;
+}
+.home-md pre.lang-js {
+  width: 50%;
+  float: left;
+  margin-bottom: 50px;
+}
+.demo-more {
+  float: right;
+}
+
 /* SERVICES
 ================================================ */
 
@@ -168,8 +200,12 @@ a:hover {
     color: #24C0D9;
 }
 .service-content {
-    margin-left: 65px;
     margin-top: -66px;
+}
+.service-content p {
+  font-size: 13px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #333333;
 }
 .demo {
   border: 3px solid #CCC;
@@ -439,6 +475,16 @@ footer {
 @media all and (max-width: 900px) {
   .col-xs-3.bs-docs-sidebar {
     display: none;
+  }
+  .home-content h1 {
+    font-size: 3rem;
+  }
+  .home-md pre.lang-js {
+    width: 100%;
+  }
+  .home-right {
+    width: 100%;
+    overflow-x: auto;
   }
 }
 

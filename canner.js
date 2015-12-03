@@ -185,31 +185,31 @@ module.exports = [{
     "layout": "./index.hbs",
     "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
     "data": {
-        "item": "react-d3",
+        "item": "A Javascript Library For Building Composable And Declarative Charts | React-D3",
         "logo": "/img/react-d3_2.png",
-        "slogan": "Painless building d3 charts",
-        "description": "A whole new solution for building reusable components for d3 charts",
+        "slogan": "A Javascript library for building composable and declarative charts",
+        "description": "A new solution for building reusable components for interactive charts",
         "banner-img": "/img/basic/cover.png",
         "product": {
-          "title": "react-d3",
+          "title": "React-d3",
           "data": [{
-            "name": "Introduction",
+            "name": "Features",
             "feature": [
               {
-                "name": "Preserve d3 flexibility",
-                "description": "<code>react-d3</code> is a highly module library. You can build new d3 charts using <code>react-d3</code> to create axis using <code>xaxis</code> component,  <code>yaxis</code> component, label using <code>label</code> component, legend <code>legend</code> component... etc, in other word, it extends the flexibility of <code>d3</code> library so you can assemble a whole new chart using core components."
+                "name": "<span class=\"glyphicon glyphicon-stats\"></span>  High-Level Charts",
+                "description": "<code>React-d3</code> support high level components which you can install and create a line chart, bar chart, pie chart... etc, within a component."
               },
               {
-                "name": "Provide high level chart library",
-                "description": "<code>react-d3</code> support high level components which you can install and create a line chart, bar chart, pie chart... etc, within a component."
+                "name": "<span class=\"glyphicon glyphicon-refresh\"></span>  Flexible & Reusable Components",
+                "description": "<code>React-d3</code> is a highly module library. You can build new d3 charts using <code>React-d3</code> to create axis using <code>xaxis</code> component,  <code>yaxis</code> component, label using <code>label</code> component, legend <code>legend</code> component... etc, in other word, it extends the flexibility of <code>d3</code> library so you can assemble a whole new chart using core components."
               },
               {
-                "name": "Better data flow, and structures",
-                "description": "<code>react-d3</code> combine the power of <code>d3</code> flexibility and the data flow, structures, components, virtual DOM, and others benefits that <code>react.js</code> provide."
+                "name": "<span class=\"glyphicon glyphicon-retweet\"></span>  Great data flow, and structures",
+                "description": "<code>React-d3</code> combine the power of <code>d3</code> flexibility and the data flow, structures, components, virtual DOM, and others benefits that <code>react.js</code> provide."
               }
             ]
           },{
-            "name": "Demo",
+            "name": "The Basic Charts",
             "demo": [
               {
                 "md": "./intro/demo_dist/demo_chart.md"

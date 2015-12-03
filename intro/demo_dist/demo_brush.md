@@ -1,9 +1,9 @@
-# Building bar group chart with brush
+### Building bar group chart with brush
 
-`react-d3-brush` support charts with brush! We support all kinds of common charts such as line chart, bar chart, bar group chart... etc.
+`React-d3-brush` support charts with brush! We support all kinds of common charts such as line chart, bar chart, bar group chart... etc.
 
 
-<div id="data_brush_bar_group" class="demo"></div>
+<div id="data_brush_bar_group" class="demo home-right"></div>
 <script src="/react-d3-example/dist/simple/min/bar_group_brush.min.js"></script>
 
 ```js
@@ -17,7 +17,7 @@ var BarGroupBrush = require('react-d3-brush').BarGroupBrush;
   // loading data
   var generalChartData = require('dsv?delimiter=,!../data/age.csv')
 
-  var width = 700,
+  var width = 500,
     height = 300,
     title = "Bar Group Chart With Brush",
     // what fields you want to build in the chart
@@ -80,8 +80,3 @@ var BarGroupBrush = require('react-d3-brush').BarGroupBrush;
   )
 })()
 ```
-
-
-<a href="/docs/brush">
-  <button type="button" class="btn btn-danger btn-lg">See more Charts with Brush!</button>
-</a>
