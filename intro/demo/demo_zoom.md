@@ -11,7 +11,7 @@
 ```js
 ReactDOM.render(
   <BarStackZoom
-    title= {Bar Stack Chart With Zoom""}
+    title= {"Bar Stack Chart With Zoom"}
     data= {data}
     width= {500}
     height= {400}
