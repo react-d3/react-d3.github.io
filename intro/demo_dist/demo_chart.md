@@ -6,19 +6,18 @@
 
 <!--!!import '../../react-d3-example/simple/line/line_garbage.js';-->
 
-```js
-var data = require('dsv?delimiter=,!./data.csv');
-var chartSeries = [
-  {
-    field: 'total', // data y field
-    name: 'Total',
-    color: '#ff7f0e'
-  }
-],
-x = function(d) {
-  return d3.time.format("%Y-%m-%d").parse(d.month);
-};
+#### Data - CSV Table
 
+```js
+month,total,incineration,garbageBury,largeGarbageRecycle,foodWaste,recycle,other,average
+2001M01,770095,295355,339023,0,0,75630,60087,1.124
+2001M02,629350,248283,256351,0,0,74732,49983,1.016
+2001M03,663170,271344,264674,0,0,77137,50015,0.966
+...
+...
+...
+```
+```js
 ReactDOM.render(
   <Chart
     title={"Taiwan refuse disposal"}
