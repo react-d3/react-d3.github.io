@@ -78,7 +78,7 @@
 
                     <!-- LOGO -->
                     <a class="navbar-brand page-scroll" href="/">
-                        <img src="https://avatars0.githubusercontent.com/u/14354544?v=3&amp;s=200" alt="" style="width:50px">
+                        <img src="/img/react-d3_2.png" alt="" style="width:130px">
                     </a>
                     <!-- END LOGO -->
 
@@ -86,26 +86,26 @@
 
                 <!-- TOGGLE NAV -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-left">
                         <li class="hidden">
                           <a href="#page-top"></a>
-                        </li>
-                        <li>
-                          <a href="/">Home</a>
                         </li>
                         <li>
                           <a href="/get_start">Get Started</a>
                         </li>
                         <li>
-                          <a href="/components">Components</a>
+                          <a href="/docs">Docs</a>
                         </li>
                         <li>
-                          <a href="/qa">QA</a>
+                          <a href="/components">Gallery</a>
                         </li>
+                      </ul>
+                    <ul class="nav navbar-nav navbar-right">
                         <li>
-                          <a href="http://github.com/react-d3/react-d3-example">Example Code</a>
+                          <a href="http://github.com/react-d3/react-d3">Github</a>
                         </li>
                     </ul>
+ 
                 </div>
                 <!-- TOGGLE NAV -->
 
@@ -113,11 +113,43 @@
             <!-- /.container -->
         </nav>
         <!-- END NAVIGATION -->
-    </header>
+   </header>
+
+    <!--Nav Bar -->
+    <nav id="doc-sidebar" class="col-xs-3 bs-docs-sidebar">
+        <ul id="sidebar" class="nav nav-stacked fixed">
+              <li>
+              <a href="#introduction">introduction</a>
+              </li>
+              <li>
+              <a href="#line">Line</a>
+              </li>
+              <li>
+              <a href="#line-multiple">Line Multiple</a>
+              </li>
+              <li>
+              <a href="#area-stack">Area Stack</a>
+              </li>
+              <li>
+              <a href="#bar">Bar</a>
+              </li>
+              <li>
+              <a href="#bar-group">Bar Group</a>
+              </li>
+              <li>
+              <a href="#bar-stack">Bar Stack</a>
+              </li>
+              <li>
+              <a href="#scatter">Scatter</a>
+              </li>
+              <li>
+              <a href="#pie">pie</a>
+              </li>
+        </ul>
+    </nav>
 
     <!-- SERVICES -->
-        <a name="0"></a>
-        <section id="services" class="section text-center">
+        <section id="introduction" class="section text-center group">
             <div class="container">
                 <h2 class="section-title wow fadeIn">introduction</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
@@ -147,8 +179,7 @@
             </div>
             <!--/.container -->
         </section>
-        <a name="1"></a>
-        <section id="services" class="section text-center">
+        <section id="line" class="section text-center group">
             <div class="container">
                 <h2 class="section-title wow fadeIn">Line</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
@@ -213,8 +244,7 @@ var LineTooltip = require('react-d3-tooltip').LineTooltip;
             </div>
             <!--/.container -->
         </section>
-        <a name="2"></a>
-        <section id="services" class="section text-center">
+        <section id="line-multiple" class="section text-center group">
             <div class="container">
                 <h2 class="section-title wow fadeIn">Line Multiple</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
@@ -288,8 +318,7 @@ var LineTooltip = require('react-d3-tooltip').LineTooltip;
             </div>
             <!--/.container -->
         </section>
-        <a name="3"></a>
-        <section id="services" class="section text-center">
+        <section id="area-stack" class="section text-center group">
             <div class="container">
                 <h2 class="section-title wow fadeIn">Area Stack</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
@@ -353,8 +382,7 @@ var AreaStackTooltip = require('react-d3-tooltip').AreaStackTooltip;
             </div>
             <!--/.container -->
         </section>
-        <a name="4"></a>
-        <section id="services" class="section text-center">
+        <section id="bar" class="section text-center group">
             <div class="container">
                 <h2 class="section-title wow fadeIn">Bar</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
@@ -410,8 +438,7 @@ var BarTooltip = require('react-d3-tooltip').BarTooltip;
             </div>
             <!--/.container -->
         </section>
-        <a name="5"></a>
-        <section id="services" class="section text-center">
+        <section id="bar-group" class="section text-center group">
             <div class="container">
                 <h2 class="section-title wow fadeIn">Bar Group</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
@@ -496,8 +523,7 @@ var BarGroupTooltip = require('react-d3-tooltip').BarGroupTooltip;
             </div>
             <!--/.container -->
         </section>
-        <a name="6"></a>
-        <section id="services" class="section text-center">
+        <section id="bar-stack" class="section text-center group">
             <div class="container">
                 <h2 class="section-title wow fadeIn">Bar Stack</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
@@ -579,8 +605,7 @@ var BarStackTooltip = require('react-d3-tooltip').BarStackTooltip;
             </div>
             <!--/.container -->
         </section>
-        <a name="7"></a>
-        <section id="services" class="section text-center">
+        <section id="scatter" class="section text-center group">
             <div class="container">
                 <h2 class="section-title wow fadeIn">Scatter</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
@@ -659,8 +684,7 @@ var ScatterTooltip = require('react-d3-tooltip').ScatterTooltip;
             </div>
             <!--/.container -->
         </section>
-        <a name="8"></a>
-        <section id="services" class="section text-center">
+        <section id="pie" class="section text-center group">
             <div class="container">
                 <h2 class="section-title wow fadeIn">pie</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
@@ -774,7 +798,8 @@ var PieTooltip = require('react-d3-tooltip').PieTooltip;
     <script src="/js/wow.min.js"></script>
     <script src="/js/prettyPhoto.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
-    <!-- <script src="/js/main.js"></script> -->
+    <!-- <script src="/js/main.js"></script>-->
+    <script src="/js/sidebar.js"></script>
     <script src="/js/prism.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -186,7 +186,7 @@ module.exports = [{
     "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
     "data": {
         "item": "react-d3",
-        "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+        "logo": "/img/react-d3_2.png",
         "slogan": "Painless building d3 charts",
         "description": "A whole new solution for building reusable components for d3 charts",
         "banner-img": "/img/basic/cover.png",
@@ -230,10 +230,10 @@ module.exports = [{
   },{
     "layout": "./gallery.hbs",
     "filename": "./get_start/index.html",
-    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js", './helper/id.js'],
     "data": {
       "item": "Getting started react-d3",
-      "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+      "logo": "/img/react-d3_2.png",
       "product": {
         "title": "react-d3",
         "data": [{
@@ -260,10 +260,10 @@ module.exports = [{
   },{
     "layout": "./gallery.hbs",
     "filename": "./components/index.html",
-    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js", './helper/id.js'],
     "data": {
       "item": "react-d3 components",
-      "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+      "logo": "/img/react-d3_2.png",
       "product": {
         "title": "react-d3",
         "data": [{
@@ -290,10 +290,10 @@ module.exports = [{
   },{
     "layout": "./gallery.hbs",
     "filename": "./qa/index.html",
-    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js", './helper/id.js'],
     "data": {
       "item": "react-d3 QA",
-      "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+      "logo": "/img/react-d3_2.png",
       "product": {
         "title": "react-d3",
         "data": [{
@@ -305,10 +305,10 @@ module.exports = [{
   },{
     "layout": "./gallery.hbs",
     "filename": "./docs/basic/index.html",
-    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js", './helper/id.js'],
     "data": {
         "item": "react-d3-basic",
-        "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+        "logo": "/img/react-d3_2.png",
         "product": {
           "title": "react-d3",
           "data": basic_data
@@ -317,10 +317,10 @@ module.exports = [{
   },{
     "layout": "./gallery.hbs",
     "filename": "./docs/core/index.html",
-    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js", './helper/id.js'],
     "data": {
         "item": "react-d3-core",
-        "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+        "logo": "/img/react-d3_2.png",
         "product": {
           "title": "react-d3",
           "data": core_data
@@ -329,10 +329,10 @@ module.exports = [{
   },{
     "layout": "./gallery.hbs",
     "filename": "./docs/brush/index.html",
-    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js", './helper/id.js'],
     "data": {
         "item": "react-d3-brush",
-        "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+        "logo": "/img/react-d3_2.png",
         "slogan": "react-d3 brush charts",
         "description": "Building Brush With Line, bar, Scatter, Area Charts ... with ease.",
         "banner-img": "/img/brush/cover.png",
@@ -345,10 +345,10 @@ module.exports = [{
   {
    "layout": "./gallery.hbs",
    "filename": "./docs/tooltip/index.html",
-   "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js", './helper/id.js'],
    "data": {
      "item": "react-d3-brush",
-     "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+     "logo": "/img/react-d3_2.png",
      "slogan": "react-d3 tooltip charts",
      "description": "Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.",
      "banner-img": "/img/tooltip/cover.png",
@@ -360,10 +360,10 @@ module.exports = [{
  },{
    "layout": "./gallery.hbs",
    "filename": "./docs/zoom/index.html",
-   "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
+    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js", './helper/id.js'],
    "data": {
      "item": "react-d3-brush",
-     "logo": "https://avatars0.githubusercontent.com/u/14354544?v=3&s=200",
+     "logo": "/img/react-d3_2.png",
      "slogan": "react-d3 zoom charts",
      "description": "Building Tooltip With Line, bar, Scatter, Area Charts ... with ease.",
      "banner-img": "/img/zoom/cover.png",

@@ -85,7 +85,7 @@
 
                     <!-- LOGO -->
                     <a class="navbar-brand page-scroll" href="/">
-                        <img src="{{logo}}" alt="" style="width:50px">
+                        <img src="{{logo}}" alt="" style="width:130px">
                     </a>
                     <!-- END LOGO -->
 
@@ -93,26 +93,26 @@
 
                 <!-- TOGGLE NAV -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-left">
                         <li class="hidden">
                           <a href="#page-top"></a>
-                        </li>
-                        <li>
-                          <a href="/">Home</a>
                         </li>
                         <li>
                           <a href="/get_start">Get Started</a>
                         </li>
                         <li>
-                          <a href="/components">Components</a>
+                          <a href="/docs">Docs</a>
                         </li>
                         <li>
-                          <a href="/qa">QA</a>
+                          <a href="/components">Gallery</a>
                         </li>
+                      </ul>
+                    <ul class="nav navbar-nav navbar-right">
                         <li>
-                          <a href="http://github.com/react-d3/react-d3-example">Example Code</a>
+                          <a href="http://github.com/react-d3/react-d3">Github</a>
                         </li>
                     </ul>
+ 
                 </div>
                 <!-- TOGGLE NAV -->
 
@@ -120,13 +120,25 @@
             <!-- /.container -->
         </nav>
         <!-- END NAVIGATION -->
-    </header>
+   </header>
+
+    <!--Nav Bar -->
+    <nav id="doc-sidebar" class="col-xs-3 bs-docs-sidebar">
+        <ul id="sidebar" class="nav nav-stacked fixed">
+          {{#if product}}
+            {{#each product.data}}
+              <li>
+              <a href="#{{toID name}}">{{name}}</a>
+              </li>
+            {{/each}}
+          {{/if}}
+        </ul>
+    </nav>
 
     <!-- SERVICES -->
     {{#if product}}
       {{#each product.data}}
-        <a name="{{@index}}"></a>
-        <section id="services" class="section text-center">
+        <section id="{{toID name}}" class="section text-center group">
             <div class="container">
                 <h2 class="section-title wow fadeIn">{{name}}</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
@@ -177,7 +189,8 @@
     <script src="/js/wow.min.js"></script>
     <script src="/js/prettyPhoto.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
-    <!-- <script src="/js/main.js"></script> -->
+    <!-- <script src="/js/main.js"></script>-->
+    <script src="/js/sidebar.js"></script>
     <script src="/js/prism.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
