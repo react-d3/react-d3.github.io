@@ -1,7 +1,7 @@
 <html><head>
     <meta charset="utf-8">
-    <title>react-d3</title>
-    <meta name="description" content="Painless Building D3 Charts - A whole new solution for building reusable components for d3 charts.">
+    <title>A Javascript Library For Building Composable And Declarative Charts | React-D3</title>
+    <meta name="description" content="A Javascript Library For Building Composable And Declarative Charts">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -50,9 +50,6 @@
         }
 
         #area-stack .x.axis text{
-          transform: rotate(45deg)
-        }
-        #area-stack .x.axis text{
           transform: rotate(45deg);
           text-anchor: start !important;
         }
@@ -79,7 +76,7 @@
 
                     <!-- LOGO -->
                     <a class="navbar-brand page-scroll" href="#page-top">
-                        <img src="https://avatars0.githubusercontent.com/u/14354544?v=3&amp;s=200" alt="" style="width:50px">
+                        <img src="/img/react-d3_2.png" alt="" style="width:130px">
                     </a>
                     <!-- END LOGO -->
 
@@ -87,24 +84,23 @@
 
                 <!-- TOGGLE NAV -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-left">
                         <li class="hidden">
                           <a href="#page-top"></a>
                         </li>
                         <li>
-                          <a href="/">Home</a>
-                        </li>
-                        <li>
                           <a href="/get_start">Get Started</a>
                         </li>
+                        <!--<li>
+                          <a href="/docs">Docs</a>
+                          </li>-->
                         <li>
-                          <a href="/components">Components</a>
+                          <a href="/components">Gallery</a>
                         </li>
+                      </ul>
+                    <ul class="nav navbar-nav navbar-right">
                         <li>
-                          <a href="/qa">QA</a>
-                        </li>
-                        <li>
-                          <a href="http://github.com/react-d3/react-d3-example">Example Code</a>
+                          <a href="http://github.com/react-d3/react-d3-core">Github</a>
                         </li>
                     </ul>
                 </div>
@@ -122,12 +118,10 @@
             <div class="container">
                 <div class="row">
                     <!-- HOME CONTENT -->
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="home-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
-                            <h1>Painless building d3 charts</h1>
-                            <p>A whole new solution for building reusable components for d3 charts</p>
-                        </div>
-                    </div>
+                      <div class="home-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
+                          <h1>A Javascript library for building composable and declarative charts</h1>
+                          <p>A new solution for building reusable components for interactive charts</p>
+                      </div>
                     <!-- END HOME CONTENT -->
 
                     <!-- HOME FEATURE IMAGE -->
@@ -135,9 +129,6 @@
                       <div class="home-feature pull-right center-block wow bounceIn" data-wow-duration="1s" data-wow-delay="1s">
                         <a href="/get_start">
                           <button type="button" class="btn btn-danger btn-lg">Get Started</button>
-                        </a>
-                        <a href="http://github.com/react-d3">
-                          <button type="button" class="btn btn-danger btn-lg">Open source on Github</button>
                         </a>
                       </div>
                     </div>
@@ -153,15 +144,15 @@
         <a name="0"></a>
         <section id="services" class="section text-center">
             <div class="container">
-                <h2 class="section-title wow fadeIn">Introduction</h2>
+                <h2 class="section-title wow fadeIn">Features</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                       <div class="col-md-4 col-sm-6">
                           <div class="single-service text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                               <div class="row" style="margin-bottom:20px">
                                   <div class="col-md-12">
                                       <div class="service-content">
-                                          <h3>Preserve d3 flexibility</h3>
-                                          <p><code>react-d3</code> is a highly module library. You can build new d3 charts using <code>react-d3</code> to create axis using <code>xaxis</code> component,  <code>yaxis</code> component, label using <code>label</code> component, legend <code>legend</code> component... etc, in other word, it extends the flexibility of <code>d3</code> library so you can assemble a whole new chart using core components.</p>
+                                          <h3><span class="glyphicon glyphicon-stats"></span>  High-Level Charts</h3>
+                                          <p><code>React-d3</code> support high level components which you can install and create a line chart, bar chart, pie chart... etc, within a component.</p>
                                       </div>
                                   </div>
                               </div>
@@ -172,8 +163,8 @@
                               <div class="row" style="margin-bottom:20px">
                                   <div class="col-md-12">
                                       <div class="service-content">
-                                          <h3>Provide high level chart library</h3>
-                                          <p><code>react-d3</code> support high level components which you can install and create a line chart, bar chart, pie chart... etc, within a component.</p>
+                                          <h3><span class="glyphicon glyphicon-refresh"></span>  Flexible &amp; Reusable Components</h3>
+                                          <p><code>React-d3</code> is a highly module library. You can build new d3 charts using <code>React-d3</code> to create axis using <code>xaxis</code> component,  <code>yaxis</code> component, label using <code>label</code> component, legend <code>legend</code> component... etc, in other word, it extends the flexibility of <code>d3</code> library so you can assemble a whole new chart using core components.</p>
                                       </div>
                                   </div>
                               </div>
@@ -184,8 +175,8 @@
                               <div class="row" style="margin-bottom:20px">
                                   <div class="col-md-12">
                                       <div class="service-content">
-                                          <h3>Better data flow, and structures</h3>
-                                          <p><code>react-d3</code> combine the power of <code>d3</code> flexibility and the data flow, structures, components, virtual DOM, and others benefits that <code>react.js</code> provide.</p>
+                                          <h3><span class="glyphicon glyphicon-retweet"></span>  Great data flow, and structures</h3>
+                                          <p><code>React-d3</code> combine the power of <code>d3</code> flexibility and the data flow, structures, components, virtual DOM, and others benefits that <code>react.js</code> provide.</p>
                                       </div>
                                   </div>
                               </div>
@@ -193,95 +184,68 @@
                       </div>
                 </div>
                 <!--.row-->
-            </div>
-            <!--/.container -->
+                <a href="/get_start">
+                  <button type="button" class="btn btn-danger btn-lg">Get Started</button>
+                </a>
+
+          </div>
+          <!--/.container -->
+          <!-- END SERVICES -->
         </section>
         <a name="1"></a>
         <section id="services" class="section text-center">
             <div class="container">
-                <h2 class="section-title wow fadeIn">Demo</h2>
+                <h2 class="section-title wow fadeIn">The Basic Charts</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                      <div class="markdown-body">
+                      <div class="home-md">
                           <div class="single-service text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                              <div class="row" style="margin-bottom:20px">
-                                  <div class="service-content">
-                                      <h1 id="building-a-simple-line-chart">Building a simple line chart</h1>
-<p><code>react-d3</code> is a highly modular chart library, you can create your d3 charts such as line chart, bar chart, bar stack chart, multiple line chart within a component.</p>
-<p></p><div id="line-garbage" class="demo"></div><p></p>
+                              <h3 id="building-a-simple-line-chart">Building a simple line chart</h3>
+<p><code>React-d3</code> is a highly modular chart library, you can create your d3 charts such as line chart, bar chart, bar stack chart, multiple line chart within a component.</p>
+<div id="line-garbage" class="demo home-right"></div>
+
+<!--!!import '../../react-d3-example/simple/line/line_garbage.js';-->
+<pre><code class="lang-js">var data = require('dsv?delimiter=,!./data.csv');
+var chartSeries = [
+  {
+    field: 'total', // data y field
+    name: 'Total',
+    color: '#ff7f0e'
+  }
+],
+x = function(d) {
+  return d3.time.format("%Y-%m-%d").parse(d.month);
+};
+
+ReactDOM.render(
+  &lt;Chart
+    title={"Taiwan refuse disposal"}
+    width={500}
+    height={300}
+    margins= {margins}
+    &gt;
+    &lt;LineChart
+      margins= {margins}
+      title={"Taiwan refuse disposal"}
+      data={data}
+      width={500}
+      height={300}
+      chartSeries={chartSeries}
+      x={x}
+      xScale={"time"}
+    /&gt;
+  &lt;/Chart&gt;
+, document.getElementById('line-garbage')
+)
+</code></pre>
 <script src="/react-d3-example/dist/simple/min/line_garbage.min.js"></script>
 
-<pre><code class="lang-js">"use strict"
-
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
-var LineChart = require('react-d3-basic').LineChart;
-
-(function() {
-  // load your general data
-  var chartData = require('dsv?delimiter=,!../data/garbage.csv');
-  // your date format, use for parsing
-  var parseDate = d3.time.format("%YM%m").parse;
-
-  var width = 700,
-    height = 300,
-    margins = {left: 100, right: 100, top: 50, bottom: 50},
-    title = "Taiwan refuse disposal",
-    // chart series,
-    // field: is what field your data want to be selected
-    // name: the name of the field that display in legend
-    // color: what color is the line
-    chartSeries = [
-      {
-        field: 'total',
-        name: 'Total',
-        color: '#ff7f0e'
-      }
-    ],
-    // your x accessor
-    x = function(d) {
-      return parseDate(d.month);
-    },
-    xScale = 'time';
-
-
-  ReactDOM.render(
-    &lt;Chart
-      title={title}
-      width={width}
-      height={height}
-      margins= {margins}
-      &gt;
-      &lt;LineChart
-        margins= {margins}
-        title={title}
-        data={chartData}
-        width={width}
-        height={height}
-        chartSeries={chartSeries}
-        x={x}
-        xScale={xScale}
-      /&gt;
-    &lt;/Chart&gt;
-  , document.getElementById('line-garbage')
-  )
-})()
-</code></pre>
-<p><a href="/docs/basic">
-  <button type="button" class="btn btn-danger btn-lg">See more Charts!</button>
-</a></p>
-
-                                  </div>
-                              </div>
                           </div>
                       </div>
-                      <div class="markdown-body">
+                      <div class="home-md">
                           <div class="single-service text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                              <div class="row" style="margin-bottom:20px">
-                                  <div class="service-content">
-                                      <h1 id="building-bar-group-chart-with-brush">Building bar group chart with brush</h1>
-<p><code>react-d3-brush</code> support charts with brush! We support all kinds of common charts such as line chart, bar chart, bar group chart... etc.</p>
-<p></p><div id="data_brush_bar_group" class="demo"></div><p></p>
+                              <h3 id="building-bar-group-chart-with-brush">Building bar group chart with brush</h3>
+<p><code>React-d3-brush</code> support charts with brush! We support all kinds of common charts such as line chart, bar chart, bar group chart... etc.</p>
+<p></p><div id="data_brush_bar_group" class="demo home-right"></div><p></p>
 <script src="/react-d3-example/dist/simple/min/bar_group_brush.min.js"></script>
 
 <pre><code class="lang-js">"use strict";
@@ -294,7 +258,7 @@ var BarGroupBrush = require('react-d3-brush').BarGroupBrush;
   // loading data
   var generalChartData = require('dsv?delimiter=,!../data/age.csv')
 
-  var width = 700,
+  var width = 500,
     height = 300,
     title = "Bar Group Chart With Brush",
     // what fields you want to build in the chart
@@ -357,21 +321,14 @@ var BarGroupBrush = require('react-d3-brush').BarGroupBrush;
   )
 })()
 </code></pre>
-<p><a href="/docs/brush">
-  <button type="button" class="btn btn-danger btn-lg">See more Charts with Brush!</button>
-</a></p>
 
-                                  </div>
-                              </div>
                           </div>
                       </div>
-                      <div class="markdown-body">
+                      <div class="home-md">
                           <div class="single-service text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                              <div class="row" style="margin-bottom:20px">
-                                  <div class="service-content">
-                                      <h1 id="building-bar-stack-with-zoom">Building bar stack with zoom</h1>
-<p><code>react-d3-zoom</code> support charts with zoom! We support all kinds of common charts such as line chart, bar chart, bar group chart... etc.</p>
-<p></p><div id="data_zoom_bar_stack" class="demo"></div><p></p>
+                              <h3 id="building-bar-stack-with-zoom">Building bar stack with zoom</h3>
+<p><code>React-d3-zoom</code> support charts with zoom! We support all kinds of common charts such as line chart, bar chart, bar group chart... etc.</p>
+<p></p><div id="data_zoom_bar_stack" class="demo home-right"></div><p></p>
 <script src="/react-d3-example/dist/simple/min/bar_stack_zoom.min.js"></script>
 
 <pre><code class="lang-js">"use strict";
@@ -384,7 +341,7 @@ var BarStackZoom = require('react-d3-zoom').BarStackZoom;
   // loading data
   var generalChartData = require('dsv?delimiter=,!../data/age.csv')
 
-  var width = 700,
+  var width = 500,
     height = 400,
     title = "Bar Stack Chart With Zoom",
     // what fields you want to build in the chart
@@ -444,21 +401,14 @@ var BarStackZoom = require('react-d3-zoom').BarStackZoom;
   )
 })()
 </code></pre>
-<p><a href="/docs/zoom">
-  <button type="button" class="btn btn-danger btn-lg">See more Charts with Zoom!</button>
-</a></p>
 
-                                  </div>
-                              </div>
                           </div>
                       </div>
-                      <div class="markdown-body">
+                      <div class="home-md">
                           <div class="single-service text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                              <div class="row" style="margin-bottom:20px">
-                                  <div class="service-content">
-                                      <h1 id="building-pie-chart-with-tooltip">Building pie chart with tooltip</h1>
-<p><code>react-d3-tooltip</code> support charts with tooltip! We support all kinds of common charts such as line chart, bar chart, bar group chart... etc.</p>
-<p></p><div id="data_tooltip_pie" class="demo"></div><p></p>
+                              <h3 id="building-pie-chart-with-tooltip">Building pie chart with tooltip</h3>
+<p><code>React-d3-tooltip</code> support charts with tooltip! We support all kinds of common charts such as line chart, bar chart, bar group chart... etc.</p>
+<p></p><div id="data_tooltip_pie" class="demo home-right"></div><p></p>
 <script src="/react-d3-example/dist/simple/min/pie_tooltip.min.js"></script>
 
 <pre><code class="lang-js">"use strict";
@@ -470,7 +420,7 @@ var PieTooltip = require('react-d3-tooltip').PieTooltip;
 (function() {
   var generalChartData = require('dsv?delimiter=,!../data/pie_test.csv')
 
-  var width = 700,
+  var width = 500,
     height = 300,
     title = "Pie Chart With Tooltip",
     // value accessor
@@ -525,20 +475,19 @@ var PieTooltip = require('react-d3-tooltip').PieTooltip;
   )
 })()
 </code></pre>
-<p><a href="/docs/tooltip">
-  <button type="button" class="btn btn-danger btn-lg">See more Charts with Tooltip!</button>
-</a></p>
 
-                                  </div>
-                              </div>
                           </div>
                       </div>
                 </div>
                 <!--.row-->
-            </div>
-            <!--/.container -->
+                <a href="/get_start">
+                  <button type="button" class="btn btn-danger btn-lg">Get Started</button>
+                </a>
+
+          </div>
+          <!--/.container -->
+          <!-- END SERVICES -->
         </section>
-    <!-- END SERVICES -->
 
     <!-- FOOTER -->
     <footer>
@@ -553,7 +502,7 @@ var PieTooltip = require('react-d3-tooltip').PieTooltip;
                 <!-- FOOTER CONTENT -->
                 <div class="col-md-6">
                     <div class="footer-content text-right">
-                        <p>© 2015 License Apache2.0, <a href="/">react-d3</a>
+                        <p>© 2015 License Apache2.0, <a href="/">React-d3</a>
                         </p>
                     </div>
                 </div>

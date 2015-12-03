@@ -5,7 +5,10 @@ Dark Gray: #727272;
 */
 /* GENERAL STYLES
 ================================================ */
-
+html, body {
+  height: 100%;
+  width: 100%;
+}
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -50,7 +53,7 @@ a:hover {
     transition: background-color .3s ease;
 }
 .section {
-    padding: 75px 0;
+    padding: 35px 0;
 }
 .section-title {
     margin-bottom: 50px;
@@ -120,6 +123,13 @@ a:hover {
     padding-top: 80px;
     padding-bottom: 65px;
 }
+#home-area button {
+  background: rgba(242, 65, 16, 0.95);
+  border: rgb(168, 36, 0);
+}
+#home-area button:hover {
+  background: #DE3D10;
+}
 .home-content {
     color: #fff;
     padding-top: 100px;
@@ -145,14 +155,42 @@ a:hover {
     color: #222;
 }
 .home-feature {}
+
+.home-right {
+  width: 500px;
+  float: right;
+}
+.home-left {
+  width: 50%;
+  float: left;
+}
+.home-md {
+  clear: both;
+  margin-bottom: 30px;
+}
+.home-md p {
+  width: 52%;
+}
+.home-md pre.lang-js {
+  width: 50%;
+  float: left;
+  margin-bottom: 50px;
+}
+.demo-more {
+  float: right;
+}
+
 /* SERVICES
 ================================================ */
 
-#services {
+.group {
+    margin-top: 50px;
+    width: 92%;
+    float: right;
     background: #fff;
     border-bottom: 1px solid #efefef;
 }
-#services a:hover {
+.group a:hover {
     color: #187F90;
     text-decoration: none;
 }
@@ -163,8 +201,12 @@ a:hover {
     color: #24C0D9;
 }
 .service-content {
-    margin-left: 65px;
     margin-top: -66px;
+}
+.service-content p {
+  font-size: 13px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #333333;
 }
 .demo {
   border: 3px solid #CCC;
@@ -381,3 +423,69 @@ footer {
     color: #34495E;
     font-size: 14px;
 }
+
+
+/* sidebar */
+#sidebar.affix {
+  top: 20px;
+}
+
+/* sidebar */
+.bs-docs-sidebar {
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    position:fixed;
+    width: 20%;
+}
+.bs-docs-sidebar .nav a {
+    color: #999797;
+    font-size: 1.2rem;
+}
+
+/* active & hover links */
+.bs-docs-sidebar .nav>.active>a, 
+.bs-docs-sidebar .nav>li>a:hover, 
+.bs-docs-sidebar .nav>li>a:focus {
+    text-decoration: none;          
+    background: #24C0D9;
+    color: #fff;
+}
+/* all active links */
+.bs-docs-sidebar .nav>.active>a, 
+.bs-docs-sidebar .nav>.active:hover>a,
+.bs-docs-sidebar .nav>.active:focus>a {
+}
+/* nested active links */
+.bs-docs-sidebar .nav .nav>.active>a, 
+.bs-docs-sidebar .nav .nav>.active:hover>a,
+.bs-docs-sidebar .nav .nav>.active:focus>a {
+}
+
+/* hide inactive nested list */
+.bs-docs-sidebar .nav ul.nav {
+    display: none;           
+}
+/* show active nested list */
+.bs-docs-sidebar .nav>.active>ul.nav {
+    display: block;           
+}
+
+@media all and (max-width: 900px) {
+  .col-xs-3.bs-docs-sidebar {
+    display: none;
+  }
+  .home-content h1 {
+    font-size: 3rem;
+  }
+  .home-md pre.lang-js {
+    width: 100%;
+  }
+  .home-right {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
