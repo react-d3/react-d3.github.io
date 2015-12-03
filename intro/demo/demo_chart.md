@@ -1,6 +1,6 @@
 ### Building a simple line chart
 
-`React-d3` is a highly modular chart library, you can create your d3 charts such as line chart, bar chart, bar stack chart, multiple line chart within a component.
+`React-d3` is a highly modular chart library, you can create your d3 charts such as line chart or bar chart within a simple component. Besides, you can easily set different props of chart component to rendering various chart you want.
 
 <div id="line-garbage" class="demo home-right"></div>
 

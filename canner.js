@@ -204,7 +204,7 @@ module.exports = [{
                 "description": "<code>React-d3</code> is a highly module library. You can build new d3 charts using <code>React-d3</code> to create axis using <code>xaxis</code> component,  <code>yaxis</code> component, label using <code>label</code> component, legend <code>legend</code> component... etc, in other word, it extends the flexibility of <code>d3</code> library so you can assemble a whole new chart using core components."
               },
               {
-                "name": "<span class=\"glyphicon glyphicon-retweet\"></span>  Great data flow, and structures",
+                "name": "<span class=\"glyphicon glyphicon-retweet\"></span>  Clear Data Flow, and Better Structures",
                 "description": "<code>React-d3</code> combine the power of <code>d3</code> flexibility and the data flow, structures, components, virtual DOM, and others benefits that <code>react.js</code> provide."
               }
             ]
