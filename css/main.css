@@ -8,7 +8,6 @@ Dark Gray: #727272;
 html, body {
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
 }
 body {
     font-family: 'Open Sans', sans-serif;
@@ -54,6 +53,7 @@ a:hover {
     transition: background-color .3s ease;
 }
 .section {
+    overflow-x: hidden
     padding: 35px 0;
 }
 .section-title {
