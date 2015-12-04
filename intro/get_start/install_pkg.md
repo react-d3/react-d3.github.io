@@ -42,13 +42,7 @@ module.exports = [{
 
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx']
-  },
-  // we need d3 in ProvidePlugin.
-  plugins: [
-    new webpack.ProvidePlugin({
-      'd3': 'd3'
-    })
-  ]
+  }
 }];
 ```
 

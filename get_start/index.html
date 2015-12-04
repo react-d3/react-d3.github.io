@@ -147,7 +147,7 @@
 
                     <div class="markdown-body">
                       <p>First prepare your data you want to show on your chart.</p>
-<p><code>react-d3</code> <strong>only support one kind of data format, which is an array with objects (the objects have to have same keys)</strong>. Which means you have to have a data like below for example.</p>
+<p><code>react-d3</code> <strong>only support one kind of data format, which is an array with objects (the objects have to have the same keys)</strong>. Which means you have to have a data like below for example.</p>
 <pre><code class="lang-js">[
   {
     name: "Lavon Hilll I",
@@ -213,6 +213,7 @@ var data = require('csv?delimiter=,!./data/test.csv')
 <p>Install <code>react-d3-basic</code>:</p>
 <pre><code>npm install --save react-d3-basic
 </code></pre><p><code>react-d3</code> packages require to be bundled with <code>webpack</code> or <code>browserify</code></p>
+<h3 id="webpack">Webpack</h3>
 <p>Sample <code>webpack</code> setting:</p>
 <pre><code class="lang-js">'use strict';
 
@@ -243,16 +244,13 @@ module.exports = [{
 
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx']
-  },
-  // we need d3 in ProvidePlugin.
-  plugins: [
-    new webpack.ProvidePlugin({
-      'd3': 'd3'
-    })
-  ]
+  }
 }];
 </code></pre>
-
+<h3 id="browserify">Browserify</h3>
+<p>You can use <a href="https://github.com/andreypopp/reactify">reactify</a> to bundle your <code>.jsx</code> or <code>.js</code> file.</p>
+<pre><code>browserify -t reactify main.js
+</code></pre>
                     </div>
                 </div>
                 <!--.row-->
@@ -277,46 +275,57 @@ var LineChart = require('react-d3-basic').LineChart;
 </code></pre>
 <h3 id="load">Load</h3>
 <p>load your data</p>
-<pre><code class="lang-js">var chartData = require('dsv?delimiter=,!../../data/garbage.csv');
+<pre><code class="lang-js">
+// using webpack
+var chartData = require('dsv?delimiter=,!../../data/garbage.csv');
+
+// not using webpack
+var chartData = [
+  // put your data here!
+]
 </code></pre>
 <h3 id="settings">Settings</h3>
 <p>your chart settings (such as settings for axis, legend, lines, chart basic settings)</p>
-<pre><code class="lang-js">// your date format, use for parsing
-var parseDate = d3.time.format("%YM%m").parse;
-
-var title = "Taiwan refuse disposal",
+<pre><code class="lang-js">var width = 700,
+    height = 300,
+    margins = {left: 100, right: 100, top: 50, bottom: 50},
+    title = "User sample",
     // chart series,
     // field: is what field your data want to be selected
     // name: the name of the field that display in legend
     // color: what color is the line
     chartSeries = [
       {
-        field: 'total',
-        name: 'Total',
+        field: 'BMI',
+        name: 'BMI',
         color: '#ff7f0e'
       }
     ],
     // your x accessor
     x = function(d) {
-      return parseDate(d.month);
-    },
-    xScale = 'time';
+      return d.index;
+    }
 </code></pre>
 <h3 id="render-">Render!</h3>
 <p>Render it in React!</p>
 <pre><code class="lang-js">ReactDOM.render(
     &lt;Chart
       title={title}
+      width={width}
+      height={height}
+      margins= {margins}
       &gt;
       &lt;LineChart
+        margins= {margins}
         title={title}
         data={chartData}
+        width={width}
+        height={height}
         chartSeries={chartSeries}
         x={x}
-        xScale={xScale}
       /&gt;
     &lt;/Chart&gt;
-  , document.getElementById('line-garbage')
+  , document.getElementById('line-user')
   )
 </code></pre>
 
@@ -332,13 +341,13 @@ var title = "Taiwan refuse disposal",
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
 
                     <div class="markdown-body">
-                      <p>Load your js file which <code>webpack</code> generate to your html</p>
+                      <p>Load your bundle js file which <code>webpack</code> or <code>browserify</code> generated into your html.</p>
 <pre><code class="lang-html">&lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;line example&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;div id="line-garbage"&gt;&lt;/div&gt;
+    &lt;div id="line-user"&gt;&lt;/div&gt;
     &lt;script src="./dist/line.js"&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
@@ -358,8 +367,8 @@ var title = "Taiwan refuse disposal",
                     <div class="markdown-body">
                       <h3 id="happy-">Happy :)</h3>
 <p>And you can enjoy your chart!</p>
-<p></p><div id="line-garbage" class="demo"></div><p></p>
-<script src="/react-d3-example/dist/simple/min/line_garbage.min.js"></script>
+<p></p><div id="line-user" class="demo"></div><p></p>
+<script src="/react-d3-example/dist/simple/min/line_user.min.js"></script>
 
                     </div>
                 </div>
@@ -373,7 +382,7 @@ var title = "Taiwan refuse disposal",
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
 
                     <div class="markdown-body">
-                      <p>Code is available on <a href="https://github.com/react-d3/react-d3-example/blob/master/line/es5/line_garbage.js">Github</a></p>
+                      <p>Code is available on <a href="https://github.com/react-d3/react-d3-example/blob/master/simple/line_user/line_user.js">Github</a></p>
 
                     </div>
                 </div>

@@ -7,7 +7,7 @@ Load your bundle js file which `webpack` or `browserify` generated into your htm
     <title>line example</title>
   </head>
   <body>
-    <div id="line-garbage"></div>
+    <div id="line-user"></div>
     <script src="./dist/line.js"></script>
   </body>
 </html>
