@@ -1,6 +1,3 @@
-
-## Why?
-
 #### Q1: Why building another reusable chart library?
 
 Nowadays, we had many great libraries to build a reusable charts, such as `nvd3`, `c3`, `highchart`... etc. Those are really great! But what `react-d3` aimed to build is not only a reusable chart library, but also building reusable chart **components** for further usages.

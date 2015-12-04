@@ -299,7 +299,7 @@ module.exports = [{
       "product": {
         "title": "react-d3",
         "data": [{
-          "name": "Motivation",
+          "name": "Why React-d3?",
           "md": "./intro/motivation/intro_motivation.md"
         }]
       }
