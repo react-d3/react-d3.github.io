@@ -122,7 +122,7 @@
               <a href="#getting-started">Getting Started</a>
               </li>
               <li>
-              <a href="#install-and-setup-react-d3-packages">Install and setup react-d3 packages</a>
+              <a href="#prepare-your-data">Prepare your Data</a>
               </li>
               <li>
               <a href="#write-chart">Write chart</a>
@@ -146,7 +146,65 @@
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
 
                     <div class="markdown-body">
-                      <p>First prepare your data you want to show on your chart.</p>
+                      <h4 id="install-and-setup-react-d3-packages">Install and Setup React-d3 packages</h4>
+<p>Pick one <code>react-d3</code> you want to install (see <a href="/gallerys">gallerys</a>). Here we are going to demo using <code>react-d3-basic</code> library to draw a simple line chart.</p>
+<p>Install <code>react-d3-basic</code>:</p>
+<pre><code>npm install --save react-d3-basic
+</code></pre><p><code>react-d3</code> packages require to be bundled with <code>webpack</code> or <code>browserify</code></p>
+<p>Sample <code>webpack</code> setting:</p>
+<pre><code class="lang-js">'use strict';
+
+var path            = require('path'),
+  webpack         = require('webpack');
+
+var js_dist = path.join(__dirname, './dist');
+
+module.exports = [{
+  name: 'chartComponent',
+  entry: {
+    line: './line.jsx',
+  },
+
+  output: {
+    path: js_dist,
+    filename: '[name].js'
+  },
+
+  module: {
+    loaders: [
+      {
+        test: [/\.jsx$/],
+        loaders: ["jsx-loader?insertPragma=React.DOM&amp;harmony"],
+      }
+    ],
+  },
+
+  resolve: {
+    extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx']
+  },
+  // we need d3 in ProvidePlugin.
+  plugins: [
+    new webpack.ProvidePlugin({
+      'd3': 'd3'
+    })
+  ]
+}];
+</code></pre>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
+        <section id="prepare-your-data" class="section text-center group">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Prepare your Data</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+                    <div class="markdown-body">
+                      <h4 id="data-format">Data Format</h4>
+<p>First prepare your data you want to show on your chart.</p>
 <p><code>react-d3</code> <strong>only support one kind of data format, which is an array with objects (the objects have to have same keys)</strong>. Which means you have to have a data like below for example.</p>
 <pre><code class="lang-js">[
   {
@@ -189,68 +247,13 @@
   ...
 ]
 </code></pre>
-<p>if you have a csv, tsv file, you can use a csv converter to convert it to JSON format. Or using <code>webpack</code> to require your csv via <code>dsv-loader</code></p>
+<h4 id="the-way-to-load-you-data">The way to load you data</h4>
+<p>If you have a csv, tsv file, you can use a csv converter to convert it to JSON format. Or using <code>webpack</code> to require your csv via <code>dsv-loader</code></p>
 <pre><code class="lang-js">var data = require('dsv?delimiter=\t!./data/letter.tsv')
 
 // or
 
 var data = require('csv?delimiter=,!./data/test.csv')
-</code></pre>
-
-                    </div>
-                </div>
-                <!--.row-->
-            </div>
-            <!--/.container -->
-        </section>
-        <section id="install-and-setup-react-d3-packages" class="section text-center group">
-            <div class="container">
-                <h2 class="section-title wow fadeIn">Install and setup react-d3 packages</h2>
-                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-
-                    <div class="markdown-body">
-                      <p>Pick one <code>react-d3</code> you want to install (see <a href="/components">components</a>). Here we are going to demo using <code>react-d3-basic</code> library to draw a simple line chart.</p>
-<p>Install <code>react-d3-basic</code>:</p>
-<pre><code>npm install --save react-d3-basic
-</code></pre><p><code>react-d3</code> packages require to be bundled with <code>webpack</code> or <code>browserify</code></p>
-<p>Sample <code>webpack</code> setting:</p>
-<pre><code class="lang-js">'use strict';
-
-var path            = require('path'),
-  webpack         = require('webpack');
-
-var js_dist = path.join(__dirname, './dist');
-
-module.exports = [{
-  name: 'chartComponent',
-  entry: {
-    line: './line.jsx',
-  },
-
-  output: {
-    path: js_dist,
-    filename: '[name].js'
-  },
-
-  module: {
-    loaders: [
-      {
-        test: [/\.jsx$/],
-        loaders: ["jsx-loader?insertPragma=React.DOM&amp;harmony"],
-      }
-    ],
-  },
-
-  resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx']
-  },
-  // we need d3 in ProvidePlugin.
-  plugins: [
-    new webpack.ProvidePlugin({
-      'd3': 'd3'
-    })
-  ]
-}];
 </code></pre>
 
                     </div>
@@ -332,7 +335,7 @@ var title = "Taiwan refuse disposal",
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
 
                     <div class="markdown-body">
-                      <p>Load your js file which <code>webpack</code> generate to your html</p>
+                      <p>Load your js file which <code>webpack</code> or <code>browserify</code> generate to your html</p>
 <pre><code class="lang-html">&lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;line example&lt;/title&gt;
@@ -357,8 +360,8 @@ var title = "Taiwan refuse disposal",
 
                     <div class="markdown-body">
                       <h3 id="happy-">Happy :)</h3>
-<p>And you can enjoy your chart!</p>
-<p></p><div id="line-garbage" class="demo"></div><p></p>
+<p>Enjoy your chart!</p>
+<p></p><div id="line-garbage" class="demo" style="width:500px"></div><p></p>
 <script src="/react-d3-example/dist/simple/min/line_garbage.min.js"></script>
 
                     </div>
@@ -373,7 +376,7 @@ var title = "Taiwan refuse disposal",
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
 
                     <div class="markdown-body">
-                      <p>Code is available on <a href="https://github.com/react-d3/react-d3-example/blob/master/line/es5/line_garbage.js">Github</a></p>
+                      <p>Code is available on <a href="https://github.com/react-d3/react-d3-example/blob/master/simple/line/line_garbage.js">Github</a></p>
 
                     </div>
                 </div>

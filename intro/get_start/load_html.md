@@ -1,5 +1,5 @@
 
-Load your js file which `webpack` generate to your html
+Load your js file which `webpack` or `browserify` generate to your html
 
 ```html
 <html>
