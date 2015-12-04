@@ -53,7 +53,7 @@ a:hover {
     transition: background-color .3s ease;
 }
 .section {
-    overflow-x: hidden
+    overflow-x: hidden;
     padding: 35px 0;
 }
 .section-title {
