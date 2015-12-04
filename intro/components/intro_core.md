@@ -12,7 +12,7 @@
 
 Such as we need xaxis, yaxis, grid in a new chart.  We can install `react-d3-core` and import them.
 
-## Supported Components
+### Supported Components
 
 #### Container
 

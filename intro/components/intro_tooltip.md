@@ -10,7 +10,7 @@
 
 `react-d3` tooltip implementation.
 
-## Support Tooltip Component
+### Support Tooltip Component
 
 - Line Chart: export as `LineTooltip`
 - Area Stack Chart: export as `AreaStackTooltip`

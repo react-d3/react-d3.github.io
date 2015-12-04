@@ -185,7 +185,7 @@ module.exports = [{
   }
 }];
 </code></pre>
-<p>compile by run:</p>
+<p>Compile by run:</p>
 <pre><code>webpack
 </code></pre><h4 id="using-browserify">Using Browserify</h4>
 <p>You can use <a href="https://github.com/andreypopp/reactify">reactify</a> to bundle your <code>.jsx</code> or <code>.js</code> file.</p>
@@ -270,7 +270,7 @@ var data = require('csv?delimiter=,!./data/test.csv')
                     <div class="markdown-body">
                       <p>Create a new file called <code>line.jsx</code> (which we have setup webpack to compile).</p>
 <h3 id="require-libraries">Require Libraries</h3>
-<p>we need to require some library we need to use:</p>
+<p>We need to require some library we need to use:</p>
 <pre><code class="lang-js">// first of course react!
 var React = require('react');
 // require `react-d3-core` for Chart component, which help us build a blank svg and chart title.
@@ -279,12 +279,11 @@ var Chart = require('react-d3-core').Chart;
 var LineChart = require('react-d3-basic').LineChart;
 </code></pre>
 <h3 id="load">Load</h3>
-<p>load your data</p>
-<pre><code class="lang-js">// using webpack
-var chartData = require('dsv?delimiter=,!../../data/garbage.csv');
-
-// not using webpack
-var chartData = [
+<p>Load your data using webpack</p>
+<pre><code class="lang-js">var chartData = require('dsv?delimiter=,!../../data/garbage.csv');
+</code></pre>
+<p>Not using webpack</p>
+<pre><code class="lang-js">var chartData = [
   // put your data here!
 ]
 </code></pre>

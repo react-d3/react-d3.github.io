@@ -52,7 +52,7 @@ module.exports = [{
 }];
 ```
 
-compile by run:
+Compile by run:
 
 ```
 webpack

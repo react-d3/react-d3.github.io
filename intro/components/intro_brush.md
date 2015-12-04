@@ -10,7 +10,7 @@
   <button type="button" class="btn btn-default">OPEN SOURCE ON GITHUB</button>
 </a>
 
-## Support Brush Component
+### Support Brush Component
 
 - Line Chart: export as `LineBrush`
 - Area Stack Chart: export as `AreaStackBrush`

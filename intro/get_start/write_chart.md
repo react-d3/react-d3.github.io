@@ -3,7 +3,7 @@ Create a new file called `line.jsx` (which we have setup webpack to compile).
 
 ### Require Libraries
 
-we need to require some library we need to use:
+We need to require some library we need to use:
 
 ```js
 // first of course react!
@@ -16,17 +16,18 @@ var LineChart = require('react-d3-basic').LineChart;
 
 ### Load
 
-load your data
+Load your data using webpack
 
 ```js
-// using webpack
 var chartData = require('dsv?delimiter=,!../../data/garbage.csv');
+```
 
-// not using webpack
+Not using webpack
+
+```js
 var chartData = [
   // put your data here!
 ]
-
 ```
 
 ### Settings

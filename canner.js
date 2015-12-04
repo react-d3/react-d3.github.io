@@ -185,7 +185,7 @@ module.exports = [{
     "layout": "./index.hbs",
     "helpers": ["./helper/ifCond.js","./helper/multipleOr.js"],
     "data": {
-        "item": "A Javascript Library For Building Composable And Declarative Charts | React-D3",
+        "item": "A Javascript Library For Building Composable And Declarative Charts | React-d3",
         "logo": "/img/react-d3_2.png",
         "slogan": "A Javascript library for building composable and declarative charts",
         "description": "A new solution for building reusable components for interactive charts",

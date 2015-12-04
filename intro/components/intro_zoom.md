@@ -10,7 +10,7 @@
 
 `react-d3` zoom implementation.
 
-## Support Zoom Component
+### Support Zoom Component
 
 - Line Chart: export as `LineZoom`
 - Area Stack Chart: export as `AreaStackZoom`
