@@ -2,8 +2,7 @@
 
 First prepare your data you want to show on your chart.
 
-`react-d3` **only support one kind of data format, which is an array with objects (the objects have to have the same keys)**. Which means you have to have a data like below for example.
-
+`react-d3` **only support one kind of data format, which is an array with objects (the objects have to have the same keys)**. Which means you have to have a data like below for example. ([data source](https://raw.githubusercontent.com/react-d3/react-d3-example/master/simple/data/user_sample.json))
 
 ```js
 [

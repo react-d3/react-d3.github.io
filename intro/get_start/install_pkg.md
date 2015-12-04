@@ -8,9 +8,17 @@ Install `react-d3-basic`:
 npm install --save react-d3-basic
 ```
 
+### Set up build tools
+
 `react-d3` packages require to be bundled with `webpack` or `browserify`
 
-### Webpack
+#### Using Webpack
+
+install wepback: 
+
+```js
+npm install webpack -g
+```
 
 Sample `webpack` setting:
 
@@ -44,7 +52,13 @@ module.exports = [{
 }];
 ```
 
-### Browserify
+compile by run:
+
+```
+webpack
+```
+
+#### Using Browserify
 
 You can use [reactify](https://github.com/andreypopp/reactify) to bundle your `.jsx` or `.js` file.
 

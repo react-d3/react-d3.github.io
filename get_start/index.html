@@ -150,8 +150,12 @@
 <p>Pick one <code>react-d3</code> you want to install (see <a href="/gallery">gallery</a>). Here we are going to demo using <code>react-d3-basic</code> library to draw a simple line chart.</p>
 <p>Install <code>react-d3-basic</code>:</p>
 <pre><code>npm install --save react-d3-basic
-</code></pre><p><code>react-d3</code> packages require to be bundled with <code>webpack</code> or <code>browserify</code></p>
-<h3 id="webpack">Webpack</h3>
+</code></pre><h3 id="set-up-build-tools">Set up build tools</h3>
+<p><code>react-d3</code> packages require to be bundled with <code>webpack</code> or <code>browserify</code></p>
+<h4 id="using-webpack">Using Webpack</h4>
+<p>install wepback: </p>
+<pre><code class="lang-js">npm install webpack -g
+</code></pre>
 <p>Sample <code>webpack</code> setting:</p>
 <pre><code class="lang-js">'use strict';
 
@@ -181,7 +185,9 @@ module.exports = [{
   }
 }];
 </code></pre>
-<h3 id="browserify">Browserify</h3>
+<p>compile by run:</p>
+<pre><code>webpack
+</code></pre><h4 id="using-browserify">Using Browserify</h4>
 <p>You can use <a href="https://github.com/andreypopp/reactify">reactify</a> to bundle your <code>.jsx</code> or <code>.js</code> file.</p>
 <pre><code>browserify -t reactify main.js
 </code></pre>
@@ -199,7 +205,7 @@ module.exports = [{
                     <div class="markdown-body">
                       <h4 id="data-format">Data Format</h4>
 <p>First prepare your data you want to show on your chart.</p>
-<p><code>react-d3</code> <strong>only support one kind of data format, which is an array with objects (the objects have to have the same keys)</strong>. Which means you have to have a data like below for example.</p>
+<p><code>react-d3</code> <strong>only support one kind of data format, which is an array with objects (the objects have to have the same keys)</strong>. Which means you have to have a data like below for example. (<a href="https://raw.githubusercontent.com/react-d3/react-d3-example/master/simple/data/user_sample.json">data source</a>)</p>
 <pre><code class="lang-js">[
   {
     name: "Lavon Hilll I",
@@ -325,6 +331,61 @@ var chartData = [
     &lt;/Chart&gt;
   , document.getElementById('line-user')
   )
+</code></pre>
+<h3 id="full-code-in-your-javascript">Full code in your javascript</h3>
+<pre><code class="lang-js">"use strict"
+
+var React = require('react');
+var ReactDOM = require('react-dom');
+var Chart = require('react-d3-core').Chart;
+var LineChart = require('react-d3-basic').LineChart;
+
+(function() {
+  // load your general data
+  var chartData = require('json!../data/user_sample.json');
+
+  var width = 700,
+    height = 300,
+    margins = {left: 100, right: 100, top: 50, bottom: 50},
+    title = "User sample",
+    // chart series,
+    // field: is what field your data want to be selected
+    // name: the name of the field that display in legend
+    // color: what color is the line
+    chartSeries = [
+      {
+        field: 'BMI',
+        name: 'BMI',
+        color: '#ff7f0e'
+      }
+    ],
+    // your x accessor
+    x = function(d) {
+      return d.index;
+    }
+
+  ReactDOM.render(
+    &lt;Chart
+      title={title}
+      width={width}
+      height={height}
+      margins= {margins}
+      &gt;
+      &lt;LineChart
+        showXGrid= {false}
+        showYGrid= {false}
+        margins= {margins}
+        title={title}
+        data={chartData}
+        width={width}
+        height={height}
+        chartSeries={chartSeries}
+        x={x}
+      /&gt;
+    &lt;/Chart&gt;
+  , document.getElementById('line-user')
+  )
+})()
 </code></pre>
 
                     </div>
