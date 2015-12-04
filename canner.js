@@ -291,16 +291,16 @@ module.exports = [{
     }
   },{
     "layout": "./gallery.hbs",
-    "filename": "./qa/index.html",
+    "filename": "./docs/index.html",
     "helpers": ["./helper/ifCond.js","./helper/multipleOr.js", './helper/id.js'],
     "data": {
-      "item": "react-d3 QA",
+      "item": "react-d3 docs",
       "logo": "/img/react-d3_2.png",
       "product": {
         "title": "react-d3",
         "data": [{
-          "name": "QA",
-          "md": "./intro/qa/intro_qa.md"
+          "name": "Motivation",
+          "md": "./intro/motivation/intro_motivation.md"
         }]
       }
     }
