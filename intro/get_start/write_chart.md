@@ -19,7 +19,15 @@ var LineChart = require('react-d3-basic').LineChart;
 load your data
 
 ```js
+
+// using webpack
 var chartData = require('dsv?delimiter=,!../../data/garbage.csv');
+
+// not using webpack
+var chartData = [
+
+]
+
 ```
 
 ### Settings

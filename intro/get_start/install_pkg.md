@@ -8,6 +8,8 @@ npm install --save react-d3-basic
 
 `react-d3` packages require to be bundled with `webpack` or `browserify`
 
+### Webpack
+
 Sample `webpack` setting:
 
 ```js
@@ -48,4 +50,12 @@ module.exports = [{
     })
   ]
 }];
+```
+
+### Browserify
+
+You can use [reactify](https://github.com/andreypopp/reactify) to bundle your `.jsx` or `.js` file.
+
+```
+browserify -t reactify main.js
 ```
