@@ -1,6 +1,6 @@
 #### Install and Setup React-d3 packages
 
-Pick one `react-d3` you want to install (see [gallerys](/gallerys)). Here we are going to demo using `react-d3-basic` library to draw a simple line chart.
+Pick one `react-d3` you want to install (see [gallery](/gallery)). Here we are going to demo using `react-d3-basic` library to draw a simple line chart.
 
 Install `react-d3-basic`:
 
@@ -17,9 +17,8 @@ Sample `webpack` setting:
 ```js
 'use strict';
 
-var path            = require('path'),
-  webpack         = require('webpack');
-
+var path = require('path');
+var webpack = require('webpack');
 var js_dist = path.join(__dirname, './dist');
 
 module.exports = [{
@@ -27,12 +26,10 @@ module.exports = [{
   entry: {
     line: './line.jsx',
   },
-
   output: {
     path: js_dist,
     filename: '[name].js'
   },
-
   module: {
     loaders: [
       {
@@ -41,7 +38,6 @@ module.exports = [{
       }
     ],
   },
-
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx']
   }

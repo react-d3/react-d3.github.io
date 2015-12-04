@@ -13,6 +13,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
@@ -35,7 +37,8 @@ h3 {
 }
 p {
     font-size: 15px;
-    color: #727272;
+    /*color: #727272;*/
+    color: #484848;
     line-height: 1.5em;
     font-weight: 400;
 }
@@ -51,6 +54,9 @@ a:hover {
     -moz-transition: background-color .3s ease;
     -o-transition: background-color .3s ease;
     transition: background-color .3s ease;
+}
+pre {
+  font-family: Monaco, "Lucida Console", monospace;
 }
 .section {
     overflow-x: hidden;
@@ -443,7 +449,7 @@ footer {
 }
 .bs-docs-sidebar .nav a {
     color: #999797;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 /* active & hover links */

@@ -147,7 +147,7 @@
 
                     <div class="markdown-body">
                       <h4 id="install-and-setup-react-d3-packages">Install and Setup React-d3 packages</h4>
-<p>Pick one <code>react-d3</code> you want to install (see <a href="/gallerys">gallerys</a>). Here we are going to demo using <code>react-d3-basic</code> library to draw a simple line chart.</p>
+<p>Pick one <code>react-d3</code> you want to install (see <a href="/gallery">gallery</a>). Here we are going to demo using <code>react-d3-basic</code> library to draw a simple line chart.</p>
 <p>Install <code>react-d3-basic</code>:</p>
 <pre><code>npm install --save react-d3-basic
 </code></pre><p><code>react-d3</code> packages require to be bundled with <code>webpack</code> or <code>browserify</code></p>
@@ -155,9 +155,8 @@
 <p>Sample <code>webpack</code> setting:</p>
 <pre><code class="lang-js">'use strict';
 
-var path            = require('path'),
-  webpack         = require('webpack');
-
+var path = require('path');
+var webpack = require('webpack');
 var js_dist = path.join(__dirname, './dist');
 
 module.exports = [{
@@ -165,12 +164,10 @@ module.exports = [{
   entry: {
     line: './line.jsx',
   },
-
   output: {
     path: js_dist,
     filename: '[name].js'
   },
-
   module: {
     loaders: [
       {
@@ -179,7 +176,6 @@ module.exports = [{
       }
     ],
   },
-
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx']
   }
@@ -278,8 +274,7 @@ var LineChart = require('react-d3-basic').LineChart;
 </code></pre>
 <h3 id="load">Load</h3>
 <p>load your data</p>
-<pre><code class="lang-js">
-// using webpack
+<pre><code class="lang-js">// using webpack
 var chartData = require('dsv?delimiter=,!../../data/garbage.csv');
 
 // not using webpack
