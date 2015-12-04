@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <title>{{item}}</title>
-    <meta name="description" content="Painless Building D3 Charts - A whole new solution for building reusable components for d3 charts.">
+    <meta name="description" content="A Javascript Library For Building Composable And Declarative Charts">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -83,7 +83,7 @@
 
                     <!-- LOGO -->
                     <a class="navbar-brand page-scroll" href="#page-top">
-                        <img src="{{logo}}" alt="" style="width:50px">
+                        <img src="{{logo}}" alt="" style="width:130px">
                     </a>
                     <!-- END LOGO -->
 
@@ -91,24 +91,23 @@
 
                 <!-- TOGGLE NAV -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-left">
                         <li class="hidden">
                           <a href="#page-top"></a>
                         </li>
                         <li>
-                          <a href="/">Home</a>
-                        </li>
-                        <li>
                           <a href="/get_start">Get Started</a>
                         </li>
+                        <!--<li>
+                          <a href="/docs">Docs</a>
+                          </li>-->
                         <li>
-                          <a href="/components">Components</a>
+                          <a href="/components">Gallery</a>
                         </li>
+                      </ul>
+                    <ul class="nav navbar-nav navbar-right">
                         <li>
-                          <a href="/qa">QA</a>
-                        </li>
-                        <li>
-                          <a href="http://github.com/react-d3/react-d3-example">Example Code</a>
+                          <a href="http://github.com/react-d3/react-d3-core">Github</a>
                         </li>
                     </ul>
                 </div>
@@ -127,16 +126,14 @@
                 <div class="row">
                     <!-- HOME CONTENT -->
                     {{#ifCond description '||' slogan }}
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="home-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
-                            {{#if slogan}}
-                            <h1>{{slogan}}</h1>
-                            {{/if}}
-                            {{#if description}}
-                            <p>{{description}}</p>
-                            {{/if}}
-                        </div>
-                    </div>
+                      <div class="home-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
+                          {{#if slogan}}
+                          <h1>{{slogan}}</h1>
+                          {{/if}}
+                          {{#if description}}
+                          <p>{{description}}</p>
+                          {{/if}}
+                      </div>
                     {{/ifCond}}
                     <!-- END HOME CONTENT -->
 
@@ -146,9 +143,6 @@
                       <div class="home-feature pull-right center-block wow bounceIn" data-wow-duration="1s" data-wow-delay="1s">
                         <a href="/get_start">
                           <button type="button" class="btn btn-danger btn-lg">Get Started</button>
-                        </a>
-                        <a href="http://github.com/react-d3">
-                          <button type="button" class="btn btn-danger btn-lg">Open source on Github</button>
                         </a>
                       </div>
                     </div>
@@ -177,7 +171,7 @@
                                   <div class="col-md-12">
                                       <div class="service-content">
                                           {{#if name}}
-                                          <h3>{{name}}</h3>
+                                          <h3>{{{name}}}</h3>
                                           {{/if}}
                                           {{#if description}}
                                           <p>{{{description}}}</p>
@@ -191,16 +185,12 @@
                   {{/if}}
                   {{#if demo}}
                     {{#each demo}}
-                      <div class="markdown-body">
+                      <div class="home-md">
                           <div class="single-service text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                              <div class="row" style="margin-bottom:20px">
-                                  <div class="service-content">
-                                      {{#if md}}
-                                      <section data-markdown="{{md}}" >
-                                      </section>
-                                      {{/if}}
-                                  </div>
-                              </div>
+                              {{#if md}}
+                              <section data-markdown="{{md}}" >
+                              </section>
+                              {{/if}}
                           </div>
                       </div>
                     {{/each}}
@@ -208,7 +198,7 @@
                   {{#if md}}
                     <div class="markdown-body">
                       {{#ifCond name '==' 'Introduction'}}
-                        <a href="https://github.com/react-d3">
+                        <a href="https://github.com/react-d3/react-d3-core">
                           <button type="button" class="btn btn-success">OPEN SOURCE ON GITHUB</button>
                         </a>
                       {{else}}
@@ -220,12 +210,16 @@
                   {{/if}}
                 </div>
                 <!--.row-->
-            </div>
-            <!--/.container -->
+                <a href="/get_start">
+                  <button type="button" class="btn btn-danger btn-lg">Get Started</button>
+                </a>
+
+          </div>
+          <!--/.container -->
+          <!-- END SERVICES -->
         </section>
       {{/each}}
     {{/if}}
-    <!-- END SERVICES -->
 
     <!-- FOOTER -->
     <footer>
@@ -240,7 +234,7 @@
                 <!-- FOOTER CONTENT -->
                 <div class="col-md-6">
                     <div class="footer-content text-right">
-                        <p>&copy; 2015 License Apache2.0, <a href="/">react-d3</a>
+                        <p>&copy; 2015 License Apache2.0, <a href="/">React-d3</a>
                         </p>
                     </div>
                 </div>

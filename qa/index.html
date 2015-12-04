@@ -78,7 +78,7 @@
 
                     <!-- LOGO -->
                     <a class="navbar-brand page-scroll" href="/">
-                        <img src="https://avatars0.githubusercontent.com/u/14354544?v=3&amp;s=200" alt="" style="width:50px">
+                        <img src="/img/react-d3_2.png" alt="" style="width:130px">
                     </a>
                     <!-- END LOGO -->
 
@@ -86,26 +86,26 @@
 
                 <!-- TOGGLE NAV -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-left">
                         <li class="hidden">
                           <a href="#page-top"></a>
                         </li>
                         <li>
-                          <a href="/">Home</a>
-                        </li>
-                        <li>
                           <a href="/get_start">Get Started</a>
                         </li>
+                        <!--<li>
+                          <a href="/docs">Docs</a>
+                          </li>-->
                         <li>
-                          <a href="/components">Components</a>
+                          <a href="/components">Gallery</a>
                         </li>
+                      </ul>
+                    <ul class="nav navbar-nav navbar-right">
                         <li>
-                          <a href="/qa">QA</a>
-                        </li>
-                        <li>
-                          <a href="http://github.com/react-d3/react-d3-example">Example Code</a>
+                          <a href="http://github.com/react-d3/react-d3-core">Github</a>
                         </li>
                     </ul>
+ 
                 </div>
                 <!-- TOGGLE NAV -->
 
@@ -113,11 +113,19 @@
             <!-- /.container -->
         </nav>
         <!-- END NAVIGATION -->
-    </header>
+   </header>
+
+    <!--Nav Bar -->
+    <nav id="doc-sidebar" class="col-xs-3 bs-docs-sidebar">
+        <ul id="sidebar" class="nav nav-stacked fixed">
+              <li>
+              <a href="#qa">QA</a>
+              </li>
+        </ul>
+    </nav>
 
     <!-- SERVICES -->
-        <a name="0"></a>
-        <section id="services" class="section text-center">
+        <section id="qa" class="section text-center group">
             <div class="container">
                 <h2 class="section-title wow fadeIn">QA</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
@@ -177,7 +185,7 @@
                 <!-- FOOTER CONTENT -->
                 <div class="col-md-6">
                     <div class="footer-content text-right">
-                        <p>© 2015 License Apache2.0, <a href="/">react-d3</a>
+                        <p>© 2015 License Apache2.0, <a href="/">React-d3</a>
                         </p>
                     </div>
                 </div>
@@ -195,7 +203,8 @@
     <script src="/js/wow.min.js"></script>
     <script src="/js/prettyPhoto.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
-    <!-- <script src="/js/main.js"></script> -->
+    <!-- <script src="/js/main.js"></script>-->
+    <script src="/js/sidebar.js"></script>
     <script src="/js/prism.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
