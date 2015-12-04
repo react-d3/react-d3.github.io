@@ -1,4 +1,6 @@
-Pick one `react-d3` you want to install (see [components](/components)). Here we are going to demo using `react-d3-basic` library to draw a simple line chart.
+#### Install and Setup React-d3 packages
+
+Pick one `react-d3` you want to install (see [gallerys](/gallerys)). Here we are going to demo using `react-d3-basic` library to draw a simple line chart.
 
 Install `react-d3-basic`:
 
