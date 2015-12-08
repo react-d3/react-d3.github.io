@@ -143,7 +143,7 @@ button.btn.btn-danger:hover {
 }
 .home-content h1 {
     text-transform: capitalize;
-    font-weight: 300;
+    font-weight: 200;
 }
 .home-content p {
     font-size: 20px;
