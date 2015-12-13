@@ -18,7 +18,10 @@ month,total,incineration,garbageBury,largeGarbageRecycle,foodWaste,recycle,other
 ...
 ```
 
+<br>
+
 We provide low level api for you to assemble your own chart.
+
 
 ```js
 ReactDOM.render(
@@ -46,7 +49,10 @@ ReactDOM.render(
 )
 ```
 
+<br>
+
 We also provide high level chart api.
+
 
 ```js
 ReactDOM.render(
