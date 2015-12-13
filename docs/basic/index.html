@@ -93,14 +93,17 @@
                         <li>
                           <a href="/get_start">Get Started</a>
                         </li>
-                        <!--<li>
+                        <li>
                           <a href="/docs">Docs</a>
-                          </li>-->
+                        </li>
                         <li>
                           <a href="/components">Gallery</a>
                         </li>
                       </ul>
                     <ul class="nav navbar-nav navbar-right">
+                        <li>
+                          <a href="http://map.reactd3.org">React-d3-map</a>
+                        </li>
                         <li>
                           <a href="http://github.com/react-d3">Github</a>
                         </li>
@@ -125,19 +128,22 @@
               <a href="#line">Line</a>
               </li>
               <li>
-              <a href="#line-multiple">Line Multiple</a>
+              <a href="#line_multiple">Line Multiple</a>
               </li>
               <li>
               <a href="#area">Area</a>
               </li>
               <li>
+              <a href="#area_stack">Area Stack</a>
+              </li>
+              <li>
               <a href="#bar">Bar</a>
               </li>
               <li>
-              <a href="#bar-group">Bar Group</a>
+              <a href="#bar_group">Bar Group</a>
               </li>
               <li>
-              <a href="#bar-stack">Bar Stack</a>
+              <a href="#bar_stack">Bar Stack</a>
               </li>
               <li>
               <a href="#scatter">Scatter</a>
@@ -248,7 +254,7 @@ var LineChart = require('react-d3-basic').LineChart;
             </div>
             <!--/.container -->
         </section>
-        <section id="line-multiple" class="section text-center group">
+        <section id="line_multiple" class="section text-center group">
             <div class="container">
                 <h2 class="section-title wow fadeIn">Line Multiple</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
@@ -386,6 +392,69 @@ var AreaChart = require('react-d3-basic').AreaChart;
             </div>
             <!--/.container -->
         </section>
+        <section id="area_stack" class="section text-center group">
+            <div class="container">
+                <h2 class="section-title wow fadeIn">Area Stack</h2>
+                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+                    <div class="markdown-body">
+                      <p>Area Stack Component:</p>
+<p></p><div id="area-stack" class="demo"></div><p></p>
+<script src="/react-d3-example/dist/simple/min/area_stack.min.js"></script>
+
+<pre><code class="lang-js">"use strict";
+
+var React = require('react');
+var ReactDOM = require('react-dom');
+var AreaStackChart = require('react-d3-basic').AreaStackChart;
+
+(function() {
+  var generalChartData = require('dsv?delimiter=,!../data/stack_test.csv')
+
+  var parseDate = d3.time.format("%m/%d/%y").parse;
+
+  var width = 700,
+    height = 400,
+    title = "Stack Area Chart",
+    chartSeries = [
+      {
+        field: "Group1",
+        name: "Group 1"
+      },
+      {
+        field: "Group2",
+        name: "Group 2"
+      },
+      {
+        field: "Group3",
+        name: "Group 3"
+      }
+    ],
+    x = function(d) {
+      return parseDate(d.date);
+    },
+    xScale = 'time';
+
+  ReactDOM.render(
+    &lt;AreaStackChart
+      data= {generalChartData}
+      width= {width}
+      height= {height}
+      chartSeries = {chartSeries}
+      x= {x}
+      xScale= {xScale}
+    /&gt;
+  , document.getElementById('area-stack')
+  )
+})()
+</code></pre>
+
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+            <!--/.container -->
+        </section>
         <section id="bar" class="section text-center group">
             <div class="container">
                 <h2 class="section-title wow fadeIn">Bar</h2>
@@ -446,7 +515,7 @@ var BarChart = require('react-d3-basic').BarChart;
             </div>
             <!--/.container -->
         </section>
-        <section id="bar-group" class="section text-center group">
+        <section id="bar_group" class="section text-center group">
             <div class="container">
                 <h2 class="section-title wow fadeIn">Bar Group</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
@@ -531,7 +600,7 @@ var BarGroupChart = require('react-d3-basic').BarGroupChart;
             </div>
             <!--/.container -->
         </section>
-        <section id="bar-stack" class="section text-center group">
+        <section id="bar_stack" class="section text-center group">
             <div class="container">
                 <h2 class="section-title wow fadeIn">Bar Stack</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">

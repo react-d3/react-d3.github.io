@@ -38,6 +38,9 @@ var charts = [{
   "name": "Area",
   "link": "area"
 },{
+  "name": "Area Stack",
+  "link": "area_stack"
+},{
   "name": "Bar",
   "link": "bar"
 },{
@@ -281,21 +284,6 @@ module.exports = [{
         }, {
           "name": "react-d3-core",
           "md": "./intro/components/intro_core.md"
-        }]
-      }
-    }
-  },{
-    "layout": "./gallery.hbs",
-    "filename": "./qa/index.html",
-    "helpers": ["./helper/ifCond.js","./helper/multipleOr.js", './helper/id.js'],
-    "data": {
-      "item": "react-d3 QA",
-      "logo": "/img/react-d3_2.png",
-      "product": {
-        "title": "react-d3",
-        "data": [{
-          "name": "QA",
-          "md": "./intro/qa/intro_qa.md"
         }]
       }
     }

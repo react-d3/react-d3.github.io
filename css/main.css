@@ -8,12 +8,13 @@ Dark Gray: #727272;
 html, body {
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
 }
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
@@ -36,7 +37,8 @@ h3 {
 }
 p {
     font-size: 15px;
-    color: #727272;
+    /*color: #727272;*/
+    color: #484848;
     line-height: 1.5em;
     font-weight: 400;
 }
@@ -53,11 +55,15 @@ a:hover {
     -o-transition: background-color .3s ease;
     transition: background-color .3s ease;
 }
+pre {
+  font-family: Monaco, "Lucida Console", monospace;
+}
 .section {
+    overflow-x: hidden;
     padding: 35px 0;
 }
 .section-title {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     padding-bottom: 20px;
     display: inline-block;
     border-bottom: 1px solid #24C0D9;
@@ -124,11 +130,11 @@ a:hover {
     padding-top: 80px;
     padding-bottom: 65px;
 }
-#home-area button {
+button.btn.btn-danger {
   background: rgba(242, 65, 16, 0.95);
   border: rgb(168, 36, 0);
 }
-#home-area button:hover {
+button.btn.btn-danger:hover {
   background: #DE3D10;
 }
 .home-content {
@@ -185,7 +191,7 @@ a:hover {
 ================================================ */
 
 .group {
-    margin-top: 50px;
+    margin-top: 70px;
     width: 92%;
     float: right;
     background: #fff;
@@ -202,7 +208,7 @@ a:hover {
     color: #24C0D9;
 }
 .service-content {
-    margin-top: -66px;
+    margin-top: -50px;
 }
 .service-content p {
   font-size: 13px;
@@ -443,7 +449,7 @@ footer {
 }
 .bs-docs-sidebar .nav a {
     color: #999797;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 /* active & hover links */

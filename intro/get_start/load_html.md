@@ -1,4 +1,3 @@
-
 Load your bundle js file which `webpack` or `browserify` generated into your html.
 
 ```html

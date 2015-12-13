@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <title>{{item}}</title>
-    <meta name="description" content="A Javascript Library For Building Composable And Declarative Charts">
+    <meta name="description" content="A Javascript Library For Building Composable And Declarative Charts | React-d3">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -98,14 +98,17 @@
                         <li>
                           <a href="/get_start">Get Started</a>
                         </li>
-                        <!--<li>
+                        <li>
                           <a href="/docs">Docs</a>
-                          </li>-->
+                        </li>
                         <li>
                           <a href="/components">Gallery</a>
                         </li>
                       </ul>
                     <ul class="nav navbar-nav navbar-right">
+                        <li>
+                          <a href="http://map.reactd3.org">React-d3-map</a>
+                        </li>
                         <li>
                           <a href="http://github.com/react-d3">Github</a>
                         </li>
@@ -209,10 +212,12 @@
                     </div>
                   {{/if}}
                 </div>
+                  {{#if demo}}
                 <!--.row-->
                 <a href="/get_start">
                   <button type="button" class="btn btn-danger btn-lg">Get Started</button>
                 </a>
+                {{/if}}
 
           </div>
           <!--/.container -->

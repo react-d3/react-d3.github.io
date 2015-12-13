@@ -1,7 +1,7 @@
 <html><head>
     <meta charset="utf-8">
     <title>A Javascript Library For Building Composable And Declarative Charts | React-D3</title>
-    <meta name="description" content="A Javascript Library For Building Composable And Declarative Charts">
+    <meta name="description" content="A Javascript Library For Building Composable And Declarative Charts | React-d3">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -91,14 +91,17 @@
                         <li>
                           <a href="/get_start">Get Started</a>
                         </li>
-                        <!--<li>
+                        <li>
                           <a href="/docs">Docs</a>
-                          </li>-->
+                        </li>
                         <li>
                           <a href="/components">Gallery</a>
                         </li>
                       </ul>
                     <ul class="nav navbar-nav navbar-right">
+                        <li>
+                          <a href="http://map.reactd3.org">React-d3-map</a>
+                        </li>
                         <li>
                           <a href="http://github.com/react-d3">Github</a>
                         </li>
@@ -183,10 +186,6 @@
                           </div>
                       </div>
                 </div>
-                <!--.row-->
-                <a href="/get_start">
-                  <button type="button" class="btn btn-danger btn-lg">Get Started</button>
-                </a>
 
           </div>
           <!--/.container -->
@@ -324,69 +323,19 @@
 <p></p><div id="data_tooltip_pie" class="demo home-right"></div><p></p>
 <script src="/react-d3-example/dist/simple/min/pie_tooltip.min.js"></script>
 
-<pre><code class="lang-js">"use strict";
-
-var React = require('react');
-var ReactDOM = require('react-dom');
-var PieTooltip = require('react-d3-tooltip').PieTooltip;
-
-(function() {
-  var generalChartData = require('dsv?delimiter=,!../data/pie_test.csv')
-
-  var width = 500,
-    height = 300,
-    title = "Pie Chart With Tooltip",
-    // value accessor
-    value = function(d) {
-      return +d.population;
-    },
-    // name accessor
-    name = function(d) {
-      return d.age;
-    },
-    // field means what your input field name is,
-    // name means the name show in the legend in your chart.
-    chartSeries = [
-      {
-        "field": "&lt;5",
-        "name": "less than 5"
-      },
-      {
-        "field": "5-13",
-        "name": "5 to 13"
-      },
-      {
-        "field": "14-17",
-        "name": "14 to 17"
-      },
-      {
-        "field": "18-24",
-        "name": "18 to 24"
-      },
-      {
-        "field": "25-44",
-        "name": "25 to 44"
-      },
-      {
-        "field": "45-64",
-        "name": "45 to 64"
-      }
-    ];
-
-
-  ReactDOM.render(
-    &lt;PieTooltip
-      title= {title}
-      data= {generalChartData}
-      width= {width}
-      height= {height}
-      chartSeries= {chartSeries}
-      value = {value}
-      name = {name}
-    /&gt;
-  , document.getElementById('data_tooltip_pie')
-  )
-})()
+<!--!!import '../../react-d3-example/simple/pie_tooltip/pie_tooltip.js';-->
+<pre><code class="lang-js">ReactDOM.render(
+  &lt;PieTooltip
+    title= {title}
+    data= {generalChartData}
+    width= {width}
+    height= {height}
+    chartSeries= {chartSeries}
+    value = {value}
+    name = {name}
+  /&gt;
+, document.getElementById('data_tooltip_pie')
+)
 </code></pre>
 
                           </div>

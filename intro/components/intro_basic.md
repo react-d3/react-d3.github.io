@@ -1,7 +1,7 @@
 # react-d3-basic
 
 <a href="/docs/basic">
-  <button type="button" class="btn btn-success">READ MORE DOCUMENT!!!!</button>
+  <button type="button" class="btn btn-success">READ MORE DOCUMENT</button>
 </a>
 
 <a href="https://github.com/react-d3/react-d3-basic">

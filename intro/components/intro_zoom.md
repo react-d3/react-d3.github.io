@@ -1,7 +1,7 @@
 # react-d3-zoom
 
 <a href="/docs/zoom">
-  <button type="button" class="btn btn-success">READ MORE DOCUMENT!!!!</button>
+  <button type="button" class="btn btn-success">READ MORE DOCUMENT</button>
 </a>
 
 <a href="https://github.com/react-d3/react-d3-zoom">
@@ -10,7 +10,7 @@
 
 `react-d3` zoom implementation.
 
-## Support Zoom Component
+### Support Zoom Component
 
 - Line Chart: export as `LineZoom`
 - Area Stack Chart: export as `AreaStackZoom`

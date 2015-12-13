@@ -3,14 +3,14 @@
 `react-d3` brush implementation.
 
 <a href="/docs/brush">
-  <button type="button" class="btn btn-success">READ MORE DOCUMENT!!!!</button>
+  <button type="button" class="btn btn-success">READ MORE DOCUMENT</button>
 </a>
 
 <a href="https://github.com/react-d3/react-d3-brush">
   <button type="button" class="btn btn-default">OPEN SOURCE ON GITHUB</button>
 </a>
 
-## Support Brush Component
+### Support Brush Component
 
 - Line Chart: export as `LineBrush`
 - Area Stack Chart: export as `AreaStackBrush`

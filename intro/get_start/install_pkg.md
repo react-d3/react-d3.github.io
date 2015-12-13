@@ -1,4 +1,6 @@
-Pick one `react-d3` you want to install (see [components](/components)). Here we are going to demo using `react-d3-basic` library to draw a simple line chart.
+#### Install and Setup React-d3 packages
+
+Pick one `react-d3` you want to install (see [gallery](/gallery)). Here we are going to demo using `react-d3-basic` library to draw a simple line chart.
 
 Install `react-d3-basic`:
 
@@ -6,18 +8,25 @@ Install `react-d3-basic`:
 npm install --save react-d3-basic
 ```
 
+### Set up build tools
+
 `react-d3` packages require to be bundled with `webpack` or `browserify`
 
-### Webpack
+#### Using Webpack
+
+install wepback: 
+
+```js
+npm install webpack -g
+```
 
 Sample `webpack` setting:
 
 ```js
 'use strict';
 
-var path            = require('path'),
-  webpack         = require('webpack');
-
+var path = require('path');
+var webpack = require('webpack');
 var js_dist = path.join(__dirname, './dist');
 
 module.exports = [{
@@ -25,12 +34,10 @@ module.exports = [{
   entry: {
     line: './line.jsx',
   },
-
   output: {
     path: js_dist,
     filename: '[name].js'
   },
-
   module: {
     loaders: [
       {
@@ -39,14 +46,19 @@ module.exports = [{
       }
     ],
   },
-
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx']
   }
 }];
 ```
 
-### Browserify
+Compile by run:
+
+```
+webpack
+```
+
+#### Using Browserify
 
 You can use [reactify](https://github.com/andreypopp/reactify) to bundle your `.jsx` or `.js` file.
 

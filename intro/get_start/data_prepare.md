@@ -1,7 +1,8 @@
+#### Data Format
+
 First prepare your data you want to show on your chart.
 
-`react-d3` **only support one kind of data format, which is an array with objects (the objects have to have the same keys)**. Which means you have to have a data like below for example.
-
+`react-d3` **only support one kind of data format, which is an array with objects (the objects have to have the same keys)**. Which means you have to have a data like below for example. ([data source](https://raw.githubusercontent.com/react-d3/react-d3-example/master/simple/data/user_sample.json))
 
 ```js
 [
@@ -46,7 +47,9 @@ First prepare your data you want to show on your chart.
 ]
 ```
 
-if you have a csv, tsv file, you can use a csv converter to convert it to JSON format. Or using `webpack` to require your csv via `dsv-loader`
+#### The way to load you data
+
+If you have a csv, tsv file, you can use a csv converter to convert it to JSON format. Or using `webpack` to require your csv via `dsv-loader`
 
 ```js
 var data = require('dsv?delimiter=\t!./data/letter.tsv')

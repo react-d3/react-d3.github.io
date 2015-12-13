@@ -1,7 +1,7 @@
 # react-d3-core
 
 <a href="/docs/core">
-  <button type="button" class="btn btn-success">READ MORE DOCUMENT!!!!</button>
+  <button type="button" class="btn btn-success">READ MORE DOCUMENT</button>
 </a>
 
 <a href="https://github.com/react-d3/react-d3-core">
@@ -12,7 +12,7 @@
 
 Such as we need xaxis, yaxis, grid in a new chart.  We can install `react-d3-core` and import them.
 
-## Supported Components
+### Supported Components
 
 #### Container
 

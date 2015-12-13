@@ -1,13 +1,10 @@
-
-## Why?
-
-#### Q1: Why building another reusable chart library?
+#### Why building another reusable chart library?
 
 Nowadays, we had many great libraries to build a reusable charts, such as `nvd3`, `c3`, `highchart`... etc. Those are really great! But what `react-d3` aimed to build is not only a reusable chart library, but also building reusable chart **components** for further usages.
 
 For instance, if we want to build a new chart on top of `react-d3` it is super easy, just call `<xaxis>`, `<yaxis>` and pass proper props. and we will build your xaxis and yaxis for you! This concept of building chart components might be a much better solution of building a whole new reusable chart community.
 
-#### Q2: What are some other common problems that building d3 charts?
+#### What are some other common problems that building d3 charts?
 
 - **Reusability** : You have to build your chart over and over again. `react-d3` is using `react`, `ES6` technologies make you easily to import and export your components.
 
@@ -18,7 +15,7 @@ For instance, if we want to build a new chart on top of `react-d3` it is super e
 - **Checking your input data** : Inputting the wrong data, will break your chart easily without knowing the reason.
 
 
-#### Q3: Why react?
+#### Why react?
 
 There are many main reasons using react as a basic structure.
 
@@ -33,7 +30,7 @@ There are many main reasons using react as a basic structure.
 - **Rendering** : By default react re-render your component when every props and states change, which make d3 more awesome. Because we can have less problem on making sure if the data is up-to-date or not.
 
 
-#### Q4: Why we are different from other react-d3 library, or other reusable chart library?
+#### Why we are different from other react-d3 library, or other reusable chart library?
 
 We have a whole new point of view to build a better reusable chart component library.  Unlike other react-d3 or reusable chart library. Which means you can build other charts(like bubble chart for example) using or tooltip utils, zoom utils, axes utils, ... etc.
 
