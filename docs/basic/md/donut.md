@@ -8,7 +8,6 @@ Donut Chart Component:
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var PieChart = require('react-d3-basic').PieChart;
 
 (function() {
@@ -51,21 +50,15 @@ var PieChart = require('react-d3-basic').PieChart;
     innerRadius = 10;
 
   ReactDOM.render(
-    <Chart
-      width={width}
-      height={height}
+    <PieChart
+      data= {generalChartData}
+      width= {width}
+      height= {height}
       chartSeries= {chartSeries}
-      >
-      <PieChart
-        data= {generalChartData}
-        width= {width}
-        height= {height}
-        chartSeries= {chartSeries}
-        value = {value}
-        name = {name}
-        innerRadius = {innerRadius}
-      />
-    </Chart>
+      value = {value}
+      name = {name}
+      innerRadius = {innerRadius}
+    />
   , document.getElementById('data_donut')
   )
 })()

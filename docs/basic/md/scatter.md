@@ -8,7 +8,6 @@ Scatter Plot Component:
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var ScatterPlot = require('react-d3-basic').ScatterPlot;
 
 (function() {
@@ -21,7 +20,6 @@ var ScatterPlot = require('react-d3-basic').ScatterPlot;
   var width = 700,
     height = 300,
     margins = {left: 100, right: 100, top: 50, bottom: 50},
-    title = "Taiwan refuse disposal - Multi line",
     // chart series,
     // field: is what field your data want to be selected
     // name: the name of the field that display in legend
@@ -53,23 +51,15 @@ var ScatterPlot = require('react-d3-basic').ScatterPlot;
     xScale = 'time';
 
   ReactDOM.render(
-    <Chart
-      title={title}
-      width={width}
-      height={height}
+    <ScatterPlot
+      data= {chartData}
+      width= {width}
+      height= {height}
       margins= {margins}
-      >
-      <ScatterPlot
-        title= {title}
-        data= {chartData}
-        width= {width}
-        height= {height}
-        margins= {margins}
-        chartSeries= {chartSeries}
-        x= {x}
-        xScale= {xScale}
-      />
-    </Chart>
+      chartSeries= {chartSeries}
+      x= {x}
+      xScale= {xScale}
+    />
   , document.getElementById('scatter-garbage')
   )
 })()

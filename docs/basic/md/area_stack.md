@@ -8,7 +8,6 @@ Area Stack Component:
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var AreaStackChart = require('react-d3-basic').AreaStackChart;
 
 (function() {
@@ -39,22 +38,14 @@ var AreaStackChart = require('react-d3-basic').AreaStackChart;
     xScale = 'time';
 
   ReactDOM.render(
-    <Chart
-      title={title}
-      width={width}
-      height={height}
-      chartSeries= {chartSeries}
-      >
-      <AreaStackChart
-        title= {title}
-        data= {generalChartData}
-        width= {width}
-        height= {height}
-        chartSeries = {chartSeries}
-        x= {x}
-        xScale= {xScale}
-      />
-    </Chart>
+    <AreaStackChart
+      data= {generalChartData}
+      width= {width}
+      height= {height}
+      chartSeries = {chartSeries}
+      x= {x}
+      xScale= {xScale}
+    />
   , document.getElementById('area-stack')
   )
 })()

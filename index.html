@@ -195,7 +195,7 @@
         <a name="1"></a>
         <section id="services" class="section text-center">
             <div class="container">
-                <h2 class="section-title wow fadeIn">The Basic Charts</h2>
+                <h2 class="section-title wow fadeIn">Basic Charts</h2>
                 <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                       <div class="home-md">
                           <div class="single-service text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
@@ -213,6 +213,32 @@
 ...
 ...
 </code></pre>
+<p>We provide low level api for you to assemble your own chart.</p>
+<pre><code class="lang-js">ReactDOM.render(
+  &lt;Chart
+    width= {width}
+    height= {height}
+    data= {data}
+    chartSeries= {chartSeries}
+    x= {x}
+    &gt;
+    // build line chart
+    &lt;Line
+      chartSeries= {series1}
+    /&gt;
+    // build area chart
+    &lt;Area
+      chartSeries= {series2}
+    /&gt;
+    &lt;Xaxis/&gt;
+    &lt;Yaxis/&gt;
+    &lt;Xgrid/&gt;
+    &lt;Ygrid/&gt;
+  &lt;/Chart&gt;
+, document.getElementById('line-garbage')
+)
+</code></pre>
+<p>We also provide high level chart api.</p>
 <pre><code class="lang-js">ReactDOM.render(
   &lt;Chart
     title={"Taiwan refuse disposal"}
@@ -235,6 +261,8 @@
 )
 </code></pre>
 <script src="/react-d3-example/dist/simple/min/line_garbage.min.js"></script>
+
+<hr>
 
                           </div>
                       </div>
@@ -274,7 +302,7 @@
 <!--!!import '../../react-d3-example/simple/bar_stack_zoom/bar_stack_zoom.js';-->
 <pre><code class="lang-js">ReactDOM.render(
   &lt;BarStackZoom
-    title= {Bar Stack Chart With Zoom""}
+    title= {"Bar Stack Chart With Zoom"}
     data= {data}
     width= {500}
     height= {400}

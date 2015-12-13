@@ -8,7 +8,6 @@ Bar Stack Chart Component:
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var BarStackChart = require('react-d3-basic').BarStackChart;
 
 (function() {
@@ -54,20 +53,15 @@ var BarStackChart = require('react-d3-basic').BarStackChart;
     yTickFormat = d3.format(".2s");
 
   ReactDOM.render(
-    <Chart
-      width={width}
-      height={height}
-      >
-      <BarStackChart
-        data= {generalChartData}
-        width= {width}
-        height= {height}
-        chartSeries = {chartSeries}
-        x= {x}
-        xScale= {xScale}
-        yTickFormat= {yTickFormat}
-      />
-    </Chart>
+    <BarStackChart
+      data= {generalChartData}
+      width= {width}
+      height= {height}
+      chartSeries = {chartSeries}
+      x= {x}
+      xScale= {xScale}
+      yTickFormat= {yTickFormat}
+    />
   , document.getElementById('data_bar_stack')
   )
 })()

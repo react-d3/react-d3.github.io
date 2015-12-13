@@ -17,6 +17,37 @@ month,total,incineration,garbageBury,largeGarbageRecycle,foodWaste,recycle,other
 ...
 ...
 ```
+
+We provide low level api for you to assemble your own chart.
+
+```js
+ReactDOM.render(
+  <Chart
+    width= {width}
+    height= {height}
+    data= {data}
+    chartSeries= {chartSeries}
+    x= {x}
+    >
+    // build line chart
+    <Line
+      chartSeries= {series1}
+    />
+    // build area chart
+    <Area
+      chartSeries= {series2}
+    />
+    <Xaxis/>
+    <Yaxis/>
+    <Xgrid/>
+    <Ygrid/>
+  </Chart>
+, document.getElementById('line-garbage')
+)
+```
+
+We also provide high level chart api.
+
 ```js
 ReactDOM.render(
   <Chart
@@ -42,3 +73,5 @@ ReactDOM.render(
 
 
 <script src="/react-d3-example/dist/simple/min/line_garbage.min.js"></script>
+
+---

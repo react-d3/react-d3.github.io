@@ -8,7 +8,6 @@ Pie Chart Component:
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var PieChart = require('react-d3-basic').PieChart;
 
 (function() {
@@ -16,7 +15,6 @@ var PieChart = require('react-d3-basic').PieChart;
 
   var width = 700,
     height = 400,
-    title = "Pie Chart",
     value = function(d) {
       return +d.population;
     },
@@ -51,21 +49,14 @@ var PieChart = require('react-d3-basic').PieChart;
     ];
 
   ReactDOM.render(
-    <Chart
-      title={title}
-      width={width}
-      height={height}
-      >
-      <PieChart
-        title= {title}
-        data= {generalChartData}
-        width= {width}
-        height= {height}
-        chartSeries= {chartSeries}
-        value = {value}
-        name = {name}
-      />
-    </Chart>
+    <PieChart
+      data= {generalChartData}
+      width= {width}
+      height= {height}
+      chartSeries= {chartSeries}
+      value = {value}
+      name = {name}
+    />
   , document.getElementById('data_pie')
   )
 })()

@@ -8,7 +8,6 @@ Bar Component:
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var BarChart = require('react-d3-basic').BarChart;
 
 (function() {
@@ -32,25 +31,18 @@ var BarChart = require('react-d3-basic').BarChart;
     yTicks = [10, "%"];
 
   ReactDOM.render(
-    <Chart
-      title={title}
-      width={width}
-      height={height}
+    <BarChart
+      title= {title}
+      data= {generalChartData}
+      width= {width}
+      height= {height}
       chartSeries = {chartSeries}
-      >
-      <BarChart
-        title= {title}
-        data= {generalChartData}
-        width= {width}
-        height= {height}
-        chartSeries = {chartSeries}
-        x= {x}
-        xLabel= {xLabel}
-        xScale= {xScale}
-        yTicks= {yTicks}
-        yLabel = {yLabel}
-      />
-    </Chart>
+      x= {x}
+      xLabel= {xLabel}
+      xScale= {xScale}
+      yTicks= {yTicks}
+      yLabel = {yLabel}
+    />
   , document.getElementById('data_bar')
   )
 })()

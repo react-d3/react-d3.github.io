@@ -38,9 +38,6 @@ var charts = [{
   "name": "Area",
   "link": "area"
 },{
-  "name": "Area Stack",
-  "link": "area_stack"
-},{
   "name": "Bar",
   "link": "bar"
 },{
@@ -209,7 +206,7 @@ module.exports = [{
               }
             ]
           },{
-            "name": "The Basic Charts",
+            "name": "Basic Charts",
             "demo": [
               {
                 "md": "./intro/demo_dist/demo_chart.md"

@@ -131,9 +131,6 @@
               <a href="#area">Area</a>
               </li>
               <li>
-              <a href="#area-stack">Area Stack</a>
-              </li>
-              <li>
               <a href="#bar">Bar</a>
               </li>
               <li>
@@ -201,7 +198,6 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var LineChart = require('react-d3-basic').LineChart;
 
 (function() {
@@ -213,7 +209,6 @@ var LineChart = require('react-d3-basic').LineChart;
   var width = 500,
     height = 300,
     margins = {left: 100, right: 100, top: 50, bottom: 50},
-    title = "Taiwan refuse disposal",
     // chart series,
     // field: is what field your data want to be selected
     // name: the name of the field that display in legend
@@ -233,23 +228,15 @@ var LineChart = require('react-d3-basic').LineChart;
 
 
   ReactDOM.render(
-    &lt;Chart
-      title={title}
+    &lt;LineChart
+      margins= {margins}
+      data={chartData}
       width={width}
       height={height}
-      margins= {margins}
-      &gt;
-      &lt;LineChart
-        margins= {margins}
-        title={title}
-        data={chartData}
-        width={width}
-        height={height}
-        chartSeries={chartSeries}
-        x={x}
-        xScale={xScale}
-      /&gt;
-    &lt;/Chart&gt;
+      chartSeries={chartSeries}
+      x={x}
+      xScale={xScale}
+    /&gt;
   , document.getElementById('line-garbage')
   )
 })()
@@ -273,9 +260,9 @@ var LineChart = require('react-d3-basic').LineChart;
 
 <pre><code class="lang-js">"use strict"
 
+var d3 = require('d3');
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var LineChart = require('react-d3-basic').LineChart;
 
 (function() {
@@ -288,7 +275,6 @@ var LineChart = require('react-d3-basic').LineChart;
   var width = 700,
     height = 300,
     margins = {left: 100, right: 100, top: 50, bottom: 50},
-    title = "Taiwan refuse disposal - Multi line",
     // chart series,
     // field: is what field your data want to be selected
     // name: the name of the field that display in legend
@@ -315,23 +301,16 @@ var LineChart = require('react-d3-basic').LineChart;
     xScale = 'time';
 
   ReactDOM.render(
-    &lt;Chart
-      title={title}
-      margins={margins}
-      width={width}
-      height={height}
-      &gt;
-      &lt;LineChart
-        title= {title}
-        data= {chartData}
-        width= {width}
-        height= {height}
-        margins= {margins}
-        chartSeries= {chartSeries}
-        x= {x}
-        xScale= {xScale}
-      /&gt;
-    &lt;/Chart&gt;
+    &lt;LineChart
+      title= {title}
+      data= {chartData}
+      width= {width}
+      height= {height}
+      margins= {margins}
+      chartSeries= {chartSeries}
+      x= {x}
+      xScale= {xScale}
+    /&gt;
   , document.getElementById('line-multi-garbage')
   )
 })()
@@ -355,10 +334,10 @@ var LineChart = require('react-d3-basic').LineChart;
 
 <pre><code class="lang-js">"use strict"
 
+var d3 = require('d3');
 var React = require('react');
-var ReactDOM = require('react-dom')
-var Chart = require('react-d3-core').Chart;
-var LineChart = require('react-d3-basic').LineChart;
+var ReactDOM = require('react-dom');
+var AreaChart = require('react-d3-basic').AreaChart;
 
 (function() {
   // load your general data
@@ -369,13 +348,11 @@ var LineChart = require('react-d3-basic').LineChart;
 
   var width = 700,
     height = 300,
-    title = "Taiwan refuse disposal - Incineration",
     chartSeries = [
       {
         field: 'incineration',
         name: 'Incineration',
         color: 'blue',
-        area: true,
         style: {
           opacity: .2
         }
@@ -386,98 +363,19 @@ var LineChart = require('react-d3-basic').LineChart;
       return parseDate(d.month);
     },
     xScale = 'time',
-    yTickOrient = 'right'
+    yTickOrient = 'right';
 
   ReactDOM.render(
-    &lt;Chart
-      title={title}
-      width={width}
-      height={height}
-      &gt;
-      &lt;LineChart
-        title= {title}
-        data= {chartData}
-        width= {width}
-        height= {height}
-        chartSeries= {chartSeries}
-        x= {x}
-        xScale= {xScale}
-        yTickOrient= {yTickOrient}
-      /&gt;
-    &lt;/Chart&gt;
-  , document.getElementById('area-garbage')
-  )
-})()
-</code></pre>
-
-                    </div>
-                </div>
-                <!--.row-->
-            </div>
-            <!--/.container -->
-        </section>
-        <section id="area-stack" class="section text-center group">
-            <div class="container">
-                <h2 class="section-title wow fadeIn">Area Stack</h2>
-                <div class="row text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-
-                    <div class="markdown-body">
-                      <p>Area Stack Component:</p>
-<p></p><div id="area-stack" class="demo"></div><p></p>
-<script src="/react-d3-example/dist/simple/min/area_stack.min.js"></script>
-
-<pre><code class="lang-js">"use strict";
-
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
-var AreaStackChart = require('react-d3-basic').AreaStackChart;
-
-(function() {
-  var generalChartData = require('dsv?delimiter=,!../data/stack_test.csv')
-
-  var parseDate = d3.time.format("%m/%d/%y").parse;
-
-  var width = 700,
-    height = 400,
-    title = "Stack Area Chart",
-    chartSeries = [
-      {
-        field: "Group1",
-        name: "Group 1"
-      },
-      {
-        field: "Group2",
-        name: "Group 2"
-      },
-      {
-        field: "Group3",
-        name: "Group 3"
-      }
-    ],
-    x = function(d) {
-      return parseDate(d.date);
-    },
-    xScale = 'time';
-
-  ReactDOM.render(
-    &lt;Chart
-      title={title}
-      width={width}
-      height={height}
+    &lt;AreaChart
+      data= {chartData}
+      width= {width}
+      height= {height}
       chartSeries= {chartSeries}
-      &gt;
-      &lt;AreaStackChart
-        title= {title}
-        data= {generalChartData}
-        width= {width}
-        height= {height}
-        chartSeries = {chartSeries}
-        x= {x}
-        xScale= {xScale}
-      /&gt;
-    &lt;/Chart&gt;
-  , document.getElementById('area-stack')
+      x= {x}
+      xScale= {xScale}
+      yTickOrient= {yTickOrient}
+    /&gt;
+  , document.getElementById('area-garbage')
   )
 })()
 </code></pre>
@@ -502,7 +400,6 @@ var AreaStackChart = require('react-d3-basic').AreaStackChart;
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var BarChart = require('react-d3-basic').BarChart;
 
 (function() {
@@ -526,25 +423,18 @@ var BarChart = require('react-d3-basic').BarChart;
     yTicks = [10, "%"];
 
   ReactDOM.render(
-    &lt;Chart
-      title={title}
-      width={width}
-      height={height}
+    &lt;BarChart
+      title= {title}
+      data= {generalChartData}
+      width= {width}
+      height= {height}
       chartSeries = {chartSeries}
-      &gt;
-      &lt;BarChart
-        title= {title}
-        data= {generalChartData}
-        width= {width}
-        height= {height}
-        chartSeries = {chartSeries}
-        x= {x}
-        xLabel= {xLabel}
-        xScale= {xScale}
-        yTicks= {yTicks}
-        yLabel = {yLabel}
-      /&gt;
-    &lt;/Chart&gt;
+      x= {x}
+      xLabel= {xLabel}
+      xScale= {xScale}
+      yTicks= {yTicks}
+      yLabel = {yLabel}
+    /&gt;
   , document.getElementById('data_bar')
   )
 })()
@@ -570,7 +460,6 @@ var BarChart = require('react-d3-basic').BarChart;
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var BarGroupChart = require('react-d3-basic').BarGroupChart;
 
 (function() {
@@ -578,7 +467,6 @@ var BarGroupChart = require('react-d3-basic').BarGroupChart;
 
   var width = 700,
     height = 400,
-    title = "Bar Group Chart",
     chartSeries = [
       {
         field: 'Under 5 Years',
@@ -620,25 +508,18 @@ var BarGroupChart = require('react-d3-basic').BarGroupChart;
     yTickFormat = d3.format(".2s");
 
   ReactDOM.render(
-    &lt;Chart
-      title={title}
-      width={width}
-      height={height}
-      &gt;
-      &lt;BarGroupChart
-        title= {title}
-        data= {generalChartData}
-        width= {width}
-        height= {height}
-        chartSeries = {chartSeries}
-        x= {x}
-        xScale= {xScale}
-        xLabel = {xLabel}
-        yTickFormat= {yTickFormat}
-        yLabelPosition= {yLabelPosition}
-        yLabel = {yLabel}
-      /&gt;
-    &lt;/Chart&gt;
+    &lt;BarGroupChart
+      data= {generalChartData}
+      width= {width}
+      height= {height}
+      chartSeries = {chartSeries}
+      x= {x}
+      xScale= {xScale}
+      xLabel = {xLabel}
+      yTickFormat= {yTickFormat}
+      yLabelPosition= {yLabelPosition}
+      yLabel = {yLabel}
+    /&gt;
   , document.getElementById('data_bar_group')
   )
 })()
@@ -664,7 +545,6 @@ var BarGroupChart = require('react-d3-basic').BarGroupChart;
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var BarStackChart = require('react-d3-basic').BarStackChart;
 
 (function() {
@@ -710,20 +590,15 @@ var BarStackChart = require('react-d3-basic').BarStackChart;
     yTickFormat = d3.format(".2s");
 
   ReactDOM.render(
-    &lt;Chart
-      width={width}
-      height={height}
-      &gt;
-      &lt;BarStackChart
-        data= {generalChartData}
-        width= {width}
-        height= {height}
-        chartSeries = {chartSeries}
-        x= {x}
-        xScale= {xScale}
-        yTickFormat= {yTickFormat}
-      /&gt;
-    &lt;/Chart&gt;
+    &lt;BarStackChart
+      data= {generalChartData}
+      width= {width}
+      height= {height}
+      chartSeries = {chartSeries}
+      x= {x}
+      xScale= {xScale}
+      yTickFormat= {yTickFormat}
+    /&gt;
   , document.getElementById('data_bar_stack')
   )
 })()
@@ -749,7 +624,6 @@ var BarStackChart = require('react-d3-basic').BarStackChart;
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var ScatterPlot = require('react-d3-basic').ScatterPlot;
 
 (function() {
@@ -762,7 +636,6 @@ var ScatterPlot = require('react-d3-basic').ScatterPlot;
   var width = 700,
     height = 300,
     margins = {left: 100, right: 100, top: 50, bottom: 50},
-    title = "Taiwan refuse disposal - Multi line",
     // chart series,
     // field: is what field your data want to be selected
     // name: the name of the field that display in legend
@@ -794,23 +667,15 @@ var ScatterPlot = require('react-d3-basic').ScatterPlot;
     xScale = 'time';
 
   ReactDOM.render(
-    &lt;Chart
-      title={title}
-      width={width}
-      height={height}
+    &lt;ScatterPlot
+      data= {chartData}
+      width= {width}
+      height= {height}
       margins= {margins}
-      &gt;
-      &lt;ScatterPlot
-        title= {title}
-        data= {chartData}
-        width= {width}
-        height= {height}
-        margins= {margins}
-        chartSeries= {chartSeries}
-        x= {x}
-        xScale= {xScale}
-      /&gt;
-    &lt;/Chart&gt;
+      chartSeries= {chartSeries}
+      x= {x}
+      xScale= {xScale}
+    /&gt;
   , document.getElementById('scatter-garbage')
   )
 })()
@@ -836,7 +701,6 @@ var ScatterPlot = require('react-d3-basic').ScatterPlot;
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var PieChart = require('react-d3-basic').PieChart;
 
 (function() {
@@ -844,7 +708,6 @@ var PieChart = require('react-d3-basic').PieChart;
 
   var width = 700,
     height = 400,
-    title = "Pie Chart",
     value = function(d) {
       return +d.population;
     },
@@ -879,21 +742,14 @@ var PieChart = require('react-d3-basic').PieChart;
     ];
 
   ReactDOM.render(
-    &lt;Chart
-      title={title}
-      width={width}
-      height={height}
-      &gt;
-      &lt;PieChart
-        title= {title}
-        data= {generalChartData}
-        width= {width}
-        height= {height}
-        chartSeries= {chartSeries}
-        value = {value}
-        name = {name}
-      /&gt;
-    &lt;/Chart&gt;
+    &lt;PieChart
+      data= {generalChartData}
+      width= {width}
+      height= {height}
+      chartSeries= {chartSeries}
+      value = {value}
+      name = {name}
+    /&gt;
   , document.getElementById('data_pie')
   )
 })()
@@ -919,7 +775,6 @@ var PieChart = require('react-d3-basic').PieChart;
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var PieChart = require('react-d3-basic').PieChart;
 
 (function() {
@@ -962,21 +817,15 @@ var PieChart = require('react-d3-basic').PieChart;
     innerRadius = 10;
 
   ReactDOM.render(
-    &lt;Chart
-      width={width}
-      height={height}
+    &lt;PieChart
+      data= {generalChartData}
+      width= {width}
+      height= {height}
       chartSeries= {chartSeries}
-      &gt;
-      &lt;PieChart
-        data= {generalChartData}
-        width= {width}
-        height= {height}
-        chartSeries= {chartSeries}
-        value = {value}
-        name = {name}
-        innerRadius = {innerRadius}
-      /&gt;
-    &lt;/Chart&gt;
+      value = {value}
+      name = {name}
+      innerRadius = {innerRadius}
+    /&gt;
   , document.getElementById('data_donut')
   )
 })()

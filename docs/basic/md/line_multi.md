@@ -6,9 +6,9 @@ Line Multiple Chart Component:
 ```js
 "use strict"
 
+var d3 = require('d3');
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var LineChart = require('react-d3-basic').LineChart;
 
 (function() {
@@ -21,7 +21,6 @@ var LineChart = require('react-d3-basic').LineChart;
   var width = 700,
     height = 300,
     margins = {left: 100, right: 100, top: 50, bottom: 50},
-    title = "Taiwan refuse disposal - Multi line",
     // chart series,
     // field: is what field your data want to be selected
     // name: the name of the field that display in legend
@@ -48,23 +47,16 @@ var LineChart = require('react-d3-basic').LineChart;
     xScale = 'time';
 
   ReactDOM.render(
-    <Chart
-      title={title}
-      margins={margins}
-      width={width}
-      height={height}
-      >
-      <LineChart
-        title= {title}
-        data= {chartData}
-        width= {width}
-        height= {height}
-        margins= {margins}
-        chartSeries= {chartSeries}
-        x= {x}
-        xScale= {xScale}
-      />
-    </Chart>
+    <LineChart
+      title= {title}
+      data= {chartData}
+      width= {width}
+      height= {height}
+      margins= {margins}
+      chartSeries= {chartSeries}
+      x= {x}
+      xScale= {xScale}
+    />
   , document.getElementById('line-multi-garbage')
   )
 })()
