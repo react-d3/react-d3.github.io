@@ -14,6 +14,14 @@ var ReactDOM = require('react-dom');
 var LineChart = require('react-d3-basic').LineChart;
 ```
 
+Or if you're using ES6 modules:
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {LineChart} from 'react-d3-basic';
+```
+
 ### Load
 
 Load your data using webpack
