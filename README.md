@@ -16,34 +16,25 @@ Update git submodules
 $ npm run sync
 ```
 
+Start the dev server. The site will be available at http://localhost:8080
+
+```
+$ npm start
+```
+
 ## Rebuild website
 
-first you have to install `canner-core` to generate html in http://reactd3.org
+The parent website is written in markdown, and can be found in `./intro`. After each change, build the site with:
 
 ```
-npm install -g canner-core
+$ npm run build-site
 ```
 
-building web pages.
+Additionally, we put the contents inside `./docs`. In each folder, there are two folders, `md`, and `md_origin`. `md_origin` contains the original md files which need to compile via [smashmd](https://github.com/Canner/smash-md). After each change, run build the docs with:
 
 ```
-canner-core build canner.js
+$ npm run build-docs
 ```
-
-----
-
-We build most of our document in markdown.
-
-Inside `./docs` folder you can see there are two folders in each folder `md`, `md_origin`. `md_origin` is the original md files which need to compile via [smashmd](https://github.com/Canner/smash-md).
-
-You can just type
-
-```
-make smashmd
-```
-
-to recompile the whole original markdown files.
-
 
 ## License
 
