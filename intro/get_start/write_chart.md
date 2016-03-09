@@ -8,10 +8,18 @@ We need to require some library we need to use:
 ```js
 // first of course react!
 var React = require('react');
-// require `react-d3-core` for Chart component, which help us build a blank svg and chart title.
-var Chart = require('react-d3-core').Chart;
+// second, ReactDOM.
+var ReactDOM = require('react-dom');
 // require `react-d3-basic` for Line chart component.
 var LineChart = require('react-d3-basic').LineChart;
+```
+
+Or if you're using ES6 modules:
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {LineChart} from 'react-d3-basic';
 ```
 
 ### Load
@@ -62,24 +70,17 @@ Render it in React!
 
 ```js
 ReactDOM.render(
-    <Chart
-      title={title}
-      width={width}
-      height={height}
-      margins= {margins}
-      >
-      <LineChart
-        margins= {margins}
-        title={title}
-        data={chartData}
-        width={width}
-        height={height}
-        chartSeries={chartSeries}
-        x={x}
-      />
-    </Chart>
+  <LineChart
+    margins= {margins}
+    title={title}
+    data={chartData}
+    width={width}
+    height={height}
+    chartSeries={chartSeries}
+    x={x}
+  />
   , document.getElementById('line-user')
-  )
+)
 ```
 
 ### Full code in your javascript
@@ -89,7 +90,6 @@ ReactDOM.render(
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var LineChart = require('react-d3-basic').LineChart;
 
 (function() {
@@ -117,25 +117,16 @@ var LineChart = require('react-d3-basic').LineChart;
     }
 
   ReactDOM.render(
-    <Chart
+    <LineChart
+      margins= {margins}
       title={title}
+      data={chartData}
       width={width}
       height={height}
-      margins= {margins}
-      >
-      <LineChart
-        showXGrid= {false}
-        showYGrid= {false}
-        margins= {margins}
-        title={title}
-        data={chartData}
-        width={width}
-        height={height}
-        chartSeries={chartSeries}
-        x={x}
-      />
-    </Chart>
-  , document.getElementById('line-user')
+      chartSeries={chartSeries}
+      x={x}
+    />
+    , document.getElementById('line-user')
   )
 })()
 ```

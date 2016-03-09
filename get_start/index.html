@@ -276,10 +276,15 @@ module.exports = [{
 <p>We need to require some library we need to use:</p>
 <pre><code class="lang-js">// first of course react!
 var React = require('react');
-// require `react-d3-core` for Chart component, which help us build a blank svg and chart title.
-var Chart = require('react-d3-core').Chart;
+// second, ReactDOM.
+var ReactDOM = require('react-dom');
 // require `react-d3-basic` for Line chart component.
 var LineChart = require('react-d3-basic').LineChart;
+</code></pre>
+<p>Or if you're using ES6 modules:</p>
+<pre><code class="lang-js">import React from 'react';
+import ReactDOM from 'react-dom';
+import {LineChart} from 'react-d3-basic';
 </code></pre>
 <h3 id="load">Load</h3>
 <p>Load your data using webpack</p>
@@ -315,31 +320,23 @@ var LineChart = require('react-d3-basic').LineChart;
 <h3 id="render-">Render!</h3>
 <p>Render it in React!</p>
 <pre><code class="lang-js">ReactDOM.render(
-    &lt;Chart
-      title={title}
-      width={width}
-      height={height}
-      margins= {margins}
-      &gt;
-      &lt;LineChart
-        margins= {margins}
-        title={title}
-        data={chartData}
-        width={width}
-        height={height}
-        chartSeries={chartSeries}
-        x={x}
-      /&gt;
-    &lt;/Chart&gt;
+  &lt;LineChart
+    margins= {margins}
+    title={title}
+    data={chartData}
+    width={width}
+    height={height}
+    chartSeries={chartSeries}
+    x={x}
+  /&gt;
   , document.getElementById('line-user')
-  )
+)
 </code></pre>
 <h3 id="full-code-in-your-javascript">Full code in your javascript</h3>
 <pre><code class="lang-js">"use strict"
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Chart = require('react-d3-core').Chart;
 var LineChart = require('react-d3-basic').LineChart;
 
 (function() {
@@ -367,25 +364,16 @@ var LineChart = require('react-d3-basic').LineChart;
     }
 
   ReactDOM.render(
-    &lt;Chart
+    &lt;LineChart
+      margins= {margins}
       title={title}
+      data={chartData}
       width={width}
       height={height}
-      margins= {margins}
-      &gt;
-      &lt;LineChart
-        showXGrid= {false}
-        showYGrid= {false}
-        margins= {margins}
-        title={title}
-        data={chartData}
-        width={width}
-        height={height}
-        chartSeries={chartSeries}
-        x={x}
-      /&gt;
-    &lt;/Chart&gt;
-  , document.getElementById('line-user')
+      chartSeries={chartSeries}
+      x={x}
+    /&gt;
+    , document.getElementById('line-user')
   )
 })()
 </code></pre>
